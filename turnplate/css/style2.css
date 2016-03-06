@@ -1,0 +1,163 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background-color: #49155a;
+	font-family: Arial, sans-serif;
+}
+#container{
+	width: 640px;
+	height: 1008px;
+	background: url(../images/bg.jpg) no-repeat;
+	margin: 0 auto;
+	padding-top: 1px;
+}
+#top{
+	width: 640px;
+	font-size: 32px;
+	text-align: center;
+	margin-top: 45px;
+	color: #fff;
+}
+#title-number{
+	font-size: 82px;
+	margin: 0 20px;
+	font-style: italic;
+}
+
+/*=========================转盘样式=========================*/
+#turnplate{
+	width: 640px;
+	height: 640px;
+	background: url(../images/turntable.png) no-repeat;
+	/*border:1px solid black;*/
+	margin: 0 auto;
+	color: #ff949c;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	transition: all 2s ease;
+}
+.question{
+	width: 318px;
+	height: 249px;	
+	text-align: center;
+	padding-top: 69px;
+	position: absolute;
+	top: 160px;
+	left: 160px;
+	font-size: 24px;
+	font-family: "Microsoft YaHei";
+}
+#title1{
+	float: left;
+	top: 0px;
+}
+#title2{
+	float: left;
+	left: 0px;
+	transform: rotate(270deg);
+}
+#title3{
+	float: right;
+	left: 320px;
+	transform: rotate(-270deg);
+}
+#title4{
+	float: right;
+	top: 320px;
+	transform: rotate(180deg);
+}
+.inner{
+	padding-top: 100px;
+	color: #d09d58;
+}
+
+
+/*====================结果选择按钮样式======================*/
+.result-btn{
+	width: 160px;
+	height: 160px;
+	border-radius: 80px;
+	text-align: center;
+	margin-top: 30px;
+}
+.yes{
+	background-color: #91c724;
+	float: left;
+	margin-left: 70px;
+}
+.no{
+	background-color: #ec2e3c;
+	float: right;
+	margin-right: 70px;
+}
+.result-btn>span {
+    display: block;
+    color: #fff;
+
+}
+.result-btn span:nth-child(1) {
+    font-size: 54px;
+    margin-top: 30px;
+}
+.result-btn span:nth-child(2) {
+	font-size: 28px;
+}
+/*===================弹出框样式================*/
+.feedback{
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	background-color: rgba(40,40,40,0.8);
+	color: #fff;
+	font-size: 40px;
+	font-family: "Microsoft YaHei";
+	text-align: center;
+	line-height: 200px;
+	position: absolute;
+/*	top: 350px;
+	left: 220px;*/
+	z-index: 9999;
+	display: none;
+}
+#point{
+	position: absolute;
+    top: 148px;
+    left: 49%;
+    z-index: 9999;
+    margin-left: -21px;
+    width: 0px;
+    height: 0px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #fff0f1;
+    font-size: 0px;
+    line-height: 0px;
+}
+/*#right-box{
+	position: absolute;
+	top: 350px;
+	left: 220px;
+	z-index: 9999;
+	display: none;
+}
+#wrong-box{	
+	position: absolute;
+	top: 350px;
+	left: 220px;
+	z-index: 9999;
+	display: none;
+}*/
+
+
+/*.test {
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+	border-right: 10px solid red;
+	border-top: 10px solid green;
+	border-left: 10px solid black;
+	border-bottom: 10px solid #ccc;
+}*/

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>新闻大转盘</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="js/screen_adapt.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style2.css">
+</head>
+<body>
+	<div id="container">
+		<div id="top">第<span id="title-number">1</span>题</div>
+		<div id="turnplate">						
+		</div>
+		<div id="result">
+			<div class="result-btn yes" id="result-yes">
+				<span>YES</span>
+				<span>正确</span>
+			</div>
+			<div class="result-btn no" id="result-no">
+				<span>NO</span>
+				<span>错误</span>
+			</div>
+		</div>
+		<div id="right-box" class="feedback">你真棒</div>
+		<div id="wrong-box" class="feedback">答错了</div>
+	
+		
+		<div id="point"></div>	
+		
+			
+	</div>
+<script type="text/javascript">
+
+		var score = 0;//用于计算得分
+		var items = [];//存放json中传过来的内容		
+		
+		/*jsonp跨域请求*/
+		var current = 0;//
+		var count = 0;//用于控制题目，第1题，第2题……
+		var responseResult = null;
+
+		function handle(response){
+			responseResult = response;//全局变量，用于保存json数据
+			count = count + 1;//函数每调用一次，count+1
+			var html = "";
+			var item = null;//用于保存json中每个题的数据
+		    for(var i = current, m = 0 ; i < (current + 4); i ++, m++){
+		    	item = response[i];
+		    	html += "<div class=\"question\" id=\"title" + (m+1) + "\">";
+		    	html += "<div class=\"outer\">" + item.question +"</div>";
+		    	html += "<div class=\"inner\">" + item.selector +"</div>";
+		    	html += "</div>";
+		    	items.push(item);
+		    }
+		    document.getElementById("turnplate").innerHTML = html;
+		    rotate();		   		    
+		}
+
+		function jsonp(url,callback){
+			var script = document.createElement("script");
+			script.src = url;
+			var head = document.getElementsByTagName("head")[0];           
+            head.appendChild(script);
+		}
+		jsonp('title.json',handle);
+
+		/*控制转盘旋转的函数*/
+		function rotate(){
+			var deg = (720*count +270);
+			console.log(deg);
+			var turnplate = document.getElementById("turnplate");
+			turnplate.style.transform = "rotate("+ deg + "deg)";
+			var html = "";
+			html += "" + count + "";
+			document.getElementById("title-number").innerHTML = html;			
+			console.log(html);			
+		}
+
+		/*页面按钮点击处理函数*/
+		var yesBtn = document.getElementById("result-yes");
+		var noBtn = document.getElementById("result-no");
+		var rightBox = document.getElementById("right-box");
+		var wrongBox = document.getElementById("wrong-box");
+		
+		//为yes按钮添加事件
+		yesBtn.addEventListener("click",function(){
+			var answer = true;			
+			if (answer == items[2*count - 1].answer) {
+				rightBox.style.display = "block";
+				current = current + 4;
+				score = score + 1;	
+				setTimeout(function(){
+					rightBox.style.display = "none";
+					handle(responseResult);
+				},1000);							
+				
+			}else{
+				wrongBox.style.display = "block";
+				current = current + 4;
+				setTimeout(function(){
+					wrongBox.style.display = "none";
+					handle(responseResult);
+				},1000);
+			}
+		},false);		
+		//为no按钮添加事件
+		noBtn.addEventListener("click",function(){
+			var answer = false;
+			if (answer == items[2*count - 1].answer) {
+				rightBox.style.display = "block";
+				current = current + 4;
+				score = score + 1;
+				setTimeout(function(){
+					rightBox.style.display = "none";
+					handle(responseResult);
+					//rotate();
+				},1000);
+			}else{
+				wrongBox.style.display = "block";
+				current = current + 4;
+				score = score + 1;
+				setTimeout(function(){
+					wrongBox.style.display = "none";
+					handle(responseResult);
+				},1000);
+			}
+		},false);
+		//为弹出框设定位置
+		var pageWidth = window.innerWidth;
+		var pageHeight = window.innerHeight;
+		rightBox.style.left = (pageWidth/2 - 100) + "px";
+		rightBox.style.top = (pageHeight/2 - 120) + "px";
+		wrongBox.style.left = (pageWidth/2 - 100) + "px";
+		wrongBox.style.top = (pageHeight/2 - 120) + "px";		
+	</script>
+
+</body>
+</html>
