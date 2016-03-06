@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>幸运大转盘-转盘转动-用CSS3实现</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div id="body-container">
+		<div id="topic"></div>
+		<div id="zhuanpan">				
+			<div id="body-zhuanpan"></div>
+			<div id="miao"></div>				
+		</div>
+		<div id="button"></div>
+		<div id="bottom"></div>
+		<div id="thanks"></div>
+		<div id="submit-information">
+		<form id="user-info">
+				<input type="text" id="qq" name="qq" >
+				<input type="text"  id="phone" name="phone">
+				<input id="submit-button" type="button" value="">	
+		</form>		
+		</div>
+		<div id="text"></div>
+	</div>
+	<script type="text/javascript" src="js/jquery-2.2.0.js"></script>
+	<script type="text/javascript">
+	
+			var index = "";
+			/*序列化表单的函数 */
+			function serialize(form){        
+            var parts = new Array();
+            var field = null;
+            for (var i=0, len=form.elements.length; i < len; i++){
+                field = form.elements[i];
+                parts.push(encodeURIComponent(field.name) + "=" + 
+                encodeURIComponent(field.value));                
+            }        
+            return parts.join("&");
+        }
+
+			
+			/*让转盘旋转的函数 rotate（）*/
+			function rotate(){
+				var zhuanpan = document.getElementById("body-zhuanpan");
+				var submitInformation = document.getElementById("submit-information");
+				var thanks = document.getElementById("thanks");
+				switch(index){
+					case "1":
+						zhuanpan.style.animation = "2s one forwards";
+						setTimeout(function(){submitInformation.style.display = "block";},2000);									
+						break;
+					case "2":
+						zhuanpan.style.animation = "2s two forwards";
+						setTimeout(function(){submitInformation.style.display = "block";},2000);
+						break;
+					case "3":
+						zhuanpan.style.animation = "2s three forwards";
+						setTimeout(function(){submitInformation.style.display = "block";},2000);
+						break;
+					case "4":
+						zhuanpan.style.animation = "2s four forwards";
+						setTimeout(function(){submitInformation.style.display = "block";},2000);
+						break;
+					case "5":
+						zhuanpan.style.animation = "2s five forwards";
+						setTimeout(function(){submitInformation.style.display = "block";},2000);
+						break;
+					default:
+						zhuanpan.style.animation = "2s zero forwards";
+						setTimeout(function(){thanks.style.display = "block";},2000);			
+				}
+			}
+			/*从后台获取数据给index*/		
+			function luck(){				 					
+ 					var xhr = new XMLHttpRequest();
+					xhr.onreadystatechange = function () {
+						if(xhr.readyState==4){
+							if((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
+								var data = JSON.parse(xhr.responseText);
+								index = data.value.toString();
+								rotate();
+							} else {
+								alert ("Request was unsuccessful:" + xhr.status) ;
+							}
+						}
+					}
+					xhr.open ("post","luck.jsp",true);	
+					xhr.send (null); 					
+					}
+			
+					
+				 /*  $.ajax({  
+						type:"GET",
+						url: "luck.jsp",
+						dataType:"json",
+						success:function(data){
+							index = data.value.toString();
+							rotate();							
+						}
+					});	
+					
+				}	
+					 */				
+			
+			/*遇到的错误：
+			1、将switch函数放在了ajax请求外面，这样每次index都是空，因为，ajax是异步请求的，需要时间，所以，代码顺序执行，index就取不到值，一直是空。
+			改正：将switch函数放在success回调函数里面，这样index才能取到值
+			2、编写luck.jsp时，没有引包，包的引入方法：<%@ page import="java.util.*" %> 
+			3、ajax()里面的url写错了。
+			*/
+			/*点击按钮，进行抽奖*/
+			var btn = document.getElementById("button");
+			btn.addEventListener("click",luck(),false);
+
+
+			function submitData(){
+	            var xhr = new XMLHttpRequest();       
+	            xhr.onreadystatechange = function(){
+	                if (xhr.readyState == 4){
+	                    if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304){
+	                        alert(xhr.responseText);
+	                        var data = JSON.parse(xhr.responseText);
+	                        console.log(data);
+	                    } else {
+	                        alert("Request was unsuccessful: " + xhr.status);
+	                    }
+	                }
+	            };
+	            xhr.open("post", "db.jsp", true);
+	            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	            var form = document.getElementById("user-info");            
+	            xhr.send(serialize(form));
+	        }
+			
+			var submitBtn = document.getElementById("submit-button").addEventListener("click",submitData,false);
+			
+			
+			/*$("#submit-button").click(function(){
+				 $.ajax({
+					type:"post",
+					url:"db.jsp",
+					dataType:"json",
+					data:{
+						qq:$("#qq").val(),
+						phone:$("#phone").val()
+					},
+					success:function(obj){
+						console.log(obj)
+                            
+					}
+				}); */
+			
+			/*var submitButton = document.getElementById("submit-button");
+			var qqNum = document.getElementById("qq").value;
+			var phoneNum = document.getElementById("phone").value;
+			submitButton.addEventListener("click",function(){
+				alert(qqNum);
+				$.ajax({
+					type:"get",
+					url:"/lucky/db.jsp",
+					dataType:"json",
+					data:{
+						qq:qqNum,
+						phone:phoneNum
+					},
+					success:function(obj){
+						console.log(obj)
+					}
+
+					
+				});
+			},false);*/
+
+			/*
+				通过ajax的data获取到页面表单的数据，然后通过ajax将数据传到url所指的后台页面，后台页面中就可以获取到相应的参数。
+				ajax与form提交表单的区别：
+					form表单，点击提交时会跳转到action所指的页面中，当前页面即不存在了，而用ajax提交表单时，页面不会跳转，数据就可以由后台代码存到数据库中了。
+
+				今天犯得错误：jquery获取某个元素时，总是忘记加#！！！！
+				获取文本框的值，可以用 .value 
+			*/
+
+
+			
+
+
+
+
+	</script>
+</body>
+</html>

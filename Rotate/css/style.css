@@ -1,0 +1,122 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+#body-container{
+	margin:0 auto;
+	width: 640px;
+	height: 1135px;
+	background: url(../images/bg.png);
+	padding-top: 1px;
+}
+#topic{
+	width: 500px;
+	height: 293px;
+	margin-top:29px;
+	margin-left: 63px;
+	background: url(../images/topic.png) no-repeat;
+}
+#zhuanpan{
+	width: 548px;
+	height: 557px;
+	background: url(../images/outer-circle.png) no-repeat;
+	position: relative;
+	top:29px;
+	left: 47px;	
+}
+#body-zhuanpan{
+	width: 510px;
+	height: 511px;
+	background: url(../images/inner-circle.png) no-repeat;
+	position: absolute;
+	top: 28px;
+	left: 20px;
+/*	animation: 2s one forwards ;*/
+}
+
+@keyframes zero {
+	100% { transform: rotate(925deg); }
+}
+@keyframes one {
+	100% { transform: rotate(1045deg); }
+}
+@keyframes two {
+	100% { transform: rotate(977deg); }
+}
+@keyframes three {
+	100% { transform: rotate(865deg); }
+}
+@keyframes four {
+	100% { transform: rotate(805deg); }
+}
+@keyframes five {
+	100% { transform: rotate(745deg) }
+}
+#miao{
+	width: 160px;
+	height: 160px;
+	background: url(../images/center_of_zhuanpan.png) no-repeat;
+	position: absolute;
+	top:194px;
+	left: 194px;
+}
+#button{
+	width: 285px;
+	height: 87px;
+	background: url(../images/button.png) no-repeat;
+	margin-top: 80px;
+	margin: 80px auto 0px auto;
+}
+#bottom{
+	width: 640px;
+	height: 101px;
+	background: url(../images/bottom.png) no-repeat;
+}
+#inner-circle{
+
+	position: absolute;
+	top: 28px;
+	left: 20px;
+}
+#thanks{
+	display: none;
+	background: url(../images/thanks.png);
+	width: 640px;
+	height: 1136px;
+	position:relative;
+	top:-1146px;
+	left:0px;
+}
+#submit-information{
+	display: none;
+	background: url(../images/submit_information.png);
+	width: 640px;
+	height: 1136px;
+	position: relative;
+	top: -1146px;
+	left: 0px;
+}
+#qq{
+	position: absolute;
+	top: 419px;
+	left: 235px;
+	height: 48px;
+	width: 286px;
+}
+#phone{
+	position: absolute;
+	top: 500px;
+	left: 235px;
+	height: 48px;
+	width: 286px;
+
+}
+#submit-button{
+	background: url(../images/submit_button.png);
+	width: 228px;
+	height: 62px;
+	position: absolute;
+	top: 635px;
+	left: 206px;
+
+}
