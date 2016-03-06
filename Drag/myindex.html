@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>实现拖拽功能</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/screen_adapt.js"></script>
+</head>
+<body>
+	<div id="box"></div>
+</body>
+<script type="text/javascript">
+
+	//记录被拖拽元素的相关信息
+	var params = {
+		left: 0,
+		top: 0,
+		currentX: 0,
+		currentY: 0,
+		flag: false//移动与否的标志
+	};
+	//获取相关CSS属性
+	var getCss = function(o,key){
+		return o.currentStyle? o.currentStyle[key] : document.defaultView.getComputedStyle(o,false)[key]; 	
+	};
+
+    /*拖拽函数*/
+	var drag = function(object){
+		params.left = getCss(object, "left");//获取元素的css中的left和top
+		params.top = getCss(object,"top");
+		
+		//添加鼠标按下事件
+		object.addEventListener("mousedown",function(event){
+			params.flag = true;
+			var e = event;
+			params.currentX = e.clientX;//记录下鼠标按下时的坐标
+			params.currentY = e.clientY;
+		},false);
+		//添加鼠标释放事件
+		object.addEventListener("mouseup",function(event){
+			params.flag = false;//拖拽停止				
+			params.left = getCss(object, "left");			
+			params.top = getCss(object, "top");
+		
+			},false);
+		//添加鼠标移动事件
+		object.addEventListener("mousemove",function(event){
+			var e = event
+			if (params.flag) {
+				var nowX = e.clientX;
+				var nowY = e.clientY;
+				var disX = nowX - params.currentX;
+				var disY = nowY - params.currentY;
+				object.style.left = parseInt(params.left) + disX + "px";
+				object.style.top = parseInt(params.top) + disY + "px";
+		}
+		},false);
+	};
+
+	//调用拖拽函数
+		var box = document.getElementById("box");
+		drag(box);
+
+
+
+	
+
+
+
+
+</script>
+</html>
