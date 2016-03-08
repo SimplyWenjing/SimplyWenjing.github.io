@@ -1,0 +1,12 @@
+#top{
+	width: 86px;
+	height: 86px;
+	border-radius: 43px;
+	border: 1px solid red;
+	background: url(../images/icon.png) no-repeat;
+	animation: 200s one infinite linear;
+
+}
+@keyframes one{
+	100% {transform: rotate(36000deg);}
+}
