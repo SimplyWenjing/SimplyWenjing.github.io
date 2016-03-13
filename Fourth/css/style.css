@@ -1,0 +1,120 @@
+/*=================活动首页样式===============*/
+*{
+	font-family: "Microsoft YaHei","YouYuan";
+	padding: 0px;
+	margin: 0px;
+}
+.container{
+	background: #7d89d8 url(../images/land.png) no-repeat right bottom;
+	width: 640px;
+	height: 1136px;
+	padding: 1px 0px;
+	margin: 0 auto;
+}
+/*上方topic*/
+#top{
+	width: 507px;
+	height: 188px;
+	background: url(../images/topic.png) no-repeat;
+	margin: 170px auto 0px auto;
+}
+/*======中间内容样式======*/
+#content{
+	background: url(../images/caidai.png) no-repeat;
+	width: 640px;
+	background-position: 39px 0px;
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+#introduction{
+	position: absolute;
+	top: 50px;
+	left: 430px;
+	height: 100px;
+	width: 177px;
+	z-index: 100;
+	text-align: center;
+	font: bold 26px "SimSun";
+	transform: rotate(27deg);
+}
+#introduction p:nth-child(1),#introduction p:nth-child(2){
+	color: #7d89d8;
+}
+#introduction p:nth-child(3){
+	color:#f45656;
+}
+#cake{
+	width: 383px;
+	height: 461px;
+	margin: 5px auto 0px auto;
+	background: url(../images/cake.png) no-repeat;
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+#fire{
+	background: url(../images/fire.png) no-repeat;
+	width: 21px;
+	height: 27px; 
+	position: absolute; 
+	top: 0px;
+	left: 162px;
+}
+div.btn{
+	width: 283px;
+	height: 106px;
+	margin: 26px auto 0px auto;
+	background: url(../images/button.png) no-repeat;
+	text-align: center;
+	line-height: 85px;	
+	font-size: 46px;
+}
+div.btn a,div.btn a:hover,div.btn a:visited{
+	text-decoration: none;
+	color: #fff;
+}
+#detail-link a{
+	color: #d13a3a;
+	text-decoration: underline;
+	font: bold 23px;
+	float: right;
+	width: 114px;
+	margin-right: 46px;
+}
+span.arrow-right{
+	background: url(../images/arrow_right.png) no-repeat;
+	display: inline-block;
+	width: 28px;
+	height: 31px;
+	vertical-align: middle;
+}
+/*======下方链接样式======*/
+#bottom{
+	width: 577px;
+	height: 90px;
+	margin: 46px auto 0px auto;
+	border-radius: 30px;
+	border: 5px dashed #dcbe3e;
+	color: #603813;
+	font: bold 28px "SimSun";
+	background-color: #f9e797;
+	line-height: 89px;
+	text-align: center;
+}
+#bless{
+	width: 280px;
+	height: 100px;
+	float: left;
+	border-right: 4px dashed #dcbe3e;
+}
+#history{
+	width: 290px;
+	height: 100px;
+	float: right;
+}
+#bottom a{
+	text-decoration: none;
+	color: #603813;
+}
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>制作蛋糕</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="js/screen_adapt.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/make_cake.css">
+	    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+</head>
+<body>
+	<div id="container">
+		<div id="cake-content">
+			<div id="cake">
+				<div id="cake1-body"></div>
+				<div id="cake2-body"></div>
+				<div id="cake3-body"></div>
+				<div id="caomei"></div>
+				<div id="chocolate"></div>
+				<div id="leaf"></div>
+				<div id="orange"></div>
+				<div id="candle"></div>
+				<div id="arrow"></div>
+			</div>
+			<div id="cake-parts" class="swiper-container">
+		        <div class="swiper-wrapper" id="slide">
+		            <div class="swiper-slide" id="cake1-icon" data-cake-type="c_cake1"></div>
+		            <div class="swiper-slide" id="cake2-icon" data-cake-type="c_cake2"></div>
+		            <div class="swiper-slide" id="cake3-icon" data-cake-type="c_cake3"></div>
+		            <div class="swiper-slide" id="candle-icon" data-cake-type="e_candle"></div>
+		            <div class="swiper-slide" id="leaf-icon" data-cake-type="e_leaf"></div>
+		            <div class="swiper-slide" id="chocolate-icon" data-cake-type="e_chocolate"></div>
+		            <div class="swiper-slide" id="caomei-icon" data-cake-type="e_caomei"></div>
+		            <div class="swiper-slide" id="orange-icon" data-cake-type="e_orange"></div>
+		        </div>
+			</div>
+
+		</div>
+		<div id="bless-word">
+			<input type="text" id="bless"></input>
+		</div>
+		<div ><a id="button">立即分享</a></div>
+	</div>
+	 <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/jquery-2.2.0.js"></script>
+    <script src="js/script.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+    /*-------------滑动----------------*/
+	    var swiper = new Swiper('.swiper-container', {
+	        slidesPerView: 4,
+	        paginationClickable: true,
+	        spaceBetween: 10,
+	        freeMode: true
+	    });
+	
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>宝贝听听4岁啦</title>
+	<meta charset="utf-8" />
+	<script src="js/screen_adapt.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animate.css">
+</head>
+<body>
+	<div class="container">
+		<div id="top"></div>
+		<div id="content">
+			<div id="cake"><div id="fire"></div></div>
+			
+			<div id="introduction"><p>制作生日蛋糕</p><p>送祝福</p><p>赢生日大礼包</p></div>
+			<div class="btn"><a href="cake.html">马上参加</a></div>
+			<div id="detail-link">
+				<a href="detail.html">活动详情></a>
+			</div>
+		</div>
+		<div id="bottom">
+			<div id="bless"> <a href="#">大家的祝福<span class="arrow-right"></span></a></div>
+			<div id="history"><a href="#">宝贝听听历程<span class="arrow-right"></span></a></div>
+		</div>
+	</div>
+	<script>
+	var pulse = function(){
+		var fire = document.getElementById('fire');
+		fire.setAttribute('class','animated pulse');
+		setTimeout(function(){
+			fire.removeAttribute('class','animated pulse');
+		},800);
+	}	
+	var time = setInterval(pulse,1000);
+	</script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>制作蛋糕</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="js/screen_adapt.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/make_cake.css">
+	    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+</head>
+<body>
+	<div id="container">
+		<div id="cake-content">
+			<div id="cake">
+				<div id="cake1-body"></div>
+				<div id="cake2-body"></div>
+				<div id="cake3-body"></div>
+				<div id="caomei"></div>
+				<div id="chocolate"></div>
+				<div id="leaf"></div>
+				<div id="orange"></div>
+				<div id="candle"></div>
+				<div id="arrow"></div>
+			</div>
+			<div id="cake-parts" class="swiper-container">
+		        <div class="swiper-wrapper" id="slide">
+		            <div class="swiper-slide" id="cake1-icon" data-cake-type="cake1"></div>
+		            <div class="swiper-slide" id="cake2-icon" data-cake-type="cake2"></div>
+		            <div class="swiper-slide" id="cake3-icon" data-cake-type="cake3"></div>
+		            <div class="swiper-slide" id="candle-icon" data-cake-type="candle"></div>
+		            <div class="swiper-slide" id="leaf-icon" data-cake-type="leaf"></div>
+		            <div class="swiper-slide" id="chocolate-icon" data-cake-type="chocolate"></div>
+		            <div class="swiper-slide" id="caomei-icon" data-cake-type="caomei"></div>
+		            <div class="swiper-slide" id="orange-icon" data-cake-type="orange"></div>
+		        </div>
+			</div>
+
+		</div>
+		<div id="bless-word">
+			<input type="text" id="bless"></input>
+		</div>
+		<div id="button">立即分享</div>
+	</div>
+	 <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/jquery-2.2.0.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+    /*-------------滑动----------------*/
+	    var swiper = new Swiper('.swiper-container', {
+	        slidesPerView: 4,
+	        paginationClickable: true,
+	        spaceBetween: 10,
+	        freeMode: true
+	    });
+	/*-----------------------用到的函数----------------*/
+	   //查找属性，返回属性的值
+	    function findAttribute(ele, name) {
+	    	while(ele) {
+	    		var value = ele.getAttribute(name);
+	    		if (value) {
+	    			return value;
+	    		}
+	    		ele = ele.parentNode;
+	    	}
+	    	return null;
+	    }
+	    //获取相关CSS属性
+		var getCss = function(o,key){
+			return o.currentStyle? o.currentStyle[key] : document.defaultView.getComputedStyle(o,false)[key]; 	
+		};
+
+		/*-------------------------制作蛋糕--------------------*/
+        document.getElementById("slide").addEventListener("click", function (event) {
+        	var srcElement = event.target;
+        	console.log(srcElement);
+        	var cakeType = findAttribute(srcElement, "data-cake-type");
+        	switch(cakeType){
+        		case "cake1":
+        		var cake1 = document.getElementById("cake1-body");
+        		var cake1Style = getCss(cake1,"display");
+        		if(cake1Style=="none"){
+        			cake1.style.display = "block";
+        			//cake1.style.z-index = 200;
+        		}else{
+        			cake1.style.display = "none";
+        		}
+        		break;
+        		case "cake2":
+        		var cake2 = document.getElementById("cake2-body");
+        		var cake2Style = getCss(cake2,"display");
+        		if(cake2Style=="none"){
+        			cake2.style.display = "block";
+        		}else{
+        			cake2.style.display = "none";
+        		}
+        		break;
+        		case "cake3":
+        		var cake3 = document.getElementById("cake3-body");
+        		var cake3Style = getCss(cake3,"display");
+        		if(cake3Style=="none"){
+        			cake3.style.display = "block";
+        		}else{
+        			cake3.style.display = "none";
+        		}
+        		break;
+        		case "candle":
+        		var candle = document.getElementById("candle");
+        		var candleStyle = getCss(candle,"display");
+        		if(candleStyle=="none"){
+        			candle.style.display = "block";
+        		}else{
+        			candle.style.display = "none";
+        		}
+        		break;
+        		case "leaf":
+        		var leaf = document.getElementById("leaf");
+        		var leafStyle = getCss(leaf,"display");
+        		if(leafStyle=="none"){
+        			leaf.style.display = "block";
+        		}else{
+        			leaf.style.display = "none";
+        		}
+        		break;
+        		case "chocolate":
+        		var chocolate = document.getElementById("chocolate");
+        		var chocoStyle = getCss(chocolate,"display");
+        		if(chocoStyle=="none"){
+        			chocolate.style.display = "block";
+        		}else{
+        			chocolate.style.display = "none";
+        		}
+        		break;
+        		case "caomei":
+        		var caomei = document.getElementById("caomei");
+        		var caomeiStyle = getCss(caomei,"display");
+        		if(caomeiStyle=="none"){
+        			caomei.style.display = "block";
+        		}else{
+        			caomei.style.display = "none";
+        		}
+        		break;
+        		default:
+        		var orange = document.getElementById("orange");
+        		var orangeStyle = getCss(orange,"display");
+        		if(orangeStyle=="none"){
+        			orange.style.display = "block";
+        		}else{
+        			orange.style.display = "none";
+        		}
+        	}
+        });
+
+	/*-----------------点击按钮跳转分享------------------*/
+	    var shareBtn = document.getElementById("button");    
+	    var bless = document.getElementById("bless");
+
+	    shareBtn.addEventListener("click",function(){
+	        var blessWord = bless.value;
+	        var url = "share.html?word=" + blessWord; 
+	        shareBtn.setAttribute("href",url);
+	    },false);
+    </script>
+</body>
+</html>

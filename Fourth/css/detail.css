@@ -1,0 +1,69 @@
+*{
+	padding:0px;
+	margin:0px;
+}
+.container{
+	padding:5px;
+	width:640px;
+	height:1136px;
+	margin :0 auto;
+	background-color: #f1d86b;
+}
+.center{
+	margin-top:140px;
+}
+.state{
+	color:#d03a1d;
+	text-align: center;
+	font-size:23px;
+	font-family: "微软雅黑";
+}
+.title-one{
+	color:#d03a1d;
+	font-family: "微软雅黑";
+	font-size: 25px;
+	font-weight: bold;
+	padding-left:25px;
+	margin-top:20px;
+	margin-bottom:5px;
+}
+.prize-show{
+	overflow: hidden;
+	padding-left:25px;
+}
+.prize-show li{
+	float:left;	
+	list-style-type: none;
+	width:160px;
+	height:170px;
+	margin-left: 35px;
+	position:relative;	
+}
+.prize-show li .prize-li{
+	width:136px;
+	margin:0 auto;
+	height:136px;
+	position: relative;
+	border: 1px solid #dfc450;
+	border-radius: 68px;
+	background-color: #fff;	
+}
+.prize-show li .prize-li img{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);	
+}
+.prize-show li .common-font{
+	display: block;
+	margin-top: 5px;
+	text-align: center;
+}
+.common-font{
+	color:#603813;
+	font-size:20px;
+	font-family: "Microsoft YaHei";
+}
+.active .common-font{
+	padding:2px 20px;
+}
