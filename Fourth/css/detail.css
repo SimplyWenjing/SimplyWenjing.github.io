@@ -7,10 +7,10 @@
 	width:640px;
 	height:1136px;
 	margin :0 auto;
-	background-color: #f1d86b;
+	background-color: #f1d86b;	
 }
 .center{
-	margin-top:140px;
+	/* margin-top:140px; */
 }
 .state{
 	color:#d03a1d;
