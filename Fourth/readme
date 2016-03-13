@@ -1,0 +1,6 @@
+Demo:http://simplywenjing.github.io/Fourth/index.html
+
+用到了swiper.js实现蛋糕元素的滑动显示；
+主页蜡烛用到了animate.css实现闪烁；
+通过点击蛋糕元素可以拼出一个蛋糕，并输入祝福的话；
+点击分享后，可以显示蛋糕并显示祝福的话。
