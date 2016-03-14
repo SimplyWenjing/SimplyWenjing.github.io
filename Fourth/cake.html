@@ -7,13 +7,13 @@
 	<link rel="stylesheet" type="text/css" href="css/make_cake.css">
 	    <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="css/swiper.min.css">
-
 </head>
 <body>
 	<div id="container">
 		<div id="cake-content">
 			<div id="cake">
 				<div id="cake1-body"></div>
+				<div id="init-cake"></div>
 				<div id="cake2-body"></div>
 				<div id="cake3-body"></div>
 				<div id="caomei"></div>
@@ -21,7 +21,7 @@
 				<div id="leaf"></div>
 				<div id="orange"></div>
 				<div id="candle"></div>
-				<div id="arrow"></div>
+				<div id="arrow"></div>				
 			</div>
 			<div id="cake-parts" class="swiper-container">
 		        <div class="swiper-wrapper" id="slide">
@@ -36,11 +36,13 @@
 		        </div>
 			</div>
 
+
 		</div>
 		<div id="bless-word">
-			<input type="text" id="bless"></input>
+			<input type="text" id="bless" maxlength="30" value="【宝贝听听生日快乐】点击输入祝福(30字内)
+"></input>
 		</div>
-		<div ><a id="button">立即分享</a></div>
+		<div id="button">立即分享</div>
 	</div>
 	 <!-- Swiper JS -->
     <script src="js/swiper.min.js"></script>
@@ -55,6 +57,19 @@
 	        spaceBetween: 10,
 	        freeMode: true
 	    });
+	    var bless = document.getElementById("bless");
+	    var tips = document.getElementById("tips");
+	    bless.addEventListener("focus",function(){
+	    	if(this.value == "【宝贝听听生日快乐】点击输入祝福(30字内)"){
+	    		this.value = "";
+	    		//tips.style.display = "none";
+	    	}
+	    },false);
+	    bless.addEventListener("blur",function(){
+	    	if(this.value == ""){
+	    		this.value = "【宝贝听听生日快乐】点击输入祝福(30字内)";
+	    	}
+	    },false);
 	
     </script>
 </body>
