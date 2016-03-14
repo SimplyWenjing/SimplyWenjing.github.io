@@ -3,6 +3,7 @@
 	font-family: "Microsoft YaHei","YouYuan";
 	padding: 0px;
 	margin: 0px;
+	-webkit-tap-highlight-color:rgba(0,0,0,0)
 }
 .container{
 	background: #7d89d8 url(../images/land.png) no-repeat right bottom;
