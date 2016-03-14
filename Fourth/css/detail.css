@@ -1,6 +1,7 @@
 *{
 	padding:0px;
 	margin:0px;
+	-webkit-tap-highlight-color:rgba(0,0,0,0)
 }
 .container{
 	padding:5px;
