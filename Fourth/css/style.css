@@ -77,7 +77,8 @@ div.btn a,div.btn a:hover,div.btn a:visited{
 #detail-link a{
 	color: #d13a3a;
 	text-decoration: underline;
-	font: bold 23px;
+	font-size: 23px;
+	font-weight: bold;
 	float: right;
 	width: 114px;
 	margin-right: 46px;
