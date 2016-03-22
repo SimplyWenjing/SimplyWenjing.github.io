@@ -1,0 +1,114 @@
+body,ul,li,div{
+	margin:0px;
+	padding:0px;
+	font-family: "Microsoft YaHei";
+	font-size: 14px;
+}
+ul li{
+	display: inline-block;
+	list-style: none;
+}
+.nav-list li{
+	padding-left: 47px;
+}
+body{
+	width: 1280px;
+	margin: 0px auto;
+	border: 1px solid black;
+}
+/*顶部样式*/
+header{
+	height: 60px;
+}
+#logo{
+	height: 31px;
+	width: 110px;
+	float: left;
+	background: url(../images/world-icon.png) no-repeat;
+	margin:13px 0px 13px 60px;
+}
+#logo span{	
+	margin-left: 44px;
+	font-size: 20px;
+}
+nav{
+	float:right;
+	margin: 18px 67px 27px 0px;
+}
+#login{
+	background-image: url(../images/login.png) no-repeat!important;
+}
+
+/*===========内容样式=============*/
+#start{
+	background: url(../images/img-top.png) no-repeat;
+	width: 1280px;
+	height: 692px;
+	padding-top: 1px;
+}
+#start-cover{
+	background: url(../images/cover.png);
+	width: 1280px;
+	height: 692px;
+	margin-top: -692px;
+
+}
+div.text:nth-child(1){
+	width: 500px;
+	color: #fff;
+	margin:230px 0px 0px 114px;
+	padding: 0px;
+}
+div.text:nth-child(1) p:nth-child(1){
+	font-size: 60px;
+	margin:0px;
+}
+div.text:nth-child(1) p:nth-child(2){
+	font-size: 21px;
+}
+#start-btn{
+	width: 284px;
+	height: 66px;
+	background-color: #e7504d;
+	line-height: 66px;
+	font-size: 30px;
+	text-align: center;
+	margin-top: 68px;
+}
+#list{
+	width: 1280px;
+	height: 250px;
+	text-align: center;
+}
+.list-icon{
+	width: 42px;
+	height: 42px;
+	margin-top: 44px;
+	margin-bottom: 44px;
+}
+li.list-icon:nth-child(1){
+	background: url(../images/list-icon1.png) no-repeat;
+	margin-left: 14px;
+}
+li.list-icon:nth-child(2){
+	background: url(../images/list-icon2.png) no-repeat;
+	margin-left: 270px;
+}
+li.list-icon:nth-child(3){
+	background: url(../images/list-icon3.png) no-repeat;
+	margin-left: 274px;
+}
+li.list-icon:nth-child(4){
+	background: url(../images/list-icon4.png) no-repeat;
+	margin-left: 280px;
+}
+#list ul:nth-child(2) li{
+	width: 310px;	
+	text-align: center;
+}
+#list ul:nth-child(2) li:nth-child(1),#list ul:nth-child(2) li:nth-child(2),#list ul:nth-child(2) li:nth-child(3){
+	border-right: 2px solid #bbbbbb;
+}
+#list ul:nth-child(2) {
+	margin-bottom: 70px;
+}
