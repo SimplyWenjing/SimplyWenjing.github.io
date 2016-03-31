@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>网贷数据</title>
+	<title>平台舆情分析</title>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/data.css">
 </head>
 <body>
 	<div class="body-container">
 		<header>
+			<div id="logo"><span>P2P舆情分析</span></div>
 			<nav>
 				<ul class="nav-list">
 					<li><a href="index.html">首页</a></li>
@@ -19,44 +19,50 @@
 					<li><a href="about.html">关于我们</a></li>
 				</ul>
 			</nav>
-			<div id="logo"><span>P2P舆情分析</span></div>
-			
 		</header>
-		<div id="data-body">
-			<ul class="nav nav-tabs" role="tablist" id="myTab">
-				<li class="active"><a href="#home" role="tab" data-toggle="tab">第一项</a></li>
-				<li><a href="#profile" role="tab" data-toggle="tab">第二项</a></li>
-				<li><a href="#messages" role="tab" data-toggle="tab">第三项</a></li>
-				<li><a href="#settings" role="tab" data-toggle="tab">第四项</a></li>
-			</ul>
-			<div class="tab-content">
-				<div class="tab-pane active" id="home">
-					<p>慕课网是一家从事互联网免费教学的网络教育公司。秉承"开拓、创新、公平、分享"的精神，
-				将互联网特性全面的应用在教育领域，致力于为教育机构及求学者打造一站式互动在线教育品牌。
+		<section>
+			<div class="content-list">
+				<a href="#platform-content"><span id="platform-icon" class="icon-text" style="top: 50px; opacity: 1;">平台数量及成交额</span></a>
+				<a href="#duration-content"><span id="duration-icon" class="icon-text" style="top: 50px; opacity: 1;">收益率与借款期限</span></a>
+				<a href="#people-content"><span id="people-icon" class="icon-text" style="top: 50px; opacity: 1;">行业参与人数</span></a>
+			</div>
+			<div id="platform-content">
+				<div class="right-content-img">
+					<img src="images/platform-img.png">
+				</div>
+				<div class="left-content-intro">
+					<h4>平台数量及成交额</h4>
+					<p>截至2015年12月底，网贷行业运营平台达到2595家，网贷成交量达到9823.04亿元，从预测曲线可以看出，2016年平台增长速度会有所放缓，但成交量依然呈现增长态势。</p>
+				</div>				
+			</div>
+			<div id="duration-content">
+				<div class="left-content-img">
+					<img src="images/duration-img.png">
+				</div>
+				<div class="right-content-intro">
+					<h1>收益率与借款期限</h1>
+					<p>
+						2015年网贷行业综合收益率为13.29% ，纵观12个月综合收益率走势，前11个月几乎呈现单边下跌的态势，而受年末因素影响，投资人资金需求较大，带动12月网贷平台综合收益率的上升。不过预计2016年网贷综合收益率将降至10%-11%之间。2015年网贷行业平均借款期限为6.81个月，平均借款期限主要被一些成交量过10亿且平均借款期限在半年以上的平台拉高。从年度12个月的平均借款期限走势看，基本处于稳定状态介于6.5个月到7个月之间波动，表明网贷行业的平均借款期限已经趋向于稳定，预计2016年网贷行业平均借款期限约为7个月。
 					</p>
 				</div>
-				<div class="tab-pane" id="profile">
-					<p>慕课网是做什么的？<br>互联网技能教育，免费的哦</p>
+			</div>
+			<div id="people-content">
+				<div class="right-content-img">
+					<img src="images/people-img.png">
 				</div>
-				<div class="tab-pane" id="messages">
-					<p>慕课网都有哪些讲师？课程质量高吗？<br>
-					学了就知道，我们不爱吹，低调是最牛逼的炫耀</p>
-				</div>
-				<div class="tab-pane" id="settings">
-					<p>我在慕课网学习能得到什么？<br>
-					屌丝逆袭不是传说,但关键是你学不学</p>
-				</div>
-			</div>		
-		</div>
+				<div class="left-content-intro">
+					<h4>行业参与人数</h4>
+					<p>2015年网贷行业投资人数与借款人数分别达586万人和285万人，网贷行业人气明显飙升。按目前增长态势，预计2016年网贷行业投资人数与借款人数或许将分别超过2000万人和900万人。</p>
+				</div>	
+				
+			</div>
+		</section>
 
 		<footer>
 			© 2015-2016 DUT-P2P舆情分析
 		</footer>
 	</div>
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script>
-  
-</script>
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
