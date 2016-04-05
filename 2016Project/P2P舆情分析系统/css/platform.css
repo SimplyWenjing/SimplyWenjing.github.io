@@ -44,7 +44,7 @@ a:hover{
     top: 0px;
     left: 0px;
     border: 1px solid #DDDDDD ;
-    display: none;
+    /*display: none;*/
 }
 .table{
     background-color: #FFFFFF;
@@ -57,7 +57,9 @@ a:hover{
 .table thead tr th {
     text-align: center;
     align-items: center;
-    padding-top: 50px;
+    padding-top: 20px;
+    border-bottom: 0px;
+    background: #ddd;
 }
 .captial_figure{
    width: 400px;

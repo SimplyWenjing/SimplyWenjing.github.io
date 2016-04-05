@@ -37,7 +37,7 @@ ul li{
 .nav-list li{
 	padding: 0px 25px 0px 25px;
 	cursor: pointer;
-	text-align: center;
+	text-align: center;	
 }
 .nav-list li:hover{
 	border-bottom: 5px solid #e7504d;
