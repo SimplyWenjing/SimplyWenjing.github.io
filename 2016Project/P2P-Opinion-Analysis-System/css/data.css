@@ -1,0 +1,89 @@
+.content-list{
+	position: relative;
+	top:10px;
+	left: 0px;
+	height: 300px;
+}
+#platform-icon{
+	background: url(../images/img-number.png) no-repeat center center;
+	position: absolute;
+    left: 120px;
+    width: 180px;
+    height: 183px;
+}
+#duration-icon{
+	background: url(../images/duration.png) no-repeat center center;
+	position: absolute;
+    left: 50%;
+    margin-left: -90px;
+    width: 200px;
+    height: 181px;
+}
+#people-icon{
+	background: url(../images/people.png) no-repeat center center;
+	position: absolute;
+    top: 65px;
+    right: 120px;
+    width: 166px;
+    height: 181px;
+}
+.icon-text{
+	font-size: 20px;
+    line-height: 370px;
+    color: #E74F4D;
+    text-align: center;
+}
+#platform-content,#people-content{
+	height: 470px;
+	width: 1280px;
+	background-color: #EEF1F2;
+}
+.right-content-img{
+	margin-top: 30px;
+	margin-left: 20px;
+	float:right;
+	width: 55%;
+}
+.left-content-intro{
+	float: left;
+	width: 28%;
+	margin-left: 70px;
+	margin-top: 50px;
+	font-size: 36px;
+	color: #080404;
+	font-family: "幼圆";
+	text-align: left;
+}
+.left-content-intro p{
+	font-size: 18px;
+	padding-top: 5px;
+	text-align: left;
+	line-height: 35px;
+}
+#duration-content{
+	height: 470px;
+	width: 1280px;
+	background-color: #fff;
+}
+.left-content-img{
+	margin-top: 30px;
+	margin-left: 50px;
+	float: left;
+	width: 50%;
+}
+.right-content-intro{
+	float: right;
+	width: 38%;
+	margin-left: 30px;
+	margin-top: 50px;
+	font-size: 20px;
+	color: #080404;
+	font-family: "幼圆";
+	text-align: left;
+}
+.right-content-intro p{
+	font-size: 14px;
+	padding-top: 5px;
+	text-align: left;
+	line-height: 25px;
+}
