@@ -1,0 +1,39 @@
+body,div,p,input,select,label,ol,ul,li{
+    margin:0;
+    padding:0;
+    text-shadow:0 0 0 #fff;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+@-webkit-viewport{
+    width:device-width;
+}
+@-moz-viewport{
+    width:device-width;
+}
+@-ms-viewport{
+    width:device-width;
+}
+@-o-viewport{
+    width:device-width;
+}
+@viewport{
+    width:device-width;
+}
+html,body{
+    min-height:100%;
+    font-size:0.9em;
+}
+body{
+    min-width: 320px;
+    max-width: 640px;
+    -webkit-font-smoothing:antialiased;
+    -webkit-text-size-adjust:100%;
+    -ms-text-size-adjust:100%;
+    text-size-adjust:100%;
+    margin:0 auto;
+    font: normal 100%;
+    letter-spacing: 0.03em;
+}
+ul{
+    list-style-type:none;
+}

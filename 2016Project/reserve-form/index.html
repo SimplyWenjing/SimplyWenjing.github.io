@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>预定信息弹出框</title>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/global.css">	
+</head>
+<body>
+	<div id="container">
+		<div id="info-alert">
+			<div class="title">预定填写以下信息</div>
+			<form action="">
+				<div class="input-group">
+					<span for="name" class="right">姓名</span>
+					<input type="text" name="name" id="name" class="info-input" />
+					<span class="required">*</span>
+				</div>
+				<div class="input-group">
+					<span for="phone" class="right">手机</span>
+					<input type="text" name="phone" id="phone" class="info-input" />
+					<span class="required">*</span>
+				</div>
+				<div class="input-group">
+					<span for="QQ" class="right">QQ号</span>
+					<input type="text" name="QQ" id="QQ" class="info-input" />
+					<span class="required">*</span>
+				</div>
+				<div class="input-group">
+					<span for="wx" class="right">微信号</span>
+					<input type="text" name="wx" id="wx" class="info-input" />
+					<span class="required">*</span>
+				</div>
+				<div class="input-group">
+					<span for="car-brand" class="right">车型</span>
+					<select name="car-brand" id="car-brand">
+						<option value="dazhong">大众</option>
+					</select>
+					<select name="car-type" id="car-type">
+						<option value="15maiteng">15年迈腾</option>
+					</select> 
+					<span class="required">*</span>
+				</div>
+				<div class="input-group">
+					<span for="detail" class="right"></span>						
+					<input type="text" name="detail" id="detail" placeholder="详细配置，如“1.8TSI豪华型" class="info-input" />
+					<span class="required">*</span>
+				</div>
+				<div class="input-group">
+					<span for="province" class="right">地区</span>
+					<select name="province" id="province">
+						<option value="beijing">北京</option>
+					</select>
+					<select name="city" id="city">
+						<option value="beijing">北京</option>
+					</select>
+					<select name="region" id="region">
+						<option value="haidian">海淀</option>
+					</select>
+					<span class="required">*</span>
+				</div>
+				<div class="input-group">
+					<span for="note" class="right">备注</span>
+					<input type="text" name="note" id="note" class="info-input" />
+					<span class="hidden required">*</span>
+				</div>
+				<div class="input-group">
+					<input type="submit" value="提交" id="submit-btn" />
+				</div>
+				
+			</form>
+			<div class="contact">
+				<p>感谢您对途灵的支持与喜爱，如预定成功，您会收到确认短息/F码</p>
+				<p>届时可凭借确认短信/F码,到***下单</p>
+				<p>如有任何问题，请联系我们：400*****</p>
+			</div>
+		</div>				
+	</div>
+	<script type="text/javascript">
+		var EventUtil = {
+			addHandler: function(element,type,handle){
+				if (element.addEventListener) {
+					element.addEventListener(type,handle,false);
+				} else if (element.attachEvent) {
+					element.attachEvent("on" + type,handle);
+				} else {
+					element["on" + type] = handle;
+				}
+			}
+		}
+		var container = document.getElementById("container");
+		EventUtil.addHandler(container,"click",function(){
+			var infoAlert = document.getElementById("info-alert");
+			infoAlert.style.display = "block";
+		})		
+	</script>
+
+</body>
+</html>

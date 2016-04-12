@@ -1,0 +1,118 @@
+#container{
+	max-width: 640px;
+	min-height:768px; 
+	background:rgba(0,0,0,0.6);
+	font-family: "微软雅黑";
+	text-align: center;
+	margin: 0 auto;
+	color: #2f2f2f;
+	padding-top:1px;
+}  
+#info-alert{
+	background: #fff;
+	border:1px solid #ddd;
+	margin: 12.5% auto 3% auto;
+	width: 93.75%;
+	text-align: center;
+	display: none;	
+}
+.input-group{
+	margin:3% auto;
+}
+.title{
+	font-size: 1.5em;
+	width: 93.75%;
+	height: 30px;
+	line-height: 30px;
+	margin:4.7% auto;
+	letter-spacing: 0.05em;
+	color: #1a1a1a;
+}
+.right{
+	width: 20%;
+	height: 33px;
+	line-height: 33px;
+	float :left;
+	text-align: right;
+}
+
+.required{
+	color:red;
+	display: inline-block;
+	margin-left: 5px;
+	font-size: 1.5em;
+	vertical-align: middle;
+}
+.hidden{
+	visibility: hidden;
+}
+.info-input{
+	width: 57.8%;
+	height: 30px;
+	border-radius: 2px;
+	border: 1px solid  #c1c1c1;
+	background-color: #eeeeee;
+	font-size: 0.9em;
+	text-indent:0.5em;
+}
+#car-brand,#car-type{
+	width: 27.5%;
+	height: 32px;
+	background-color: #eee;
+	font-size: 0.8em;
+	font-family: "微软雅黑";	
+}
+#car-type{
+	margin-left: 2.2%;
+
+}
+#province,#city,#region{
+	width: 17.3%;
+	height: 32px;	
+	background-color: #eee;
+	font-size: 0.8em;
+	font-family: "微软雅黑";	
+	letter-spacing: 0.05em;
+}
+#city,#region{
+	margin-left: 2.2%;
+}
+#submit-btn{
+	width: 39%;
+	height: 30px;
+	background: #0082e1;
+	border-radius: 2px;
+	margin: 1.56% auto;
+	margin-left: -3%; 
+	color: #fff;
+	font-size:1.1em;
+	border:0px;
+	font-family: "微软雅黑";
+	letter-spacing: 0.05em;
+	font-weight: bold;
+}
+.contact{
+	width: 63%;
+	min-width:250px;
+	text-align: left;
+	margin: 3% auto 4.7% auto;
+	letter-spacing: 0px;
+	font-size: 0.8em;
+	color:#525252;
+}
+.contact p{
+	margin-top:5px;
+}
+/*重写下拉框样式*/
+select {
+  /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+  border: solid 1px #b6b6b6;
+  border-radius: 2px;
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  /*在选择框的最右侧中间显示小箭头图片*/
+  background: url(../images/arrow.png) no-repeat scroll right center transparent;
+  /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+  padding-right: 2em;
+}
