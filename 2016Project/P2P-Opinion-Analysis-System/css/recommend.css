@@ -1,0 +1,91 @@
+.content{
+	height:1000px;
+	font: normal 100% "微软雅黑";
+
+}
+#risk{
+	width: 60%;
+	height: 400px;
+	border: 1px solid #c4c8f0;
+	border-radius: 5px;
+	float: left;
+	margin-left: 5%;
+	margin-top: 30px;
+	overflow-y: auto;
+}
+#recommend{
+	width: 20%;
+	height: 400px;
+	border: 1px solid #f0c5c4;
+	border-radius: 5px;
+	float: right;
+	margin-right: 5%;
+	margin-top: 30px;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+.recommend-title{
+	text-align: center;
+	background: url(../images/title-bg.png) repeat-x;
+	height: 40px;
+	width: 100%;
+	display: block;
+	line-height: 40px;
+	color: #e7504d;
+	font-size:1.3em;
+}
+.risk-title{
+	text-align: center;
+	background: url(../images/risk-bg.png) repeat-x;
+	height: 40px;
+	width: 100%;
+	display: block;
+	line-height: 40px;
+	color: #4d5fe7;
+	font-size:1.3em;
+}
+.input-group{
+	margin: 30px auto;
+}
+.user-select{
+	width: 55%;
+	font-size: 0.9em;
+	margin-left: 10%;
+	height: 30px;
+}
+span.label-left{
+	font-size: 0.9em;
+	width: 27%;
+	height: 33px;
+	line-height: 33px;
+	float :left;
+	text-align: right;
+	margin-left: 2%;
+	letter-spacing: 1px;
+}
+/*重写下拉框样式*/
+select {
+  border: solid 1px #b6b6b6;
+  border-radius: 2px;
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  background: url(../images/arrow.png) no-repeat scroll right center transparent;
+  padding-right: 2em;
+}
+.input-group:nth-child(3){
+	padding-bottom: 40px;
+	border-bottom: 1px solid #f0c5c4;
+}
+#recommend-btn{
+	margin: 0px auto 20px 25%;
+	background: #e7504d;
+	color: #fff;
+	width:50%;
+	height: 35px;
+	border: 1px solid #e7504d;
+	border-radius: 20px;
+	position: absolute;
+	top: 46%;
+}
