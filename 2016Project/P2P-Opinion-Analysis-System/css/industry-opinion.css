@@ -1,0 +1,135 @@
+a,a:hover,a:visited{
+	text-decoration: none;
+}
+#myTab{
+	width: 90%;
+	margin:30px auto;
+}
+#myTab li{
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	border-top:1px solid #E74F4D;
+	border-left:1px solid #E74F4D;
+	border-right: 1px solid #E74F4D;
+	border-bottom: 1px solid #E74F4D;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	font-size: 16px;
+	text-align: center;
+}
+
+#myTab li:hover{
+	background: #E74F4D;
+	color: #fff;
+}
+.li-hover{
+	background: #E74F4D;
+	color: #fff;
+}
+#trend-2015{
+	width: 80%;
+	margin:0px auto;
+}
+/*趋势滑动块*/
+#trend-slide{
+	width: 786.6px;
+	height: 384.3px;
+	margin: 30px auto;
+}
+.trend-slide:nth-child(1){
+	background: url(../images/news-trend.jpg) no-repeat top center;
+	background-size: 80%;
+	border-bottom: 2px dashed #E74F4D;
+	padding-bottom: 10px;
+}
+.trend-slide:nth-child(2){
+	background: url(../images/topic-ranking.jpg) no-repeat top center;
+	background-size: 80%;
+	border-bottom: 2px dashed #E74F4D;
+	padding-bottom: 10px;
+}
+.trend-slide span {
+        display: inline-block;
+        width: 85%;
+        text-indent: 2em;
+        text-align: left;
+        letter-spacing: 1px;
+        margin-top: 350px;
+        margin-left: 10%;
+        color: #E74F4D;
+        font-size: 16px;
+        font-weight: bold;
+    }
+/*认知滑动快*/
+#opinion {
+    width: 90%;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+}
+.opinion-slide:nth-child(1){
+    background: url(../images/public-opinion.png) no-repeat center center;
+    background-size: 100%;
+}
+.opinion-slide:nth-child(2){
+    background: url(../images/industry-opinion.png) no-repeat center center;
+    background-size: 80%;
+}
+.opinion-slide:nth-child(3){
+    background: url(../images/gov-opinion.png) no-repeat center center;
+    background-size: 100%;
+}
+.opinion-slide:nth-child(4){
+    background: url(../images/event-key.png) no-repeat center center;
+    background-size: 100%;
+}
+/*行业事件top10*/
+#event-top ul li{
+	display: block;
+	width: 600px;
+	margin:10px auto 10px auto;
+	border:2px solid #ddd;
+	border-radius: 5px;
+	height: 50px;
+}
+#event-top ul li:hover{
+	background: rgba(0,0,0,0.1);
+}
+#event-top .event-rank{
+	display: block;
+	height: 50px;
+	line-height:50px; 
+	float:left;	
+	margin-left: 30px;
+}
+#event-top p{
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	margin-left: 150px;
+	font-size: 18px;
+	font-family: "微软雅黑";
+}
+
+/*tab控制*/
+.tab-content{
+	position: relative;
+	top: 0;
+	left: 0;
+}
+#hot{
+	display: none;
+}
+#trend{
+	margin-top:60px;
+}
+#event-top{
+	display: none;
+}

@@ -14,20 +14,115 @@
 				<ul class="nav-list">
 					<li><a href="index.html">首页</a></li>
 					<li class="nav-active"><a href="recommend.html">投资推荐</a></li>
-					<li><a href="industry_opinion.html" >行业舆情</a></li>
-					<li><a href="data.html">行业热度</a></li>
+					<li><a href="industry-opinion.html" >行业舆情</a></li>
 					<li><a href="platform-opinion.html">品牌舆情</a></li>
 					<li><a href="about.html">入门精华帖</a></li>
 				</ul>
 			</nav>
 		</header>
 		<section class="content">
-			<img src="images/recommend.jpg" alt="投资推荐" />
+			<img src="images/recommend.jpg" width="1280px"alt="投资推荐" />
 			<div class="content-body">
 				<section id="risk">
-					<span class="risk-title">个人投资风险评估</span>
-					<form action="post" id="risk-form">						
-					</form>					
+					<span class="risk-title">个人投资偏好测评</span>
+					<div id="risk-Q">
+						<form action="post" id="risk-form">		
+							<p class="intro-text">以下问卷能帮助投资者准确的对自我风险承受能力，投资理念，投资性格等进行专业的认知测试，综合评估您的风险承受能力高低，是您进行投资理财前的重要准备工作！因此，请认真回答以下问题:</p>	
+							<div class="Q-input-group">
+								<span for="1" class="Q-title">1. 您的年龄在以下哪个范围内？</span>
+								<input name="1" type="radio" value="A" id="1-A" required /><label for="1-A" >&nbsp;A.&nbsp;29岁以下</label> 
+								<input name="1" type="radio" value="B" id="1-B" /><label for="1-B">&nbsp;B.&nbsp;30-39岁 </label>  
+								<input name="1" type="radio" value="C" id="1-C" /><label for="1-C">&nbsp;
+								C.&nbsp;40-49岁 
+								</label>
+								<input name="1" type="radio" value="D" id="1-D" /><label for="1-D">&nbsp;D.&nbsp;50-59岁</label>			
+								<input name="1" type="radio" value="E" id="1-E" /><label for="1-E">&nbsp;E.&nbsp;60岁以上</label>			
+							</div>			
+							<div class="Q-input-group">
+								<span for="2" class="Q-title">2. 您有过几年的投资经验？</span>
+								<input name="2" type="radio" value="A" id="2-A" required /><label for="2-A" >&nbsp;A.&nbsp;10年以上</label> 
+								<input name="2" type="radio" value="B" id="2-B" /><label for="2-B">&nbsp;B.&nbsp;6-10年 </label>  
+								<input name="2" type="radio" value="C" id="2-C" /><label for="2-C">&nbsp;
+								C.&nbsp;3-5年 </label>
+								<input name="2" type="radio" value="D" id="2-D" /><label for="2-D">&nbsp;D.&nbsp;1-2年	</label>			
+								<input name="2" type="radio" value="E" id="2-E" /><label for="2-E">&nbsp;E.&nbsp;1年以下 </label>
+							</div>			
+							<div class="Q-input-group">
+								<span for="3" class="Q-title">3. 您是否有过投资经验？</span>
+								<input name="3" type="radio" value="A" id="3-A" required /><label for="3-A" >&nbsp;A.&nbsp;有投资贵金属、外汇、期货、期权等高风险衍生品经验   </label> <br/>
+								<input name="3" type="radio" value="B" id="3-B" /><label for="3-B">&nbsp;B.&nbsp;有投资股票、股票型基金的经验 </label>  <br/>
+								<input name="3" type="radio" value="C" id="3-C" /><label for="3-C">&nbsp;C.&nbsp;有购买过银行的理财产品、债券基金、分红型、投连险   </label><br/>
+								<input name="3" type="radio" value="D" id="3-D" /><label for="3-D">&nbsp;D.&nbsp;有购买过保本基金、货币基金（如余额宝）、信托等低风险产品 	</label><br/>			
+								<input name="3" type="radio" value="E" id="3-E" /><label for="3-E">&nbsp;E.&nbsp;从未有过投资经历，只存银行的定期或活期  </label><br/>
+							</div>			
+							<div class="Q-input-group">
+								<span for="4" class="Q-title">4. 您的家庭目前全年收入状况如何？</span>
+								<input name="4" type="radio" value="A" id="4-A" required /><label for="4-A" >&nbsp;A.&nbsp;50万元以上</label> 
+								<input name="4" type="radio" value="B" id="4-B" /><label for="4-B">&nbsp;B.&nbsp;30-50万元 </label>  
+								<input name="4" type="radio" value="C" id="4-C" /><label for="4-C">&nbsp;
+								C.&nbsp;15-30万元 </label>
+								<input name="4" type="radio" value="D" id="4-D" /><label for="4-D">&nbsp;D.&nbsp;5-15万元	</label>			
+								<input name="4" type="radio" value="E" id="4-E" /><label for="4-E">&nbsp;E.&nbsp;5万元以下 </label>
+							</div>			
+							<div class="Q-input-group">
+								<span for="5" class="Q-title">5. 您投资的主要目的是什么？选择最符合您的一个描述：</span>
+								<input name="5" type="radio" value="A" id="5-A" required /><label for="5-A" >&nbsp;A.&nbsp;关心长期的高回报，能够接受短期的资产价值波动。   </label> <br/>
+								<input name="5" type="radio" value="B" id="5-B" /><label for="5-B">&nbsp;B.&nbsp;倾向长期的成长，较少关心短期的回报以及波动。 </label>  <br/>
+								<input name="5" type="radio" value="C" id="5-C" /><label for="5-C">&nbsp;C.&nbsp;希望投资能获得一定的增值，同时获得波动适度的年回报。   </label><br/>
+								<input name="5" type="radio" value="D" id="5-D" /><label for="5-D">&nbsp;D.&nbsp;只想确保资产的安全性，同时希望能够得到固定的收益。 	</label><br/>			
+								<input name="5" type="radio" value="E" id="5-E" /><label for="5-E">&nbsp;E.&nbsp; 希望利用投资以及投资所获得的收益在短期内用于大额的购买计划。  </label><br/>
+							</div>			
+							<div class="Q-input-group">
+								<span for="6" class="Q-title">6. 当您进行投资时（例如基金、股票），您能接受一年内损失多少？</span>
+								<input name="6" type="radio" value="A" id="6-A" required /><label for="6-A" >&nbsp;A.&nbsp;我能承受25％以上亏损</label><br/> 
+								<input name="6" type="radio" value="B" id="6-B" /><label for="6-B">&nbsp;B.&nbsp;我能承受10-20％的亏损 </label> <br/>  
+								<input name="6" type="radio" value="C" id="6-C" /><label for="6-C">&nbsp;C.&nbsp;我最多只能承受5-10%的亏损 </label><br/> 
+								<input name="6" type="radio" value="D" id="6-D" /><label for="6-D">&nbsp;D.&nbsp;我最多只能承受5%以下的亏损	</label><br/> 		
+								<input name="6" type="radio" value="E" id="6-E" /><label for="6-E">&nbsp;E.&nbsp;我几乎不能承受任何亏损</label>
+							</div>			
+							<div class="Q-input-group">
+								<span for="7" class="Q-title">7. 目前您的投资主要是哪一品种？</span>
+								<input name="7" type="radio" value="A" id="7-A" required /><label for="7-A" >&nbsp;A.&nbsp;外汇、期货、现货贵金属 等超高风险资产</label><br/>  
+								<input name="7" type="radio" value="B" id="7-B" /><label for="7-B">&nbsp;B.&nbsp;股票、股票基金、私募股权基金 等高风险资产 </label><br/>   
+								<input name="7" type="radio" value="C" id="7-C" /><label for="7-C">&nbsp;C.&nbsp;混合基金、指数基金、结构类产品 等较高风险资产 </label><br/> 
+								<input name="7" type="radio" value="D" id="7-D" /><label for="7-D">&nbsp;D.&nbsp;银行理财产品、信托、固定收益类基金（有限合伙基金）、货币基金(如余额宝）</label><br/> 			
+								<input name="7" type="radio" value="E" id="7-E" /><label for="7-E">&nbsp;E.&nbsp;活期、定期存款、国债、保险 </label>
+							</div>			
+							<div class="Q-input-group">
+								<span for="8" class="Q-title">8. 如果您拥有50万用来建立资产组合，您会选择下面哪一个组合？</span>
+								<input name="8" type="radio" value="A" id="8-A" required /><label for="8-A" >&nbsp;A.&nbsp;低风险投资、一般风险投资、高风险投资的比重分别为 5  ：15 ：80</label><br/>  
+								<input name="8" type="radio" value="B" id="8-B" /><label for="8-B">&nbsp;B.&nbsp;低风险投资、一般风险投资、高风险投资的比重分别为 10 ：30 ：60</label><br/>   
+								<input name="8" type="radio" value="C" id="8-C" /><label for="8-C">&nbsp;C.&nbsp;低风险投资、一般风险投资、高风险投资的比重分别为 30 ：40 ：30 </label><br/> 
+								<input name="8" type="radio" value="D" id="8-D" /><label for="8-D">&nbsp;D.&nbsp;低风险投资、一般风险投资、高风险投资的比重分别为 60 ：30 ：10</label><br/> 			
+								<input name="8" type="radio" value="E" id="8-E" /><label for="8-E">&nbsp;E.&nbsp;低风险投资、一般风险投资、高风险投资的比重分别为 80 ：15 ：5 </label>
+							</div>			
+							<div class="Q-input-group">
+								<span for="9" class="Q-title">9. 长期风险承受水平：下面哪一种描述最符合您可接受的价值波动程度？</span>
+								<input name="9" type="radio" value="A" id="9-A" required /><label for="9-A" >&nbsp;A.&nbsp;希望赚取最高回报潜力，能接受3年以上的负面波动，包括损失本金</label><br/>  
+								<input name="9" type="radio" value="B" id="9-B" /><label for="9-B">&nbsp;B.&nbsp;希望赚取较高回报潜力，能接受3年以上的负面波动 </label><br/>   
+								<input name="9" type="radio" value="C" id="9-C" /><label for="9-C">&nbsp;C.&nbsp;寻求资金较高收益，可接受3年内负面波动，使回报显著高于定期存款 </label><br/> 
+								<input name="9" type="radio" value="D" id="9-D" /><label for="9-D">&nbsp;D.&nbsp;保守投资，但愿意在2年内接受少许负面波动，使回报高于定期存款	</label><br/> 			
+								<input name="9" type="radio" value="E" id="9-E" /><label for="9-E">&nbsp;E.&nbsp; 不希望投资本金承担风险。我愿意接受的回报大约与定期存款一样 </label>
+							</div>			
+							<div class="Q-input-group">
+								<span for="10" class="Q-title">10. 假设现有以下几个投资品种，那您会选择哪一个？</span>
+								<input name="10" type="radio"  requiredvalue="A" id="10-A"   required/><label for="10-A" >&nbsp;A.&nbsp;收益率在30%以上，同时本金也有可能亏损20%以上</label><br/>  
+								<input name="10" type="radio" value="B" id="10-B" /><label for="10-B">&nbsp;B.&nbsp;本金不保证，收益率在20%以内，同时本金也有可能亏损10%以内 </label><br/>   
+								<input name="10" type="radio" value="C" id="10-C" /><label for="10-C">&nbsp;C.&nbsp;本息保证，收益率在10%左右 </label><br/> 
+								<input name="10" type="radio" value="D" id="10-D" /><label for="10-D">&nbsp;D.&nbsp;本息保证，收益率在4-6%之间</label><br/> 			
+								<input name="10" type="radio" value="E" id="10-E" /><label for="10-E">&nbsp;E.&nbsp; 银行定期存款，收益率在3% </label>
+							</div>	
+							<button type="submit" id="Q-btn">提交</button>		
+						</form>
+					</div>	
+					<div id="user-risk">
+						<div id="risk-close">×</div>
+						<div id="result"></div>
+						<!-- 
+						<span class="user-risk-span">得分：33；保守型——低风险级别产品</span>
+						<p class="user-risk-p">您的风险承担能力水平比较低，您关注资产的安全性远超于资产的收益性，所以低风险 、
+高流动性的投资品种比较适合您，这类投资的收益相对偏低。</p> -->
+					</div>									
 				</section>
 				<section id="recommend">
 					<span class="recommend-title">投资倾向</span>
@@ -61,6 +156,88 @@
 			© 2015-2016 DUT-P2P舆情分析
 		</footer>
 	</div>
-
+	<script type="text/javascript">
+	var questionBtn = document.getElementById("Q-btn");
+	var alert = document.getElementById("user-risk");
+	function getRank(){
+		var parts = [];
+		var score = 0;
+		var form = document.forms[0];
+		for (var i = 0; i < form.elements.length-1; i++) {
+			var field = form.elements[i];			
+			if (field.name.length) {
+				if (field.checked) {
+					parts.push(field.value);
+				}					
+			}
+		}
+		var result=parts.map(function(item,index,array){
+			console.log(item);
+			switch (item){
+				case "A" : return item = 10; 
+				case "B" : return item = 8; 
+				case "C" : return item = 5;
+				case "D" : return item = 3;
+				case "E" : return item = 0;
+			}			
+		});		
+		for (var i = 0; i < result.length; i++) {
+			score+=result[i];
+		};
+		return score;
+	}
+	questionBtn.addEventListener("click",function(event){
+		event.preventDefault();
+		var score = getRank();		
+		alert.style.display = "block";
+		var result = document.getElementById("result");
+		if (0 < score <= 22) {
+			var html = "";
+			var span = "得分："+score+";保守型——低风险级别产品";
+			var p = "您的风险承担能力水平比较低，您关注资产的安全性远超于资产的收益性，所以低风险 、高流动性的投资品种比较适合您，这类投资的收益相对偏低。"		
+			html +="<span class='user-risk-span'>" + span + "<\/span>";
+			html +="<p class='user-risk-p'>" + p + "<\/p>";
+			result.innerHTML = html;
+		} else if(22 < score <= 44){
+			var html = "";
+			var span = "得分："+score+";稳健型——较低风险级别产品";
+			var p = "您有比较有限的风险承受能力，对投资收益比较敏感，期望通过短期、持续、渐进的投资获得高于定期存款的回报。所以较低等级风险的产品如保本保息的固定收益类，比较适合您，适当回避风险的同时保证收益，跑赢通胀。"		
+			html +="<span class='user-risk-span'>" + span + "<\/span>";
+			html +="<p class='user-risk-p'>" + p + "<\/p>";
+			result.innerHTML = html;
+		} else if(44 < score <= 66){
+			var html = "";
+			var span = "得分："+score+";平衡型——中等风险级别产品";
+			var p = "您有一定的风险承受能力，对投资收益比较敏感，期望通过长期且持续的投资获得高于平均水平的回报，通常更注重十年甚至更长期限内的平均收益。所以中等风险收益的投资品种比较适合您，回避风险的同时有一定的收益保证。"		
+			html +="<span class='user-risk-span'>" + span + "<\/span>";
+			html +="<p class='user-risk-p'>" + p + "<\/p>";
+			result.innerHTML = html;
+		} else if(66 < score <=88){
+			var html = "";
+			var span = "得分："+score+";积极型——较高风险级别产品";
+			var p = "您有中高的风险承受能力，愿意承担可预见的投资风险去获取更多的收益，一般倾向于进行中短期投资。所以中高等级的风险收益投资品种比较适合您，以一定的可预见风险换取超额收益。"		
+			html +="<span class='user-risk-span'>" + span + "<\/span>";
+			html +="<p class='user-risk-p'>" + p + "<\/p>";
+			result.innerHTML = html;
+		} else if(88<score<100){
+			var html = "";
+			var span = "得分："+score+";激进型——高风险级别产品";
+			var p = "您有较高的风险承受能力，是富有冒险精神的积极型选手。在投资收益波动的情况下，仍然保持积极进取的投资理念。短期内投资收益的下跌被您视为加注投资的利好机会。您适合从事灵活、风险与报酬都比较高的投资，不过要注意不要因一时的高报酬获利而将全部资金投入高风险操作，务必做好风险管理与资金调配工作。"		
+			html +="<span class='user-risk-span'>" + span + "<\/span>";
+			html +="<p class='user-risk-p'>" + p + "<\/p>";
+			result.innerHTML = html;
+		}
+	},false);
+	var close = document.getElementById("risk-close");
+	close.addEventListener("click",function(){
+		alert.style.display = "none";
+	},false);
+	
+ 
+	</script>
 </body>
 </html>
+
+
+
+

@@ -18,7 +18,6 @@ div.content-body{
 	border: 1px solid #152332;
 	border-radius: 10px;
 	background: #fff;
-	display: none;
 }
 #topic-detail{
 	position: absolute;
@@ -29,7 +28,6 @@ div.content-body{
 	border: 1px solid #152332;
 	border-radius: 10px;
 	background: #fff;
-	display: none;
 }
 #event-detail{
 	position: absolute;
