@@ -118,10 +118,6 @@
 					<div id="user-risk">
 						<div id="risk-close">×</div>
 						<div id="result"></div>
-						<!-- 
-						<span class="user-risk-span">得分：33；保守型——低风险级别产品</span>
-						<p class="user-risk-p">您的风险承担能力水平比较低，您关注资产的安全性远超于资产的收益性，所以低风险 、
-高流动性的投资品种比较适合您，这类投资的收益相对偏低。</p> -->
 					</div>									
 				</section>
 				<section id="recommend">
@@ -182,7 +178,7 @@
 			}			
 		});		
 		for (var i = 0; i < result.length; i++) {
-			score+=result[i];
+			score+=parseInt(result[i]);
 		};
 		return score;
 	}
@@ -191,35 +187,35 @@
 		var score = getRank();		
 		alert.style.display = "block";
 		var result = document.getElementById("result");
-		if (0 < score <= 22) {
+		if ( 0 < score && score <= 22) {
 			var html = "";
 			var span = "得分："+score+";保守型——低风险级别产品";
 			var p = "您的风险承担能力水平比较低，您关注资产的安全性远超于资产的收益性，所以低风险 、高流动性的投资品种比较适合您，这类投资的收益相对偏低。"		
 			html +="<span class='user-risk-span'>" + span + "<\/span>";
 			html +="<p class='user-risk-p'>" + p + "<\/p>";
 			result.innerHTML = html;
-		} else if(22 < score <= 44){
+		} else if( 22 < score && score <= 44 ){
 			var html = "";
 			var span = "得分："+score+";稳健型——较低风险级别产品";
 			var p = "您有比较有限的风险承受能力，对投资收益比较敏感，期望通过短期、持续、渐进的投资获得高于定期存款的回报。所以较低等级风险的产品如保本保息的固定收益类，比较适合您，适当回避风险的同时保证收益，跑赢通胀。"		
 			html +="<span class='user-risk-span'>" + span + "<\/span>";
 			html +="<p class='user-risk-p'>" + p + "<\/p>";
 			result.innerHTML = html;
-		} else if(44 < score <= 66){
+		} else if(44 < score && score <= 66){
 			var html = "";
 			var span = "得分："+score+";平衡型——中等风险级别产品";
 			var p = "您有一定的风险承受能力，对投资收益比较敏感，期望通过长期且持续的投资获得高于平均水平的回报，通常更注重十年甚至更长期限内的平均收益。所以中等风险收益的投资品种比较适合您，回避风险的同时有一定的收益保证。"		
 			html +="<span class='user-risk-span'>" + span + "<\/span>";
 			html +="<p class='user-risk-p'>" + p + "<\/p>";
 			result.innerHTML = html;
-		} else if(66 < score <=88){
+		} else if(66 < score && score <=88){
 			var html = "";
 			var span = "得分："+score+";积极型——较高风险级别产品";
 			var p = "您有中高的风险承受能力，愿意承担可预见的投资风险去获取更多的收益，一般倾向于进行中短期投资。所以中高等级的风险收益投资品种比较适合您，以一定的可预见风险换取超额收益。"		
 			html +="<span class='user-risk-span'>" + span + "<\/span>";
 			html +="<p class='user-risk-p'>" + p + "<\/p>";
 			result.innerHTML = html;
-		} else if(88<score<100){
+		} else if(88<score && score <100){
 			var html = "";
 			var span = "得分："+score+";激进型——高风险级别产品";
 			var p = "您有较高的风险承受能力，是富有冒险精神的积极型选手。在投资收益波动的情况下，仍然保持积极进取的投资理念。短期内投资收益的下跌被您视为加注投资的利好机会。您适合从事灵活、风险与报酬都比较高的投资，不过要注意不要因一时的高报酬获利而将全部资金投入高风险操作，务必做好风险管理与资金调配工作。"		
