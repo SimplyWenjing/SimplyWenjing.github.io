@@ -89,29 +89,13 @@
 								<input name="7" type="radio" value="E" id="7-E" /><label for="7-E">&nbsp;E.&nbsp;活期、定期存款、国债、保险 </label>
 							</div>			
 							<div class="Q-input-group">
-								<span for="8" class="Q-title">8. 如果您拥有50万用来建立资产组合，您会选择下面哪一个组合？</span>
-								<input name="8" type="radio" value="A" id="8-A" required /><label for="8-A" >&nbsp;A.&nbsp;低风险投资、一般风险投资、高风险投资的比重分别为 5  ：15 ：80</label><br/>  
-								<input name="8" type="radio" value="B" id="8-B" /><label for="8-B">&nbsp;B.&nbsp;低风险投资、一般风险投资、高风险投资的比重分别为 10 ：30 ：60</label><br/>   
-								<input name="8" type="radio" value="C" id="8-C" /><label for="8-C">&nbsp;C.&nbsp;低风险投资、一般风险投资、高风险投资的比重分别为 30 ：40 ：30 </label><br/> 
-								<input name="8" type="radio" value="D" id="8-D" /><label for="8-D">&nbsp;D.&nbsp;低风险投资、一般风险投资、高风险投资的比重分别为 60 ：30 ：10</label><br/> 			
-								<input name="8" type="radio" value="E" id="8-E" /><label for="8-E">&nbsp;E.&nbsp;低风险投资、一般风险投资、高风险投资的比重分别为 80 ：15 ：5 </label>
-							</div>			
-							<div class="Q-input-group">
-								<span for="9" class="Q-title">9. 长期风险承受水平：下面哪一种描述最符合您可接受的价值波动程度？</span>
-								<input name="9" type="radio" value="A" id="9-A" required /><label for="9-A" >&nbsp;A.&nbsp;希望赚取最高回报潜力，能接受3年以上的负面波动，包括损失本金</label><br/>  
-								<input name="9" type="radio" value="B" id="9-B" /><label for="9-B">&nbsp;B.&nbsp;希望赚取较高回报潜力，能接受3年以上的负面波动 </label><br/>   
-								<input name="9" type="radio" value="C" id="9-C" /><label for="9-C">&nbsp;C.&nbsp;寻求资金较高收益，可接受3年内负面波动，使回报显著高于定期存款 </label><br/> 
-								<input name="9" type="radio" value="D" id="9-D" /><label for="9-D">&nbsp;D.&nbsp;保守投资，但愿意在2年内接受少许负面波动，使回报高于定期存款	</label><br/> 			
-								<input name="9" type="radio" value="E" id="9-E" /><label for="9-E">&nbsp;E.&nbsp; 不希望投资本金承担风险。我愿意接受的回报大约与定期存款一样 </label>
-							</div>			
-							<div class="Q-input-group">
-								<span for="10" class="Q-title">10. 假设现有以下几个投资品种，那您会选择哪一个？</span>
-								<input name="10" type="radio"  requiredvalue="A" id="10-A"   required/><label for="10-A" >&nbsp;A.&nbsp;收益率在30%以上，同时本金也有可能亏损20%以上</label><br/>  
-								<input name="10" type="radio" value="B" id="10-B" /><label for="10-B">&nbsp;B.&nbsp;本金不保证，收益率在20%以内，同时本金也有可能亏损10%以内 </label><br/>   
-								<input name="10" type="radio" value="C" id="10-C" /><label for="10-C">&nbsp;C.&nbsp;本息保证，收益率在10%左右 </label><br/> 
-								<input name="10" type="radio" value="D" id="10-D" /><label for="10-D">&nbsp;D.&nbsp;本息保证，收益率在4-6%之间</label><br/> 			
-								<input name="10" type="radio" value="E" id="10-E" /><label for="10-E">&nbsp;E.&nbsp; 银行定期存款，收益率在3% </label>
-							</div>	
+								<span for="8" class="Q-title">8. 您在选择p2p理财产品时是否倾向于听取舆论评价？</span>
+								<input name="8" type="radio" value="A" id="8-A" required /><label for="8-A" >&nbsp;A.&nbsp;非常同意</label> 
+								<input name="8" type="radio" value="B" id="8-B" /><label for="8-B">&nbsp;B.&nbsp;一般同意</label>   
+								<input name="8" type="radio" value="C" id="8-C" /><label for="8-C">&nbsp;C.&nbsp;不一定</label>
+								<input name="8" type="radio" value="D" id="8-D" /><label for="8-D">&nbsp;D.&nbsp;不同意</label>			
+								<input name="8" type="radio" value="E" id="8-E" /><label for="8-E">&nbsp;E.&nbsp;自己判断</label>
+							</div>						
 							<button type="submit" id="Q-btn">提交</button>		
 						</form>
 					</div>	
@@ -187,35 +171,35 @@
 		var score = getRank();		
 		alert.style.display = "block";
 		var result = document.getElementById("result");
-		if ( 0 < score && score <= 22) {
+		if ( 0 < score && score <= 15) {
 			var html = "";
 			var span = "得分："+score+";保守型——低风险级别产品";
 			var p = "您的风险承担能力水平比较低，您关注资产的安全性远超于资产的收益性，所以低风险 、高流动性的投资品种比较适合您，这类投资的收益相对偏低。"		
 			html +="<span class='user-risk-span'>" + span + "<\/span>";
 			html +="<p class='user-risk-p'>" + p + "<\/p>";
 			result.innerHTML = html;
-		} else if( 22 < score && score <= 44 ){
+		} else if( 15 < score && score <= 30 ){
 			var html = "";
 			var span = "得分："+score+";稳健型——较低风险级别产品";
 			var p = "您有比较有限的风险承受能力，对投资收益比较敏感，期望通过短期、持续、渐进的投资获得高于定期存款的回报。所以较低等级风险的产品如保本保息的固定收益类，比较适合您，适当回避风险的同时保证收益，跑赢通胀。"		
 			html +="<span class='user-risk-span'>" + span + "<\/span>";
 			html +="<p class='user-risk-p'>" + p + "<\/p>";
 			result.innerHTML = html;
-		} else if(44 < score && score <= 66){
+		} else if(30 < score && score <= 45){
 			var html = "";
 			var span = "得分："+score+";平衡型——中等风险级别产品";
 			var p = "您有一定的风险承受能力，对投资收益比较敏感，期望通过长期且持续的投资获得高于平均水平的回报，通常更注重十年甚至更长期限内的平均收益。所以中等风险收益的投资品种比较适合您，回避风险的同时有一定的收益保证。"		
 			html +="<span class='user-risk-span'>" + span + "<\/span>";
 			html +="<p class='user-risk-p'>" + p + "<\/p>";
 			result.innerHTML = html;
-		} else if(66 < score && score <=88){
+		} else if(45 < score && score <=60){
 			var html = "";
 			var span = "得分："+score+";积极型——较高风险级别产品";
 			var p = "您有中高的风险承受能力，愿意承担可预见的投资风险去获取更多的收益，一般倾向于进行中短期投资。所以中高等级的风险收益投资品种比较适合您，以一定的可预见风险换取超额收益。"		
 			html +="<span class='user-risk-span'>" + span + "<\/span>";
 			html +="<p class='user-risk-p'>" + p + "<\/p>";
 			result.innerHTML = html;
-		} else if(88<score && score <100){
+		} else if(60<score && score <70){
 			var html = "";
 			var span = "得分："+score+";激进型——高风险级别产品";
 			var p = "您有较高的风险承受能力，是富有冒险精神的积极型选手。在投资收益波动的情况下，仍然保持积极进取的投资理念。短期内投资收益的下跌被您视为加注投资的利好机会。您适合从事灵活、风险与报酬都比较高的投资，不过要注意不要因一时的高报酬获利而将全部资金投入高风险操作，务必做好风险管理与资金调配工作。"		
