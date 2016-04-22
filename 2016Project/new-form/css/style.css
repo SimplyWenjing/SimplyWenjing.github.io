@@ -52,31 +52,30 @@ select{
 	text-indent: 10px;
 	color: #282828;
 	border:1px solid #a29e9e;
-	background: #eee !important;
 }
 #car-brand{
 	width: 2.921875rem;
-	
+	background: #eee;
 }
 #car-type{
 	width: 3.359375rem;
 	margin-left: 0.28125rem;
-	/*background: #eee !important;*/
+	background: #eee;
 }
 #province{
 	width: 1.859375rem;
-	/*background: #eee !important;*/
+	background: #eee;
 }
 #city{
 	width: 1.859375rem;
 	margin-left: 0.28125rem;
-	/*background: #eee !important;*/
+	background: #eee;
 
 }
 #region{
 	width: 2.1875rem;
 	margin-left: 0.28125rem;
-	/*background: #eee !important;*/
+	background: #eee;
 }
 #submit-btn{
 	background: #0082e1;
@@ -105,16 +104,13 @@ select{
 [data-dpr="2"] input {
     font-size: 23px;
 }
-[data-dpr="2"] #city {
+[data-dpr="2"] select {
     font-size: 23px;
     background: url(../images/arrow-3.png) no-repeat scroll right center transparent !important;
     background-position: 85% 50% !important;
-    background-color:#eee;
 }
 [data-dpr="2"] .introduction{
-	font-size: 17px;
-	letter-spacing: 2px;
-	color:#282828;
+	font-size: 16px;
 }
 [data-dpr="2"] #submit-btn{
 	font-size: 26px;
