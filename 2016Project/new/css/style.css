@@ -1,0 +1,169 @@
+body{
+	min-width: 320px;
+}
+#book-box{
+	width: 10.0rem;
+	height: 17.75rem;
+	border:1px solid #fff;	
+}
+h4{
+	width: 7rem;
+	height: 0.6875rem;	
+	margin: 1rem auto 0.05rem auto;
+	font-size: 20px;
+	font-weight: normal;
+	text-align: center;
+}
+fieldset{
+	width: 9rem;
+	margin: 0.515625rem auto 0.0rem auto;	
+}
+.right{
+	width: 1.09375rem;
+	font-size: 12px;
+	text-align: right;
+	display: block;
+	float: left;
+	height: 0.921875rem;
+	line-height: 0.921875rem;
+	margin-right: 0.515625rem;
+	
+}
+.info-input{
+	width: 6.609375rem;
+	height: 0.921875rem;
+	background: #eee;
+	border-radius: 0.078125rem;
+	font-size:10px;
+	text-indent: 0.078125rem
+}
+.introduction{
+	font-size:8px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 8.03125rem;	
+	margin-top: 0.515625rem;
+	letter-spacing: 1px;
+}
+
+select{
+	height: 0.921875rem;
+	font-size:10px;
+	text-indent: 10px;
+	color: #282828;
+	border:1px solid #a29e9e;
+}
+#car-brand{
+	width: 2.921875rem;
+	background: #eee !important;
+}
+#car-type{
+	width: 3.359375rem;
+	margin-left: 0.28125rem;
+	background: #eee !important;
+}
+#province{
+	width: 1.859375rem;
+	background: #eee !important;
+}
+#city{
+	width: 1.859375rem;
+	margin-left: 0.28125rem;
+	background: #eee !important;
+
+}
+#region{
+	width: 2.1875rem;
+	margin-left: 0.28125rem;
+	background: #eee !important;
+}
+#submit-btn{
+	background: #0082e1;
+	width: 5.53125rem;
+	height: 1.140625rem;
+	color: #fff;
+	font-size: 14px;
+	border-radius: 3px;
+}
+.required{
+  color:red;
+  display: inline-block;
+}
+.error-msg{
+  text-align: left;
+  color: red;
+  margin-top: 0.15625rem;
+  margin-left: 1.7rem;
+}
+[data-dpr="2"] h4{
+	font-size: 34px;
+}
+[data-dpr="2"] .right {
+    font-size: 23px;
+}
+[data-dpr="2"] input {
+    font-size: 23px;
+}
+[data-dpr="2"] select {
+    font-size: 23px;
+    background: url(../images/arrow-3.png) no-repeat scroll right center transparent !important;
+    background-position: 85% 50% !important;
+}
+[data-dpr="2"] .introduction{
+	font-size: 17px;
+	letter-spacing: 2px;
+	color:#282828;
+}
+[data-dpr="2"] #submit-btn{
+	font-size: 26px;
+}
+[data-dpr="3"] h4{
+	font-size: 66px;
+}
+[data-dpr="3"] .right {
+    font-size: 44px;
+}
+[data-dpr="3"] input {
+    font-size: 44px;
+}
+[data-dpr="3"] select {
+    font-size: 44px;
+    background: url(../images/4.png) no-repeat scroll right center transparent !important;
+    background-position: 85% 50% !important;
+}
+[data-dpr="3"] .introduction{
+	font-size: 30px;
+}
+[data-dpr="3"] #submit-btn{
+	font-size: 44px;
+}
+[data-dpr="3"] .required{
+	font-size: 44px;
+	margin-left: 8px;
+}
+@media screen and (min-width: 751px) and (max-width: 1240px){
+	#book-box{
+		margin: 0 auto;
+		font-size:20px;
+		height: 10rem;
+	}
+	.info-input{
+		width: 6.609375rem;
+		height: 0.7rem;
+	}
+	fieldset{
+		width: 9rem;
+		margin: 0.2rem auto 0.0rem auto;	
+	}
+	select{
+		height: 0.7rem;
+		font-size:10px;
+		text-indent: 10px;
+	}
+	#submit-btn{
+		height: 0.8rem;
+	}
+	.introduction{
+		margin-left: 23%;
+	}
+}

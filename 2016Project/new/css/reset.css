@@ -1,0 +1,26 @@
+body{
+  font-family: "Microsoft YaHei","Microsoft JhengHei","SimSun","YouYuan";
+}
+fieldset,div,button,h4,select{
+	border: 0;
+	padding: 0;
+	margin: 0;
+	color: #282828;
+}
+input{
+	border:1px solid #a4a3a3;
+}
+select{
+ /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+  border: solid 1px #a4a3a3;
+  border-radius: 2px;
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  /*在选择框的最右侧中间显示小箭头图片*/
+  background: url(../images/arrow.png) no-repeat scroll right center transparent !important;
+  background-position: 90% 50% !important;
+  /*background-size: 20px 14px !important;*/
+}
+
+
