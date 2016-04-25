@@ -3,16 +3,17 @@
 	top: 0px;
 	left: 0;
 	width: 10rem;
-	height: 15rem;
+	height: 17.5rem;
 	padding: 0px;
 	background:url(../images/arrow.png);
+	overflow: hidden;
 }
 #body-cover{
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	width: 10rem;
-	height: 15rem;
+	height: 17.5rem;
 	background: rgba(0,0,0,0.6);
 	display: none;
 	padding: 0px;
@@ -21,7 +22,7 @@
 	position: absolute;
     left: 50%; 
     top: 50%; 
-    margin-top: -8rem;
+    margin-top: -7.5rem;
     margin-left: -4.52rem;
 	width: 9.04rem;
 	height: 14.2rem;	
