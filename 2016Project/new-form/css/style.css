@@ -3,8 +3,8 @@
 	top: 0px;
 	left: 0;
 	width: 10.0rem;
-	height: 16.73rem;
-	padding: 0;
+	height: 16rem;
+	padding: 0px;
 	background:url(../images/arrow.png);
 }
 #body-cover{
@@ -12,9 +12,10 @@
 	top: 0px;
 	left: 0px;
 	width: 10rem;
-	height: 16.73rem;
+	height: 16rem;
 	background: rgba(0,0,0,0.6);
 	display: none;
+	padding: 0px;
 }
 #book-box{
 	position: absolute;
