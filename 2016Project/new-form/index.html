@@ -8,94 +8,106 @@
 	<script src="js/flexible.js"></script>
 </head>
 <body>
-	<div id="book-box">
-		<h4>预定填写以下信息</h4>
-		<form action="post" id="info-form">
-			<fieldset>
-				<label for="name" class="right">姓名</label>
-				<input type="text" id="name" name="name" required class="info-input" />
-				<span class="required">*</span>
-			</fieldset>
-			<fieldset>
-				<label for="phone" class="right">手机</label>
-				<input type="tel" id="phone" name="phone" required class="info-input"/>
-				<span class="required">*</span>
-			</fieldset>
-			<fieldset>
-				<label for="qq" class="right">QQ号</label>
-				<input type="text" id="qq" name="qq" required class="info-input" />
-				<span class="required">*</span>
-			</fieldset>
-			<fieldset>
-				<label for="wx" class="right">微信号</label>
-				<input type="text" id="wx" name="wx" required class="info-input" />
-				<span class="required">*</span>
-			</fieldset>
-			<fieldset>
-				<label for="car-brand" class="right">车型</label>
-				<select name="car-brand" id="car-brand" required>
-					<option value>请选择</option>
-					<option value="dazhong">大众</option>
-				</select>
-				<select name="car-type" id="car-type" required>
-					<option value>请选择</option>
-					<option value="15maiteng">15年迈腾</option>
-				</select> 
-				<span class="required">*</span>			
-			</fieldset>
-			<fieldset>
-				<label for="detail" class="right"></label>					
-				<input type="text" name="detail" id="detail" placeholder="详细配置，如“1.8TSI豪华型" required class="info-input" />
-			</fieldset>
-			<fieldset>
-				<label for="province" class="right">地区</label>
-				<select name="province" id="province" required>
-					<option value>省</option>
-					<option value="beijing">北京</option>
-				</select>
-				<select name="city" id="city" required>
-					<option value>市</option>
-					<option value="beijing">北京</option>
-				</select>
-				<select name="region" id="region" required>
-					<option value>区</option>
-					<option value="haidian">海淀</option>
-				</select>
-				<span class="required">*</span>
-			</fieldset>
-			<fieldset>
-				<label for="note" class="right" class="right">备注</label>
-				<input type="text" name="note" id="note" class="info-input" />
-			</fieldset>
-			<fieldset>
-				<label for="submit-btn" class="right"></label>
-				<button type="submit" value="提交" id="submit-btn">提交</button>
-			</fieldset>
-		</form>
-		
-		<div class="introduction">
-			<p>感谢您对途灵的支持与喜爱，如预定成功，您会收到确认短息/F码<br/>
-			   届时可凭借确认短信/F码,到***下单<br/>
-			   如有任何问题，请联系我们：400*****</p>
-		</div>
-	</div>
+	<div id="body-container">
+		<div id="body-cover"></div>
+		<div id="book-box">
+			<h4>预定填写以下信息</h4>
+			<form action="post" id="info-form">
+				<fieldset>
+					<label for="name" class="right">姓名</label>
+					<input type="text" id="name" name="name" required class="info-input" />
+					<span class="required">*</span>
+				</fieldset>
+				<fieldset>
+					<label for="phone" class="right">手机</label>
+					<input type="tel" id="phone" name="phone" required class="info-input"/>
+					<span class="required">*</span>
+				</fieldset>
+				<fieldset>
+					<label for="qq" class="right">QQ号</label>
+					<input type="text" id="qq" name="qq" required class="info-input" />
+					<span class="required">*</span>
+				</fieldset>
+				<fieldset>
+					<label for="wx" class="right">微信号</label>
+					<input type="text" id="wx" name="wx" required class="info-input" />
+					<span class="required">*</span>
+				</fieldset>
+				<fieldset>
+					<label for="car-brand" class="right">车型</label>
+					<select name="car-brand" id="car-brand" required>
+						<option value>请选择</option>
+						<option value="dazhong">大众</option>
+					</select>
+					<select name="car-type" id="car-type" required>
+						<option value>请选择</option>
+						<option value="15maiteng">15年迈腾</option>
+					</select> 
+					<span class="required">*</span>			
+				</fieldset>
+				<fieldset>
+					<label for="detail" class="right"></label>
+					<select name="detail" id="detail">
+						<option value>请选择详细配置</option>
+					</select>					
+					<!-- <input type="text" name="detail" id="detail" placeholder="详细配置，如“1.8TSI豪华型" required class="info-input" /> -->
+				</fieldset>
+				<fieldset>
+					<label for="province" class="right">地区</label>
+					<select name="province" id="province" required>
+						<option value>省</option>
+						<option value="beijing">北京</option>
+					</select>
+					<select name="city" id="city" required>
+						<option value>市</option>
+						<option value="beijing">北京</option>
+					</select>
+					<select name="region" id="region" required>
+						<option value>区</option>
+						<option value="haidian">海淀</option>
+					</select>
+					<span class="required">*</span>
+				</fieldset>
+				<fieldset>
+					<label for="note" class="right" class="right">备注</label>
+					<input type="text" name="note" id="note" class="info-input" />
+				</fieldset>
+				<fieldset>
+					<label for="submit-btn" class="right"></label>
+					<button type="submit" value="提交" id="submit-btn">提交</button>
+				</fieldset>
+			</form>
+			
+			<div class="introduction">
+				<p>感谢您对途灵的支持与喜爱，如预定成功，您会收到确认短息/F码<br/>
+				届时可凭借确认短信/F码,到***下单<br/>
+				如有任何问题，请联系我们：400*****</p>
+			</div>
+		</div>		
+	</div>	
 	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript">
-		var $container = $("#container");
+		/*==========实现弹窗的JS代码==========*/
+		var $container = $("#body-container");
+		var $infoAlert = $("#book-box");
+		// var $bodyCover = $("#body-cover");
 		$container.click(function(){
-			var $infoAlert = $("#info-alert");
+			$infoAlert.prev().css("display","block");			
 			$infoAlert.css("display","block");
 		})
+		/*==============表单验证==============*/
 		$("#info-form :input").blur(function(){
 			$parent = $(this).parent();
 			$parent.find(".error-msg").remove();
-			if ($(this).is("#name")) {//验证姓名是否为空
+			if ($(this).is("#name")) {
+			//验证姓名是否为空
 				if (this.value == "") {
 					var errorMsg = "姓名不能为空";
 					$parent.append('<div class="error-msg">' + errorMsg +'</div>');
 				}
 			}
-			if ($(this).is("#phone")) {//验证手机号码输入是否正确
+			if ($(this).is("#phone")) {
+			//验证手机号码输入是否正确
 				if (this.value == "") {
 					var errorMsg = "手机号不能为空";
 					$parent.append('<div class="error-msg">' + errorMsg +'</div>');
@@ -113,7 +125,8 @@
 					}
 				}									
 			}
-			if ($(this).is("#qq")) {//验证QQ号是否为数字
+			if ($(this).is("#qq")) {
+			//验证QQ号是否为数字
 				if (this.value == "") {
 					var errorMsg = "QQ号不能为空";
 					$parent.append('<div class="error-msg">' + errorMsg +'</div>');
@@ -126,7 +139,8 @@
 					}
 				}				
 			}
-			if ($(this).is("#wx")) {//验证微信号是否为数字
+			if ($(this).is("#wx")) {
+			//验证微信号是否为数字
 				if (this.value == "") {
 					var errorMsg = "微信号不能为空";
 					$parent.append('<div class="error-msg">' + errorMsg +'</div>');
@@ -140,12 +154,20 @@
 				}				
 			}
 		})
-		$("#submit-btn").click(function(){
+		$("#submit-btn").click(function(){			
 			$("#info-form :input").trigger("blur");
 			var errorNum = $("form .error-msg").length;
 			if (errorNum) {
+				if ($container.width() > 1000 && $container.width() < 1242 ) {
+					$infoAlert.css("height","680px");
+					$container.css("height","850px");
+				}else{
+					$infoAlert.css("height","15.5rem");
+				}
+				
 				return false;
 			}
+
 		})
 	</script>
 </body>
