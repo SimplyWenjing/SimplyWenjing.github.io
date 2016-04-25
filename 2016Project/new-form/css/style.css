@@ -49,7 +49,7 @@ fieldset{
 	margin-right: 0.3rem;	
 }
 .info-input{
-	width: 5.893333rem;
+	width: 5.5rem;
 	height: 0.533333rem;
 	background: #eee;
 	border-radius: 0.078125rem;
@@ -72,25 +72,25 @@ select{
 	border-radius: 0.078125rem;
 }
 #car-brand{
-	width: 2.56rem;	
+	width: 2.4rem;	
 	background: #eee;	
 }
 #car-type{
-	width: 2.933333rem;
+	width: 2.7rem;
 	margin-left: 0.28125rem;
 }
 #detail{
-	width: 5.893333rem;
+	width: 5.5rem;
 }
 #province{
-	width: 1.586667rem;
+	width: 1.5rem;
 }
 #city{
-	width: 1.586667rem;
+	width: 1.5rem;
 	margin-left: 0.28125rem;
 }
 #region{
-	width: 1.96rem;
+	width: 1.7rem;
 	margin-left: 0.28125rem;
 }
 #submit-btn{
