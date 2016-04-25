@@ -6,7 +6,6 @@
 	height: 17.5rem;
 	padding: 0px;
 	background:url(../images/arrow.png);
-	overflow: hidden;
 }
 #body-cover{
 	position: absolute;
@@ -20,12 +19,10 @@
 }
 #book-box{
 	position: absolute;
-    left: 50%; 
-    top: 50%; 
-    margin-top: -7.5rem;
-    margin-left: -4.52rem;
+    left: 0; top: 0; right: 0; bottom: 0;
+    margin:auto;
 	width: 9.04rem;
-	height: 14.2rem;	
+	height: 14rem;	
 	background-color: #fff;
 	border:1px solid #adb2b8;
 	display: none;
