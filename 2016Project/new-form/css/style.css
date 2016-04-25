@@ -3,16 +3,16 @@
 	top: -5px;
 	left: 0;
 	width:10.0rem;
-	height: 16.72rem;
+	height: 16.73rem;
 	padding-top: 1px;
 	background:url(../images/arrow.png);
 }
 #body-cover{
 	position: absolute;
-	top:-5px;
-	left: 0;
+	top:-8px;
+	left: -2px;
 	width: 10rem;
-	height: 16.72rem;
+	height: 16.73rem;
 	background: rgba(0,0,0,0.6);
 	display: none;
 }
@@ -109,7 +109,7 @@ select{
 .error-msg{
   text-align: left;
   color: red;
-  margin-top: 0.1rem;
+  margin-top: 0.05rem;
   margin-left: 1.7rem;
 }
 [data-dpr="2"] h4{
