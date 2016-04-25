@@ -19,8 +19,10 @@
 }
 #book-box{
 	position: absolute;
-    left: 0; top: 0; right: 0; bottom: 0;
-    margin:auto;
+    left: 50%; 
+    top: 50%; 
+    margin-top: -8rem;
+    margin-left: -4.52rem;
 	width: 9.04rem;
 	height: 14.2rem;	
 	background-color: #fff;
