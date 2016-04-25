@@ -109,7 +109,7 @@ select{
 .error-msg{
   text-align: left;
   color: red;
-  margin-top: 0.15625rem;
+  margin-top: 0.1rem;
   margin-left: 1.7rem;
 }
 [data-dpr="2"] h4{
