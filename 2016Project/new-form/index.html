@@ -158,11 +158,12 @@
 			$("#info-form :input").trigger("blur");
 			var errorNum = $("form .error-msg").length;
 			if (errorNum) {
-				if ($container.width() > 900 && $container.width()!==1242 ) {
-					$infoAlert.css("height","670px");
-				}else{
+				//alert($(window).width());
+				 if ($(window).width() > 900 &&$(window).width()!==1242 ) {
+				 	$infoAlert.css("height","670px");
+				 }else{
 					$infoAlert.css("height","16rem");
-				}
+				 }
 				
 				return false;
 			}
