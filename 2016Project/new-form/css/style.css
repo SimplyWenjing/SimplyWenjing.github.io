@@ -1,6 +1,6 @@
 #body-container{
 	position: relative;
-	top: -2px;
+	top: -5px;
 	left: 0;
 	width:10.0rem;
 	height: 16.72rem;
@@ -9,7 +9,7 @@
 }
 #body-cover{
 	position: absolute;
-	top:-4px;
+	top:-5px;
 	left: 0;
 	width: 10rem;
 	height: 16.72rem;
