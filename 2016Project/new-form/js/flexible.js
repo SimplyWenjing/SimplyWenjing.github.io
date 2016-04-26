@@ -31,6 +31,7 @@
                 scale = parseFloat(match[1]);
                 dpr = parseInt(1 / scale);
             }
+            scale = 1 / dpr ;
         }
     } else if (flexibleEl) {
         var content = flexibleEl.getAttribute('content');
