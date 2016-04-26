@@ -1,5 +1,5 @@
 var deviceWidth = document.documentElement.clientWidth;//设备css像素宽
-var isIPhone = window.navigator.appVersion.match(/iPhone/gi);//判断设备是不是iPhone
+var isIPhone = window.navigator.userAgent.match(/iPhone/gi);//判断设备是不是iPhone
 if (isIPhone) {
 	alert("iPhone");
 	dpr = window.devicePixelRatio;
