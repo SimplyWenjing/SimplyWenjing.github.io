@@ -1,90 +1,112 @@
-body{
-	min-width: 320px;
+#body-container{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 17.5rem;
+	padding: 0px;
+	background:url(../images/arrow.png);
+	float: left;
+	overflow: hidden;
+}
+#body-cover{
+	position: absolute;
+	top: 0rem;
+	left: 0px;
+	width: 100%;
+	height: 17.5rem;
+	background: rgba(0,0,0,0.6);
+	display: none;
+	padding: 0px;
+	float: left;
+	overflow: hidden;
 }
 #book-box{
-	width: 10.0rem;
-	height: 17.75rem;
-	border:1px solid #fff;	
+	position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    margin:auto;
+	width: 9.04rem;
+	height: 14rem;	
+	background-color: #fff;
+	border:1px solid #adb2b8;
+	display: none;
+	overflow: hidden;
 }
 h4{
 	width: 7rem;
-	height: 0.6875rem;	
-	margin: 1rem auto 0.05rem auto;
+	height:0.72rem;	
+	margin: 0.72rem auto 0 auto;
 	font-size: 20px;
 	font-weight: normal;
 	text-align: center;
 }
 fieldset{
-	width: 9rem;
-	margin: 0.515625rem auto 0.0rem auto;	
+	width: 8rem;
+	margin: 0.306667rem auto 0.0rem auto;	
 }
 .right{
-	width: 1.09375rem;
+	width: 1.4rem;
 	font-size: 12px;
 	text-align: right;
 	display: block;
 	float: left;
-	height: 0.921875rem;
-	line-height: 0.921875rem;
-	margin-right: 0.515625rem;
-	
+	height: 0.653333rem;
+	height: 0.653333rem;
+	margin-right: 0.3rem;	
 }
 .info-input{
-	width: 6.609375rem;
-	height: 0.921875rem;
+	width: 5.5rem;
+	height: 0.653333rem;
 	background: #eee;
 	border-radius: 0.078125rem;
-	font-size:10px;
 	text-indent: 0.078125rem
 }
 .introduction{
 	font-size:8px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 8.03125rem;	
-	margin-top: 0.515625rem;
+	width: 7.333333rem;	
+	margin: 0.515625rem auto 0px 0.96rem;
 	letter-spacing: 1px;
+	padding-bottom:5px;
+	padding-top:10px;
 }
 
 select{
-	height: 0.921875rem;
-	font-size:10px;
-	text-indent: 10px;
+	height: 0.653333rem;
+	text-indent: 0.078125rem;
 	color: #282828;
 	border:1px solid #a29e9e;
-	background: #eee !important;
+	border-radius: 0.078125rem;
 }
 #car-brand{
-	width: 2.921875rem;
-	
+	width: 2.4rem;	
+	background: #eee;	
 }
 #car-type{
-	width: 3.359375rem;
+	width: 2.7rem;
 	margin-left: 0.28125rem;
-	/*background: #eee !important;*/
+}
+#detail{
+	width: 5.5rem;
 }
 #province{
-	width: 1.859375rem;
-	/*background: #eee !important;*/
+	width: 1.5rem;
 }
 #city{
-	width: 1.859375rem;
+	width: 1.5rem;
 	margin-left: 0.28125rem;
-	/*background: #eee !important;*/
-
 }
 #region{
-	width: 2.1875rem;
+	width: 1.7rem;
 	margin-left: 0.28125rem;
-	/*background: #eee !important;*/
 }
 #submit-btn{
 	background: #0082e1;
-	width: 5.53125rem;
-	height: 1.140625rem;
+	width: 5.013333rem;
+	height: 0.773333rem;
 	color: #fff;
 	font-size: 14px;
 	border-radius: 3px;
+	margin-bottom: 5px;
 }
 .required{
   color:red;
@@ -93,28 +115,39 @@ select{
 .error-msg{
   text-align: left;
   color: red;
-  margin-top: 0.15625rem;
+  margin-top: 0.05rem;
   margin-left: 1.7rem;
 }
+[data-dpr="1"] body{
+	font-size: 12px;
+}
+[data-dpr="2"] body{
+	font-size: 24px;
+}
+[data-dpr="3"] body{
+	font-size: 36px;
+}
 [data-dpr="2"] h4{
-	font-size: 34px;
+	font-size: 36px;
 }
 [data-dpr="2"] .right {
-    font-size: 23px;
+    font-size: 26px;
 }
 [data-dpr="2"] input {
-    font-size: 23px;
+    font-size: 24px;
 }
-[data-dpr="2"] #city {
-    font-size: 23px;
-    background: url(../images/arrow-3.png) no-repeat scroll right center transparent !important;
-    background-position: 85% 50% !important;
-    background-color:#eee;
+[data-dpr="2"] select {
+    font-size: 24px;
+    background: url(../images/arrow-2.png) no-repeat scroll right center transparent !important;
+    background-position: 90% 50% !important;
+}
+[data-dpr="2"] #detail {
+    font-size: 24px;
+    background: url(../images/arrow-2.png) no-repeat scroll right center transparent !important;
+    background-position: 95% 50% !important;
 }
 [data-dpr="2"] .introduction{
-	font-size: 17px;
-	letter-spacing: 2px;
-	color:#282828;
+	font-size: 22px;
 }
 [data-dpr="2"] #submit-btn{
 	font-size: 26px;
@@ -130,42 +163,140 @@ select{
 }
 [data-dpr="3"] select {
     font-size: 44px;
-    background: url(../images/4.png) no-repeat scroll right center transparent !important;
-    background-position: 85% 50% !important;
+    background: url(../images/arrow-3.png) no-repeat scroll right center transparent !important;
+    background-position: 90% 50% !important;
+}
+[data-dpr="3"] #detail {
+    font-size: 44px;
+    background: url(../images/arrow-3.png) no-repeat scroll right center transparent !important;
+    background-position: 95% 50% !important;
 }
 [data-dpr="3"] .introduction{
-	font-size: 30px;
+	font-size: 36px;
 }
 [data-dpr="3"] #submit-btn{
 	font-size: 44px;
+	letter-spacing: 2px;
 }
 [data-dpr="3"] .required{
 	font-size: 44px;
 	margin-left: 8px;
 }
-@media screen and (min-width: 751px) and (max-width: 1240px){
+@media screen and (min-width: 751px) and (max-width: 1241px){
+	#body-container{
+		width:100%;
+		padding-top: 1px;
+	}
+	#body-cover{
+		width: 100%;
+	}
+	h4{
+		margin: 30px auto 5px auto;
+	}
+	.right{
+		height: 0.5rem;
+		line-height: 0.5rem;
+	}
 	#book-box{
-		margin: 0 auto;
-		font-size:20px;
-		height: 10rem;
+		position: absolute;
+		top: 30px;
+		left: 30px;
+		font-size: 20px;
+		width: 450px;
+		height: 580px;
 	}
 	.info-input{
-		width: 6.609375rem;
-		height: 0.7rem;
+		width: 5.5rem;
+		height: 0.5rem;
+	}
+	#detail{
+		width: 5.5rem;
+		height: 0.6rem;
+		background-position: 95% 50% !important;
+	}
+	#car-type,#car-brand{
+		width:2.56rem;
+	}
+	#city,#province,#region{
+		width: 1.58rem;
 	}
 	fieldset{
 		width: 9rem;
-		margin: 0.2rem auto 0.0rem auto;	
+		margin: 0.3rem auto 0.0rem auto;	
 	}
 	select{
-		height: 0.7rem;
-		font-size:10px;
+		height: 0.6rem;
 		text-indent: 10px;
 	}
 	#submit-btn{
-		height: 0.8rem;
+		height: 0.6rem;
+		width:3.8rem;
 	}
 	.introduction{
-		margin-left: 23%;
+		margin-top: 0px;
+		margin-left: 12%;
+		font-size: 10px;
+		letter-spacing: 0px;
+	}
+	.error-msg{
+	  font-size: 12px;
 	}
 }
+@media screen and (min-width: 1243px) and (max-width: 1920px){
+	#body-container{
+		width:100%;
+		padding-top: 1px;
+	}
+	#body-cover{
+		width: 100%;
+	}
+	h4{
+		margin: 30px auto 5px auto;
+	}
+	.right{
+		height: 0.5rem;
+		line-height: 0.5rem;
+	}
+	#book-box{
+		position: absolute;
+		font-size:20px;
+		width: 450px;
+		height: 580px;
+	}
+	.info-input,#detail{
+		width: 5.5rem;
+		height: 0.5rem;
+	}
+	#detail{
+		width: 5.5rem;
+		height: 0.5rem;
+		background-position: 99% 50% !important;
+	}
+	#car-type,#car-brand{
+		width:2.6rem;
+	}
+	#city,#province,#region{
+		width: 1.6rem;
+	}
+	fieldset{
+		width: 9rem;
+		margin: 0.3rem auto 0.0rem auto;	
+	}
+	select{
+		height: 0.6rem;
+		text-indent: 10px;
+	}
+	#submit-btn{
+		height: 0.6rem;
+		width:3.8rem;
+	}
+	.introduction{
+		margin-top: 0px;
+		margin-left: 14%;
+		font-size: 10px;
+	}
+	.error-msg{
+	  font-size: 12px;
+	}
+}
+
