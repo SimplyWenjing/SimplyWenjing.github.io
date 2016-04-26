@@ -23,6 +23,7 @@ html{
 	padding: 0px;
 	float: left;
 	overflow: hidden;
+	z-index:100;
 }
 #book-box{
 	position: absolute;
@@ -34,6 +35,7 @@ html{
 	border:1px solid #adb2b8;
 	display: none;
 	overflow: hidden;
+	z-index:200;
 }
 h4{
 	width: 7rem;
