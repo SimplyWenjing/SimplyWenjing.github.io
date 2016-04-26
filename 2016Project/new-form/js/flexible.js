@@ -8,28 +8,28 @@
     var tid;
     var flexible = lib.flexible || (lib.flexible = {});
     
-    // if (metaEl) {
-    //     console.warn('将根据已有的meta标签来设置缩放比例');
-    //     var match = metaEl.getAttribute('content').match(/initial\-scale=([\d\.]+)/);
-    //     if (match) {
-    //         scale = parseFloat(match[1]);
-    //         dpr = parseInt(1 / scale);
-    //     }
-    // } else if (flexibleEl) {
-    //     var content = flexibleEl.getAttribute('content');
-    //     if (content) {
-    //         var initialDpr = content.match(/initial\-dpr=([\d\.]+)/);
-    //         var maximumDpr = content.match(/maximum\-dpr=([\d\.]+)/);
-    //         if (initialDpr) {
-    //             dpr = parseFloat(initialDpr[1]);
-    //             scale = parseFloat((1 / dpr).toFixed(2));    
-    //         }
-    //         if (maximumDpr) {
-    //             dpr = parseFloat(maximumDpr[1]);
-    //             scale = parseFloat((1 / dpr).toFixed(2));    
-    //         }
-    //     }
-    // }
+    if (metaEl) {
+        console.warn('将根据已有的meta标签来设置缩放比例');
+        var match = metaEl.getAttribute('content').match(/initial\-scale=([\d\.]+)/);
+        if (match) {
+            scale = parseFloat(match[1]);
+            dpr = parseInt(1 / scale);
+        }
+    } else if (flexibleEl) {
+        var content = flexibleEl.getAttribute('content');
+        if (content) {
+            var initialDpr = content.match(/initial\-dpr=([\d\.]+)/);
+            var maximumDpr = content.match(/maximum\-dpr=([\d\.]+)/);
+            if (initialDpr) {
+                dpr = parseFloat(initialDpr[1]);
+                scale = parseFloat((1 / dpr).toFixed(2));    
+            }
+            if (maximumDpr) {
+                dpr = parseFloat(maximumDpr[1]);
+                scale = parseFloat((1 / dpr).toFixed(2));    
+            }
+        }
+    }
 
     if (!dpr && !scale) {
         var isAndroid = win.navigator.appVersion.match(/android/gi);
