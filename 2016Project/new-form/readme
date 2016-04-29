@@ -1,0 +1,6 @@
+该页面是一个可以在手机端自适应的页面，基于rem布局
+使用了淘宝的flexible.js
+ajax实现表单提交，
+解决了双击会重复提交的问题
+DEMO:
+http://simplywenjing.github.io/2016Project/new-form/
