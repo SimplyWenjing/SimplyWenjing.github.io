@@ -173,3 +173,231 @@
 	</script>
 </body>
 </html>
+
+
+
+@model AdmissionManageProject.Models.JourneyInfo
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<h2>添加人员表单</h2>*@
+@section BodyCss{
+    <link href="~/Pages/css/jquery-ui.min.css" rel="Stylesheet" type="text/css" />
+    <link href="~/Scripts/widget/alert/sweet-alert.css" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/Body.css")" rel="Stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Pages/css/resetcss.css")" rel="Stylesheet" type="text/css" />
+}
+<form action="/JourneyInfo/Create" method="post" id="info-form">
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal body-text">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <!--行程基本信息-->
+        <div id="journey-type">
+            <div class="form-group">
+                <label class="control-label col-md-3" for="JourneyCategory"><span style="color:red">*</span>行程类型</label>
+                <select id="JourneyCategory" name="JourneyCategory" class="form-control col-md-7">
+                    <option value>--请选择行程类型--</option>
+                    <option value="大型咨询会（高校、媒体开放日）">大型咨询会（高校、媒体开放日）</option>
+                    <option value="小型咨询会（走访中学）">小型咨询会（走访中学）</option>
+                    <option value="中型咨询会（中学咨询会）">中型咨询会（中学咨询会）</option>
+                </select>
+            </div>
+            @if (AdmissionManageProject.Codes.Global.RoleId == 1)
+            {
+                <div class="form-group">
+                    <label class="control-label col-md-3" for="Province"><span style="color:red">*</span>省区</label>
+                    <input class="form-control text-box single-line col-md-7" id="Province" name="Province" type="text" value="" />
+                    <div class="col-md-2">
+                        <span id="province-danger" class="text-danger">您输入的省区不正确</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3" for="City"><span style="color:red">*</span>城市</label>
+                    <input class="form-control text-box single-line col-md-7" id="City" name="City" type="text" value="" />
+                    <div class="col-md-2">
+                        <span id="city-danger" class="text-danger">您输入的城市不正确</span>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="form-group">
+                    <label class="control-label col-md-3"><span style="color:red">*</span>省区</label>
+                    <select id="Province" name="Province" class="form-control col-md-7">
+                        <option value=""></option>
+                        <option value="湖南">湖南</option>
+                        <option value="辽宁">辽宁</option>
+                        <option value="巴基斯坦">巴基斯坦</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3" for="City"><span style="color:red">*</span>城市</label>
+                    <input class="form-control text-box single-line col-md-7" id="City" name="City" type="text" value="" />
+                    <div class="col-md-2">
+                        <span id="city-danger" class="text-danger">您输入的城市不正确</span>
+                    </div>
+                </div>
+            }
+            <div class="form-group">
+                <label class="control-label col-md-3"><span style="color:red">*</span>责任单位（人）</label>
+                @if (ViewBag.User.RoleId == 1)
+                {
+                    <select name="ResponseDepartment" class="form-control col-md-7" id="ResponseDepartment">
+                        <option value=""></option>
+                        <option value="材料">材料</option>
+                        <option value="创新">创新</option>
+                        <option value="电信">电信</option>
+                        <option value="管理">管理</option>
+                        <option value="胡祥培组">胡祥培组</option>
+                        <option value="化工">化工</option>
+                        <option value="机械">机械</option>
+                        <option value="建工">建工</option>
+                        <option value="建艺">建艺</option>
+                        <option value="教务处">教务处</option>
+                        <option value="孟长功组">孟长功组</option>
+                        <option value="能动">能动</option>
+                        <option value="人文">人文</option>
+                        <option value="软件">软件</option>
+                        <option value="数学">数学</option>
+                        <option value="外语">外语</option>
+                        <option value="物理">物理</option>
+                        <option value="系统管理员">系统管理员</option>
+                        <option value="校团委">校团委</option>
+                        <option value="校友会">校友会</option>
+                        <option value="宣传部">宣传部</option>
+                        <option value="学生处">学生处</option>
+                        <option value="袁晓东">袁晓东</option>
+                        <option value="运载">运载</option>
+                        <option value="招生办">招生办</option>
+                    </select>
+                    }
+                    else
+                    {
+                        <input name="ResponseDepartment" value="@ViewBag.User.Department" class="form-control col-md-7" readonly />
+                    }
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3" for="HostDepartment"><span style="color:red">*</span>主办单位</label>
+                <input class="form-control text-box single-line col-md-7" id="HostDepartment" name="HostDepartment" type="text" value="" />
+            </div>
+        </div>
+        <!--活动详细信息-->
+        <div id="active-detail">
+            <div class="form-group">
+                <label class="control-label col-md-3" for="ActivityDate"><span style="color:red">*</span>活动日期</label>
+                <input class="form-control text-box single-line col-md-7" id="ActivityDate" name="ActivityDate" type="text" value="" />
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3" for="ActivityTime"><span style="color:red">*</span>活动开始时间</label>
+                <input class="form-control text-box single-line col-md-7" id="ActivityTime" name="ActivityTime" type="time" value="" />
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3" for="FeedBackDeadLine"><span style="color:red">*</span>反馈截止时间</label>
+                <input class="form-control text-box single-line col-md-7" id="FeedBackDeadLine" name="FeedBackDeadLine" type="text" value="" />
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3" for="AdvisorySite"><span style="color:red">*</span>咨询地点</label>
+                <input class="form-control text-box single-line col-md-7" id="AdvisorySite" name="AdvisorySite" type="text" value="" />
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3" for="Cost"><span style="color:red">*</span>会务费</label>
+                <input class="form-control text-box single-line col-md-7" id="Cost" name="Cost" type="text" value="" />
+            </div>
+        </div>
+        <!--联系方式相关信息-->
+        <div id="contact-info">
+            <div class="form-group">
+                <label class="control-label col-md-3" for="Telephone"><span style="color:red">*</span>联系电话</label>
+                <input class="form-control text-box single-line col-md-7" id="Telephone" name="Telephone" type="tel" value="" />
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3" for="Mail"><span style="color:red">*</span>邮箱</label>
+                <input class="form-control text-box single-line col-md-7" id="Mail" name="Mail" type="email" value="" />
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3" for="MailAddress"><span style="color:red">*</span>邮寄地址</label>
+                <input class="form-control text-box single-line col-md-7" id="MailAddress" name="MailAddress" type="text" value="" />
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3" for="Fax"><span style="color:red">*</span>传真</label>
+                <input class="form-control text-box single-line col-md-7" id="Fax" name="Fax" type="text" value="" />
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3" for="IsPublic"><span style="color:red">*</span>是否公开</label>
+                <div class="col-md-7 col-md-offset-1">
+                    <div class="checkbox">
+                        <input class="check-box" id="IsPublic" name="IsPublic" type="checkbox" value="true" />
+                        <input name="IsPublic" type="hidden" value="false" />
+                    </div>
+                </div>
+            </div>
+        </div> 
+                <div class="form-group">
+                    <label class="control-label col-md-3"><span style="color:red">*</span>附件上传</label>
+                    <input type="text" class="form-control col-md-3" name="RawFilename" readonly id="RawFilename" placeholder="请点击选择文件按钮" />
+                    <input type="file" name="file_upload" id="file_upload" class="form-control " />
+                    </div>
+                </div>}
+            else
+            {
+                <div class="form-group">
+                    <label class="control-label col-md-3" for="Description"><span style="color:red">*</span>简要说明</label>
+                    <input class="form-control text-box single-line col-md-7" id="Description" name="Description" type="text" value="" />
+                </div>
+                <input name="Invitation" class="hidden" id="filename" />
+                <div class="form-group">
+                    <label class="control-label col-md-3"><span style="color:red">*</span>附件上传</label>
+                    <input type="text" class="form-control col-md-3" name="RawFilename" readonly id="RawFilename" placeholder="请点击选择文件按钮" />
+                    <input type="file" name="file_upload" id="file_upload" class="form-control col-md-4" />
+                    </div>
+                </div>}
+        </div>
+        <div class="form-group" id="submint-btn">
+            <div class="col-md-offset-3 col-md-5">
+                <button type="button" value="提交" class="btn btn-default" id="submit-btn" >提交</button>
+                <div class="btn btn-default" id="journey-create-btn">
+                    @Html.ActionLink("返回主界面", "CurrentJourneyInfo")
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="confirm" style="display:none;z-index:9999 !important;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>请您认真检查行程信息，一旦提交不可撤回。</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" id="cancle">取消</button>
+                    <input type="submit" class="btn btn-primary" id="btCreate" value="确认新建" />
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</form>
+
+
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval");
+        @Scripts.Render("~/Pages/js/jquery-2.1.4.js");
+
+        @*用于文件上传开始*@
+        <script src="~/uploadify/jquery.uploadify.min.js"></script>
+        <script src="~/Scripts/widget/alert/sweet-alert.js"></script>
+        <script src="~/Pages/js/jquery-ui.min.js"></script>
+        <script src="~/Scripts/createJourney.js"></script>
+        <script src="~/Scripts/journey_validate.js"></script>
+        @*<script type="text/javascript">
+            $('#submit-btn').click(function () {
+                console.log("hello");          
+            });
+
+        </script>*@
+        @*用于文件上传结束*@
+    }
+
+
