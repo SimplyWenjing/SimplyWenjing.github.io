@@ -1,132 +1,367 @@
-#container{
-	max-width: 640px;
-	min-height:968px; 
-	background:rgba(0,0,0,0.6);
-	font-family: "微软雅黑";
-	text-align: center;
-	margin: 0 auto;
-	color: #2f2f2f;
-	padding-top:1px;
-}  
-#info-alert{
-	background: #fff;
-	border:1px solid #ddd;
-	margin: 12.5% auto 3% auto;
-	width: 93.75%;
-	text-align: center;
-	display: none;	
-}
-.input-group{
-	margin:3% auto;
-}
-.title{
-	font-size: 1.5em;
-	width: 93.75%;
-	height: 30px;
-	line-height: 30px;
-	margin:4.7% auto;
-	letter-spacing: 0.05em;
-	color: #1a1a1a;
-}
-.right{
-	width: 20%;
-	height: 33px;
-	line-height: 33px;
-	float :left;
-	text-align: right;
+body{
+	min-width: 320px;
 }
 
-.required{
-	color:red;
-	display: inline-block;
-	margin-left: 5px;
-	font-size: 1.5em;
-	vertical-align: middle;
+#dialog-box fieldset,button,h4,select,p{
+  border: 0;
+  padding:0;
+  margin: 0;
+  color: #282828;
 }
-.hidden{
-	visibility: hidden;
+#dialog-box input{
+    border:1px solid #a4a3a3;
 }
-.info-input{
-	width: 57.8%;
-	height: 30px;
-	border-radius: 2px;
-	border: 1px solid  #c1c1c1;
-	background-color: #eeeeee;
-	font-size: 0.9em;
-	text-indent:0.5em;
-}
-#car-brand,#car-type{
-	width: 27.5%;
-	height: 32px;
-	background-color: #eee;
-	font-size: 0.8em;
-	font-family: "微软雅黑";	
-}
-#car-type{
-	margin-left: 2.2%;
-
-}
-#province,#city,#region{
-	width: 17.3%;
-	height: 32px;	
-	background-color: #eee;
-	font-size: 0.8em;
-	font-family: "微软雅黑";	
-	letter-spacing: 0.05em;
-}
-#city,#region{
-	margin-left: 2.2%;
-}
-#submit-btn{
-	width: 39%;
-	height: 30px;	
-	margin: 1.56% auto;
-	margin-left: -3%; 	
-}
-.contact{
-	width: 63%;
-	min-width:250px;
-	text-align: left;
-	margin: 3% auto 4.7% auto;
-	letter-spacing: 0px;
-	font-size: 0.8em;
-	color:#525252;
-}
-.contact p{
-	margin-top:5px;
-}
-.error-msg{
-	text-align: left;
-	color: red;
-	width: 57.8%;
-	font-size: 0.9em;
-	margin: 1.5% 0 1% 30%;
-	font-style: normal;
-}
-
-/*重写下拉框样式*/
-select {
-  /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
-  border: solid 1px #b6b6b6;
+#dialog-box select{
+ /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+  border: solid 1px #a4a3a3;
   border-radius: 2px;
   appearance:none;
   -moz-appearance:none;
   -webkit-appearance:none;
   /*在选择框的最右侧中间显示小箭头图片*/
-  background: url(../images/arrow.png) no-repeat scroll right center transparent;
-  /*为下拉小箭头留出一点位置，避免被文字覆盖*/
-  padding-right: 2em;
+  background: url(../../images/arrow.png) no-repeat scroll right center transparent !important;
+  background-position: 95% 50% !important;
+  text-indent: 0.5em;
 }
-button {
-	appearance:none;
-    -moz-appearance:none;
-    -webkit-appearance:none; 
-    background: #0082e1;
-	border-radius: 2px;
+#info_form{
+	margin:0 auto;
+}
+body{
+	min-width: 320px;
+	font: normal 100% "微软雅黑";
+}
+#body-cover{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 128vh;
+	background: rgba(0,0,0,0.7);
+	display: none;
+	padding: 0px;
+	float: left;
+	overflow: hidden;
+	z-index: 10;
+}
+#dialog-box{
+	padding: 3% auto;
+	font-size: 0.9rem;
+	background: #fff;
+	border:1px solid #adb2b8;
+	display: none;
+	position: absolute;
+    left: 5%; top: 40px; right: 0;
+    width: 90%;
+	z-index: 100;
+	box-sizing: border-box;
+}
+.title{
+	margin-top: 1rem;
+	margin-bottom: 0.5rem;
+	font-size: 1.4rem;
+	font-weight: 530;
+	text-align: center;
+	color: #303030;
+	width: 100%;
+}
+#dialog-box fieldset{
+	width: 90%;
+	margin: 3% auto 0 auto;
+}
+.right{
+	width: 18%;
+	display: inline-block;
+	margin-right: 3%;
+	text-align: right;
+}
+.introduction{
+	font-size: 0.5rem;
+	margin: 5% auto 15px auto; 
+}
+.info-input{
+	width: 60%;
+	border-radius: 3px;
+	background: #eee;
+}
+#detail{
+	width: 60%;
+}
+#submit-btn{
+	width: 50%;
+	height: 27px;
+	background: #0082e1;
 	color: #fff;
-	font-size:1.1em;
-	border: 1px #0082e1 ;
-	font-family: "微软雅黑";
-	letter-spacing: 0.05em;
-	font-weight: bold;
+	margin-top: 6px;
+	border-radius: 3px;
+}
+.required{
+  color:red;
+  display: inline-block;
+  margin-left: 1%;
+}
+.error-msg{
+  text-align: left;
+  color: red;
+  width: 60%;
+  font-size: 0.6rem;
+  margin: 0% 0 0% 23%;
+  font-style: normal;
+}
+/*反馈弹框样式*/
+#feedback{
+	position: absolute;	
+	top : 50%;
+	left: 50%;
+	margin-top: -2rem;
+	margin-left: -3rem;
+	width: 6rem;
+	height: 4rem;
+	/*bottom:8rem;
+	left: 1.8rem;*/
+	border:1px solid #ddd;	
+	border-radius: 5px;
+	background: #eee;
+	display: none;
+	z-index: 1000;
+}
+.feedback-content{
+	margin-left:auto;
+	margin-right: auto;
+	margin-top: 1rem;
+	width:4rem;
+	height: 2rem;
+	text-align: center;
+	font-size:14px;
+}
+.feedback-content p{
+	padding-top:5px;
+}
+#feedback-btn{
+	background: #0082e1;
+	width: 2rem;
+	height: 0.8rem;
+	margin:0.3rem auto 0.2rem auto;
+	color: #fff;
+	border-radius: 3px;
+	line-height: 0.8rem;
+}
+@media screen and (min-width: 320px) and (max-width: 374px) {
+	#dialog-box input{
+		height: 5vh;
+	}
+	.title{
+		font-size: 1.2rem;
+	}
+	#dialog-box{
+		width: 90%;
+		height: 92vh;
+	}
+	#dialog-box fieldset{
+		margin-top: 3.5%;
+		width: 90%;
+	}
+	#detail{
+		width:65%;
+		height: 25px;
+	}
+	.introduction{
+		width: 85%;
+		font-size: 0.7rem;
+	}
+	.info-input{
+		height: 25px;
+		width: 65%;
+		padding:0px;
+		box-sizing: border-box;
+	}	
+	#car-brand{
+		width: 32%;
+		height: 25px;
+	}
+	#car-type{
+		width: 31%;
+		height: 25px;
+	}
+	#province,#city{
+		width: 20%;
+		height: 25px;
+	}	
+	#region{
+		width: 21%;
+		height: 25px;
+	}
+}
+@media screen and (min-width: 375px) and (max-width: 413px) {
+	#dialog-box{
+		width: 94%;
+		height: 92vh;
+	}
+	#dialog-box fieldset{
+		margin-top:4%;
+	}
+	.introduction{
+		width: 70%;
+		letter-spacing: 0.02rem;
+	}
+	.info-input{
+		height: 32px;
+		width: 66%;
+		padding:0px;
+		box-sizing: border-box;
+	}	
+	#detail{
+		height: 32px;
+		width: 66%;
+	}
+	#car-brand,#car-type{
+		width: 32.6%;
+		height: 32px;
+	}
+	#province,#city,#region{
+		width: 21%;
+		height: 32px;
+	}	
+	#submit-btn{
+		width: 60%;
+		height: 35px;
+		background: #0082e1;
+		color: #fff;
+		margin-top: 6px;
+		border-radius: 3px;
+	}
+}
+@media screen and (min-width: 414px) and (max-width: 768px) {
+	#dialog-box{
+		width: 94%;
+		height: 85vh;
+
+	}
+	#dialog-box fieldset{
+		margin-top:4%;
+	}
+	.introduction{
+		width: 70%;
+		letter-spacing: 0.02rem;
+	}
+	.info-input{
+		height: 35px;
+		width: 66%;
+		padding:0px;
+		box-sizing: border-box;
+	}	
+	#detail{
+		height: 35px;
+		width: 66%;
+	}
+	#car-brand,#car-type{
+		width: 32.6%;
+		height: 35px;
+	}
+	#province,#city,#region{
+		width: 21%;
+		height: 35px;
+	}	
+	#submit-btn{
+		width: 60%;
+		height: 37px;
+		background: #0082e1;
+		color: #fff;
+		margin-top: 6px;
+		border-radius: 3px;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	#dialog-box{
+		width: 450px;
+		height: 70vh;
+        left: 50%;
+        margin-left: -225px;
+        padding-bottom: 2rem;
+
+	}
+	.introduction{
+		width: 56%;
+		letter-spacing: 0.02rem;
+		font-size: 0.7rem;
+	}
+	.info-input{
+		height: 35px;
+		width: 62%;
+		padding:0px;
+	}	
+	#detail{
+		height: 35px;
+	}
+	#car-brand,#car-type{
+		width: 30.75%;
+		height: 35px;
+	}
+	#province,#city,#region{
+		width: 20.2%;
+		height: 35px;
+	}	
+	#submit-btn{
+		height: 38px;
+		font-size: 1.1rem;
+		letter-spacing: 0.5rem;
+		font-family: "微软雅黑";
+	}
+}
+@media screen and (min-width: 1024px) {
+	#dialog-box{
+		width: 430px;
+        left: 50%;
+        height: auto;
+        margin-left: -225px;
+        padding-bottom: 2rem;
+	}
+	.title{
+		margin:2rem auto 1rem auto;
+	}
+	.introduction{
+		width: 70%;
+		letter-spacing: 0.02rem;
+		font-size: 0.7rem;
+	}
+	#dialog-box fieldset{
+		margin-top: 3%;
+		//padding-left: 5%;
+	}
+	.info-input{
+		height: 30px;
+		width: 62%;
+		padding:0px;
+		box-sizing: border-box;
+	}	
+	#detail{
+		width:62%;
+		height: 30px;
+	}
+	#car-brand{
+		width: 30%;
+		height: 30px;
+	}
+	#car-type{
+		width: 31%;
+		height: 30px;
+	}
+	#province,#city{
+		width: 20%;
+		height: 30px;
+	}	
+	#region{
+		width: 20%;
+		height: 30px;
+	}
+	#submit-btn{
+		height: 35px;
+		width: 50%;
+		font-size: 1.0rem;
+		letter-spacing: 0.5rem;
+		font-family: "微软雅黑";
+	}	
+
 }
