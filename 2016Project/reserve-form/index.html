@@ -1,190 +1,114 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>预定信息弹出框</title>
+	<title>预定信息弹出框-响应式设计</title>
 	<meta charset="utf-8" />
-	<meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-touch-fullscreen" content="yes">
-    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<meta  name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />	
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/global.css">	
 </head>
 <body>
-	<div id="container">
-		<div id="info-alert">
-			<div class="title">预定填写以下信息</div>
-			<form action="" id="info-form">
-				<div class="input-group">
-					<span for="name" class="right">姓名</span>
-					<input type="text" name="name" id="name" class="info-input" required/>
-					<span class="required">*</span>										
-				</div>		
-				<div class="input-group">
-					<span for="phone" class="right">手机</span>
-					<input type="tel" name="phone" id="phone" class="info-input" required />
-					<span class="required">*</span>
-					
-				</div>
-				<div class="input-group" id="QQnum">
-					<span for="QQ" class="right">QQ号</span>
-					<input type="text" name="QQ" id="QQ" class="info-input" required />
-					<span class="required">*</span>
-				</div>
-				<div class="input-group">
-					<span for="wx" class="right">微信号</span>
-					<input type="text" name="wx" id="wx" class="info-input" required />
-					<span class="required">*</span>
-				</div>
-				<div class="input-group">
-					<span for="car-brand" class="right">车型</span>
-					<select name="car-brand" id="car-brand" required>
-						<option value>请选择</option>
-						<option value="dazhong">大众</option>
-					</select>
-					<select name="car-type" id="car-type" required>
-						<option value>请选择</option>
-						<option value="15maiteng">15年迈腾</option>
-					</select> 
-					<span class="required">*</span>
-				</div>
-				<div class="input-group">
-					<span for="detail" class="right"></span>						
-					<input type="text" name="detail" id="detail" placeholder="详细配置，如“1.8TSI豪华型" class="info-input" required />
-					<span class="required">*</span>
-				</div>
-				<div class="input-group">
-					<span for="province" class="right">地区</span>
-					<select name="province" id="province" required>
-						<option value>省</option>
-						<option value="beijing">北京</option>
-					</select>
-					<select name="city" id="city" required>
-						<option value>市</option>
-						<option value="beijing">北京</option>
-					</select>
-					<select name="region" id="region" required>
-						<option value>区</option>
-						<option value="haidian">海淀</option>
-					</select>
-					<span class="required">*</span>
-				</div>
-				<div class="input-group">
-					<span for="note" class="right">备注</span>
-					<input type="text" name="note" id="note" class="info-input" />
-					<span class="hidden required">*</span>
-				</div>
-				<div class="input-group" id="submit">
-					<button type="submit" value="提交" id="submit-btn">提交</button>
-				</div>
-				
-			</form>
-			<div class="contact">
-				<p>感谢您对途灵的支持与喜爱，如预定成功，您会收到确认短息/F码</p>
-				<p>届时可凭借确认短信/F码,到***下单</p>
-				<p>如有任何问题，请联系我们：400*****</p>
-			</div>
-		</div>				
-	</div>
-	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript">
-	 	// //跨浏览器添加事件
-		// var EventUtil = {
-		// 	addHandler: function(element,type,handle){
-		// 		if (element.addEventListener) {
-		// 			element.addEventListener(type,handle,false);
-		// 		} else if (element.attachEvent) {
-		// 			element.attachEvent("on" + type,handle);
-		// 		} else {
-		// 			element["on" + type] = handle;
-		// 		}
-		// 	}
-		// }
-		// //弹框
-		// var container = document.getElementById("container");
-		// EventUtil.addHandler(container,"click",function(){
-		// 	var infoAlert = document.getElementById("info-alert");
-		// 	infoAlert.style.display = "block";
-		// })	
-		var $container = $("#container");
-		$container.click(function(){
-			var $infoAlert = $("#info-alert");
-			$infoAlert.css("display","block");
-		})
-		$("#info-form :input").blur(function(){
-			$parent = $(this).parent();
-			$parent.find(".error-msg").remove();
-			if ($(this).is("#name")) {//验证姓名是否为空
-				if (this.value == "") {
-					var errorMsg = "姓名不能为空";
-					$parent.append('<div class="error-msg">' + errorMsg +'</div>');
-				}
-			}
-			if ($(this).is("#phone")) {//验证手机号码输入是否正确
-				if (this.value == "") {
-					var errorMsg = "手机号不能为空";
-					$parent.append('<div class="error-msg">' + errorMsg +'</div>');
-				} else {
-					if (!$.isNumeric(this.value)) {
-						var errorMsg = "手机号格式有误";
-						$parent.append('<div class="error-msg">' + errorMsg +'</div>');
-					} else {
-						if (this.value.toString().length !== 11) {
-							var errorMsg = "输入有误，手机号码应为11位";
-							$parent.append('<div class="error-msg">' + errorMsg +'</div>');
-						} else {
-							return true;					
-						}
-					}
-				}									
-			}
-			if ($(this).is("#QQ")) {//验证QQ号是否为数字
-				if (this.value == "") {
-					var errorMsg = "QQ号不能为空";
-					$parent.append('<div class="error-msg">' + errorMsg +'</div>');
-				} else{
-					if (!$.isNumeric(this.value)) {
-						var errorMsg = "QQ号只能为数字";
-						$parent.append('<div class="error-msg">' + errorMsg +'</div>');
-					} else {
-						return true;
-					}
-				}				
-			}
-			if ($(this).is("#wx")) {//验证微信号是否为数字
-				if (this.value == "") {
-					var errorMsg = "微信号不能为空";
-					$parent.append('<div class="error-msg">' + errorMsg +'</div>');
-				} else{
-					if (!$.isNumeric(this.value)) {
-						var errorMsg = "微信号只能为数字";
-						$parent.append('<div class="error-msg">' + errorMsg +'</div>');
-					} else {
-						return true;
-					}
-				}				
-			}
-			if ($(this).is("#detail")) {//验证详细信息是否为空
-				if (this.value == "") {
-					var errorMsg = "此项不能为空";
-					$parent.append('<div class="error-msg">' + errorMsg +'</div>');
-				}
-			}
-		})
-		$("#submit-btn").click(function(){
-			$("#info-form :input").trigger("blur");
-			var errorNum = $("form .error-msg").length;
-			if (errorNum) {
-				return false;
-			}
-		})
+	<input type="button" id="btnClick" value="添加信息" />
 		
-
-
-
-
+	<!-------------------------------弹窗开始 ------------------------------------------------>
+		<div id="dialog-box">
+			<div class="title">预定填写以下信息</div>
+			<form id="info_form">
+				<fieldset>
+					<label for="name" class="right">姓名</label>
+					<input type="text" id="name" name="w_name"  class="info-input" />
+					<span class="required">*</span>
+				</fieldset>
+				<fieldset>
+					<label for="phone" class="right">手机</label>
+					<input type="tel" id="phone" name="w_phone"  class="info-input"/>
+					<span class="required">*</span>
+				</fieldset>
+				<fieldset>
+					<label for="qq" class="right">QQ号</label>
+					<input type="text" id="qq" name="w_qq"  class="info-input" />
+					<span class="required">*</span>
+				</fieldset>
+				<fieldset>
+					<label for="wx" class="right">微信号</label>
+					<input type="text" id="wx" name="w_wechat"  class="info-input" />
+					<span class="required">*</span>
+				</fieldset>
+				<fieldset>
+					<label for="car-brand" class="right">车型</label>
+					<select class="dialog_select" name="car-w_car_brand" id="car-brand" >
+						<option value>请选择</option>
+						
+					</select>
+					<select class="dialog_select" name="w_car_type" id="car-type" >
+						<option value>请选择</option>
+						
+					</select> 
+					<span class="required">*</span>			
+				</fieldset>
+				<fieldset>
+					<label for="detail" class="right"></label>
+					<select class="dialog_select" name="w_car_info" id="detail">
+						<option value>请选择详细配置</option>
+						
+					</select>	
+					<span class="required">*</span>					
+					
+				</fieldset>
+				<fieldset>
+					<label for="province" class="right">地区</label>
+					<select class="dialog_select" name="w_province" id="province" required>
+						<option value>省</option>
+					</select>
+					<select class="dialog_select" name="w_city" id="city" required>
+						<option value>市</option>
+					
+					</select>
+					<select class="dialog_select" name="w_district" id="region" required>
+						<option value>区</option>
+					</select>
+					<span class="required">*</span>
+				</fieldset>
+				<fieldset>
+					<label for="note" class="right" class="right">备注</label>
+					<input type="text" name="w_comment" id="note" class="info-input" />
+				</fieldset>
+				<fieldset>
+					<input type="hidden" name="w_status" value="1" />
+					<label for="submit-btn" class="right"></label>
+					<button type="button" value="提交" id="submit-btn">提交</button>
+				</fieldset>
+			</form>			
+			<div class="introduction">
+				<p>感谢您对途灵的支持与喜爱，如预定成功，您会收到确认短信/F码<br/>
+				届时可凭借确认短信/F码,到***下单<br/>
+				如有任何问题，请联系我们：400*****</p>
+			</div>
+		</div>		
+	<div id="body-cover"></div>
+	<div id='feedback'></div>
+	<!-------------------------------弹窗结束 ------------------------------------------------>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/screen_adapt.js"></script>
+	<script type="text/javascript">
+		/*==========实现弹窗的JS代码==========*/
+		var btnClick = $("#btnClick");
+		btnClick.click(function(){
+			
+			var dialogConfig = {
+				dialogObj : $("#dialog-box"),
+				dialogCover : $("#body-cover"),
+				submitUrl : "http://localhost:8000/data/user_order",
+				getCarBrandUrl : "http://localhost:8000/data/car_brand",
+				getCartypeUrl : "http://localhost:8000/data/car_type",
+				getCarConfigUrl : "http://localhost:8000/data/car_config",
+				getProvinceUrl : "http://localhost:8000/data/provinces",
+				getCitiesUrl : "http://localhost:8000/data/cities",
+				getAreasUrl : "http://localhost:8000/data/areas"
+		    }    
+			
+			$.formDialog(dialogConfig);
+			
+		})
 	</script>
-
 </body>
 </html>
