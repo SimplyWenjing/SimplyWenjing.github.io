@@ -2,8 +2,8 @@
 <html>
 <head>
 	<title>预定信息弹出框-响应式设计</title>
-	<meta content="width=device-width,maximum-scale=1.0,user-scalable=no" />
 	<meta charset="utf-8" />
+    <meta  name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/flexible.js"></script>
@@ -13,7 +13,7 @@
 		<div id="body-cover"></div>
 		<div id="book-box">
 			<h4>预定填写以下信息</h4>
-			<form action="post" id="info-form">
+			<form id="info-form">
 				<fieldset>
 					<label for="name" class="right">姓名</label>
 					<input type="text" id="name" name="name" required class="info-input" />
@@ -38,11 +38,11 @@
 					<label for="car-brand" class="right">车型</label>
 					<select name="car-brand" id="car-brand" required>
 						<option value>请选择</option>
-						<option value="dazhong">大众</option>
+						<option value="大众">大众</option>
 					</select>
 					<select name="car-type" id="car-type" required>
 						<option value>请选择</option>
-						<option value="15maiteng">15年迈腾</option>
+						<option value="15年迈腾">15年迈腾</option>
 					</select> 
 					<span class="required">*</span>			
 				</fieldset>
@@ -50,6 +50,7 @@
 					<label for="detail" class="right"></label>
 					<select name="detail" id="detail">
 						<option value>请选择详细配置</option>
+						<option value="1.8TSI">1.8TSI豪华型</option>
 					</select>					
 					<!-- <input type="text" name="detail" id="detail" placeholder="详细配置，如“1.8TSI豪华型" required class="info-input" /> -->
 				</fieldset>
@@ -57,15 +58,15 @@
 					<label for="province" class="right">地区</label>
 					<select name="province" id="province" required>
 						<option value>省</option>
-						<option value="beijing">北京</option>
+						<option value="北京">北京</option>
 					</select>
 					<select name="city" id="city" required>
 						<option value>市</option>
-						<option value="beijing">北京</option>
+						<option value="北京">北京</option>
 					</select>
 					<select name="region" id="region" required>
 						<option value>区</option>
-						<option value="haidian">海淀</option>
+						<option value="海淀">海淀</option>
 					</select>
 					<span class="required">*</span>
 				</fieldset>
@@ -75,12 +76,11 @@
 				</fieldset>
 				<fieldset>
 					<label for="submit-btn" class="right"></label>
-					<button type="submit" value="提交" id="submit-btn">提交</button>
+					<button type="button" value="提交" id="submit-btn">提交</button>
 				</fieldset>
-			</form>
-			
+			</form>			
 			<div class="introduction">
-				<p>感谢您对途灵的支持与喜爱，如预定成功，您会收到确认短息/F码<br/>
+				<p>感谢您对途灵的支持与喜爱，如预定成功，您会收到确认短信/F码<br/>
 				届时可凭借确认短信/F码,到***下单<br/>
 				如有任何问题，请联系我们：400*****</p>
 			</div>
@@ -104,6 +104,9 @@
 			//验证姓名是否为空
 				if (this.value == "") {
 					var errorMsg = "姓名不能为空";
+					$parent.append('<div class="error-msg">' + errorMsg +'</div>');
+				} else if (!/^[\u4e00-\u9fa5]{2,4}$/.test(this.value)){
+					var errorMsg = "请输入合法姓名";//姓名为2-4位汉字
 					$parent.append('<div class="error-msg">' + errorMsg +'</div>');
 				}
 			}
@@ -154,25 +157,60 @@
 					}
 				}				
 			}
+			if ($(this).is("select")) {
+			//验证下拉框是否为空
+				if (this.value == "") {
+					var errorMsg = "此项不能为空";
+					$parent.append('<div class="error-msg">' + errorMsg +'</div>');
+				} 				
+			}
 		})
-		$("#submit-btn").click(function(){			
+		$("#submit-btn").click (function (){			
 			$("#info-form :input").trigger("blur");
 			var errorNum = $("form .error-msg").length;
 			if (errorNum) {
-				//alert($(window).width());
+			//如果用户填的不正确，提示错误信息，不提交表单
 				 if ($(window).width() > 900 &&$(window).width()!==1242 ) {
 				 	$infoAlert.css("height","670px");
-				 }else{
+				 } else {
 					$infoAlert.css("height","16.6rem");
-				 }
-				
+				 }				
 				return false;
+			} else {
+			//用户输入正确，则发送ajax请求，提交表单
+				$.ajax ({
+					type: "post",
+					url: "userInfo.json",
+					dataType: "json",
+					data: {
+						name: $("#name").val(),
+						phone: $("#phone").val(),
+						qq: $("#qq").val(),
+						wx: $("#wx").val(),
+						carBrand: $("#car-brand").val(),
+						carType: $("#car-type").val(),
+						detail: $("#detail").val(),
+						province: $("#province").val(),
+						city: $("#city").val(),
+						region: $("#region").val(),
+						note: $("#note").val()
+					},
+					success: function (data) {
+						console.log("success");
+						alert("提交成功"); 
+						// $("#submit-btn").attr({"disabled": "disabled"});                    
+					},
+					error: function (XMLHttpRequest,textStatus) {
+						console.log("error");
+					}
+				});
+				return false;      
 			}
-
 		})
 	</script>
 </body>
 </html>
+<<<<<<< HEAD
 
 
 
@@ -401,3 +439,5 @@
     }
 
 
+=======
+>>>>>>> origin/master

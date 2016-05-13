@@ -1,0 +1,263 @@
+.content{
+	height:1000px;
+	font: normal 100% "微软雅黑";
+	/*background: rgba(69,70,76,0.4);*/
+}
+#risk{
+	width: 60%;
+	height: 550px;
+	border: 1px solid #c4c8f0;
+	border-radius: 5px;
+	float: left;
+	margin-left: 5%;
+	margin-top: 30px;
+}
+#risk-Q{
+	width: 100%;
+	height: 500px;
+	border-radius: 5px;
+	overflow-y: auto;
+}
+.intro-text{
+	text-indent: 2em;
+	letter-spacing: 1px;
+	padding:5px 15px;
+}
+.Q-input-group{
+	margin: 10px 20px;
+}
+.Q-title{
+	display: block;
+	text-align: left;
+	margin: 5px auto;
+}
+.Q-input-group input{
+	margin-left: 30px;
+}
+#Q-btn{
+	margin: 20px auto 20px 35%;
+	background: #4D5FE7;
+	color: #fff;
+	width: 30%;
+	height: 35px;
+	border: 1px solid #4D5FE7;
+	border-radius: 5px;
+}
+.risk-form{
+	overflow-y: auto;
+	width: 60%;
+	height: 360px;
+}
+#recommend{
+	width: 25%;
+	height: 550px;
+	border: 1px solid #f0c5c4;
+	border-radius: 5px;
+	float: right;
+	margin-right: 5%;
+	margin-top: 30px;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+.recommend-title{
+	text-align: center;
+	background: url(../images/title-bg.png) repeat-x;
+	height: 40px;
+	width: 100%;
+	display: block;
+	line-height: 40px;
+	color: #e7504d;
+	font-size:1.3em;
+}
+.risk-title{
+	text-align: center;
+	background: url(../images/risk-bg.png) repeat-x;
+	height: 40px;
+	width: 100%;
+	display: block;
+	line-height: 40px;
+	color: #4d5fe7;
+	font-size:1.3em;
+}
+.input-group{
+	margin: 20px auto;
+}
+.user-select{
+	width: 50%;
+	font-size: 0.9em;
+	margin-left: 8%;
+	height: 30px;
+}
+span.label-left{
+	font-size: 0.9em;
+	width: 35%;
+	height: 33px;
+	line-height: 33px;
+	float :left;
+	text-align: right;
+	margin-left: 1%;
+	letter-spacing: 1px;
+	text-align: center;
+}
+/*重写下拉框样式*/
+select {
+  border: solid 1px #b6b6b6;
+  border-radius: 2px;
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  background: url(../images/arrow.png) no-repeat scroll right center transparent ;
+  background-color: #EEEEEE;
+  padding-right: 2em;
+  text-indent: 0.3em;
+}
+.input-group:nth-child(4){
+	padding-bottom: 40px;
+	border-bottom: 1px solid #f0c5c4;
+}
+#recommend-btn{
+	margin: 0px auto 20px 25%;
+	background: #e7504d;
+	color: #fff;
+	width:50%;
+	height: 35px;
+	border: 1px solid #e7504d;
+	border-radius: 20px;
+	position: absolute;
+	top: 39%;
+}
+/*弹出框*/
+#user-risk{
+	position: relative;
+	width: 350px;
+	height: 200px;
+	border:1px solid black;
+	top: -300px;
+	left: 200px;
+	display: none;
+	background: rgba(0,0,0,0.9);
+	border-radius:5px;
+	color:#fff;
+}
+.user-risk-span{
+	display: block;
+	text-indent: 2em;
+	letter-spacing: 1px;
+	margin:10px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.user-risk-p{
+	display: block;
+	margin:30px 10px;
+	font-size: 14px;
+	letter-spacing: 1px;
+	text-indent: 2em;
+}
+#risk-close{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px red;
+	border:1px red solid;
+	color:red;
+	font-size: 14px;
+	line-height: 10px;
+	z-index: 10000;
+}
+#recommend_result{
+	width: 90%;
+	height:50%;
+
+	border-radius: 5px 5px 0px 0px;
+	text-align: center;
+	margin-left: 6%;
+	display: none;
+}
+h3{
+	border-radius: 5px 5px 0px 0px;
+	margin-top: 10%;
+	padding: 15px;
+	background-color: #ffF;
+	color: white;
+}
+#recommend-result{
+/*text-align: left;*/
+	width: 96%;
+	height: 90%;
+	text-align: left;
+	margin-top: -16px;
+
+}
+#recommend-result li span:nth-child(2){
+	display: inline-block;
+	width: 50%;
+	text-align: center;
+	margin-left: 2%;
+}
+#recommend-result li span:nth-child(3){
+	text-align: center;
+	margin-left:1%;
+	text-align: center;
+}
+
+#recommend-result li:nth-child(odd){
+	display: block;
+	/*border: 1px solid #C4C8F0;*/
+	background-color: #F6F4F7;
+	height: 9%;
+	font-size: 1em;
+	padding: 5px 5px;
+    width: 100%;
+    margin-left: 1px;
+}
+
+#recommend-result li span{
+	margin-left: 5%;
+}
+#recommend-result li:nth-child(even){
+	display: block;
+	background-color: #FEFEFE;
+	height: 9%;
+	font-size: 1em;
+	padding: 5px 5px;
+	width: 100%;
+	margin-left: 1px;
+}
+#recommend-result li:nth-child(1) span:nth-child(2){
+	margin-left: 14%;
+	display: inline;
+}
+#recommend-result li:nth-child(1) span:nth-child(1){
+	margin-left: 7%;
+}
+#recommend-result li:nth-child(1) span:nth-child(2){
+	margin-left: 21%;
+}
+#recommend-result li:nth-child(1) span:nth-child(3){
+	margin-left: 25%;
+}
+#recommend_illustrate{
+   margin-left: 5px;
+	margin-top: 20%;
+	font-size: 1.2em;
+	padding: 1em;
+	color: #E9864D;
+	text-shadow: 0 -1px 0 #374683;
+	display: block;
+}
+#recommend_illustrate span{
+	display: inline-block;
+	width: 4px;
+	height: 4px;
+	background-color: red;
+	border: 1px solid red;
+	margin-right: 2px;
+}
+#recommend-result li span{
+	/*font-style: italic;*/
+	margin-right: 5%;
+}
