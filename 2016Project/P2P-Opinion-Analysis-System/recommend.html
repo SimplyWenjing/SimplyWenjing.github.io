@@ -16,6 +16,7 @@
 					<li class="nav-active"><a href="recommend.html">投资推荐</a></li>
 					<li><a href="industry-opinion.html" >行业舆情</a></li>
 					<li><a href="platform-opinion.html">品牌舆情</a></li>
+					<li ><a href="opinion-customization.html">舆情定制</a></li>
 					<li><a href="about.html">入门精华帖</a></li>
 				</ul>
 			</nav>
@@ -88,15 +89,15 @@
 								<input name="7" type="radio" value="D" id="7-D" /><label for="7-D">&nbsp;D.&nbsp;银行理财产品、信托、固定收益类基金（有限合伙基金）、货币基金(如余额宝）</label><br/> 			
 								<input name="7" type="radio" value="E" id="7-E" /><label for="7-E">&nbsp;E.&nbsp;活期、定期存款、国债、保险 </label>
 							</div>			
-							<div class="Q-input-group">
+<!--							<div class="Q-input-group">
 								<span for="8" class="Q-title">8. 您在选择p2p理财产品时是否倾向于听取舆论评价？</span>
 								<input name="8" type="radio" value="A" id="8-A" required /><label for="8-A" >&nbsp;A.&nbsp;非常同意</label> 
 								<input name="8" type="radio" value="B" id="8-B" /><label for="8-B">&nbsp;B.&nbsp;一般同意</label>   
 								<input name="8" type="radio" value="C" id="8-C" /><label for="8-C">&nbsp;C.&nbsp;不一定</label>
 								<input name="8" type="radio" value="D" id="8-D" /><label for="8-D">&nbsp;D.&nbsp;不同意</label>			
 								<input name="8" type="radio" value="E" id="8-E" /><label for="8-E">&nbsp;E.&nbsp;自己判断</label>
-							</div>						
-							<button type="submit" id="Q-btn">提交</button>		
+							</div>	-->
+							<button type="submit" id="Q-btn">提交</button>
 						</form>
 					</div>	
 					<div id="user-risk">
@@ -110,9 +111,9 @@
 						<span for="type" class="label-left">投资收益率</span>
 						<select name="radio" id="radio" class="user-select">
 							<option value>请选择投资收益率</option>
-							<option value="1">5%以下</option>
-							<option value="2">5%-8%</option>
-							<option value="3">8%-12%</option>
+							<option value="1">7%以下</option>
+							<option value="2">7%-10%</option>
+							<option value="3">10%-12%</option>
 							<option value="4">12%-15%</option>
 							<option value="5">15%以上</option>
 						</select>
@@ -121,100 +122,43 @@
 						<span for="duration" class="label-left">投资期限</span>
 						<select name="duration" id="duration" class="user-select">
 							<option value>请选择投资期限</option>
-							<option value="">1个月内</option>
-							<option value="">1个月-3个月</option>
-							<option value="">3个月-6个月</option>
-							<option value="">6个月-12个月</option>						
-							<option value="">12个月以上</option>						
+							<option value="1">1个月内</option>
+							<option value="2">1个月-3个月</option>
+							<option value="3">3个月-6个月</option>
+							<option value="4">6个月-1年</option>
+							<option value="5">1年-2年</option>
+							<option value="6">2年以上</option>
+						</select>
+					</div>
+					<div class="input-group">
+						<span for="duration" class="label-left">听取舆论评价程度</span>
+						<select name="duration" id="acceptance-level" class="user-select">
+							<option value>请选择听取意愿程度</option>
+							<option value="1">非常同意</option>
+							<option value="2">一般同意</option>
+							<option value="3">不一定</option>
+							<option value="4">不同意</option>
+							<option value="5">自己判断</option>
 						</select>
 					</div>
 					<button id="recommend-btn">投资推荐</button>
+					<p id="recommend_illustrate">
+						<span class="frame"></span>点击上方投资推荐按钮，为您推荐最适合于您的网贷产品
+					</p>
+					<div id="recommend_result">
+					<h3>总分前6名推荐</h3>
+					<ul id="recommend-result">
+					</ul>
+					</div>
 				</section>
+
 			</div>
 		</section>
 		<footer>
 			© 2015-2016 DUT-P2P舆情分析
 		</footer>
 	</div>
-	<script type="text/javascript">
-	var questionBtn = document.getElementById("Q-btn");
-	var alert = document.getElementById("user-risk");
-	function getRank(){
-		var parts = [];
-		var score = 0;
-		var form = document.forms[0];
-		for (var i = 0; i < form.elements.length-1; i++) {
-			var field = form.elements[i];			
-			if (field.name.length) {
-				if (field.checked) {
-					parts.push(field.value);
-				}					
-			}
-		}
-		var result=parts.map(function(item,index,array){
-			console.log(item);
-			switch (item){
-				case "A" : return item = 10; 
-				case "B" : return item = 8; 
-				case "C" : return item = 5;
-				case "D" : return item = 3;
-				case "E" : return item = 0;
-			}			
-		});		
-		for (var i = 0; i < result.length; i++) {
-			score+=parseInt(result[i]);
-		};
-		return score;
-	}
-	questionBtn.addEventListener("click",function(event){
-		event.preventDefault();
-		var score = getRank();		
-		alert.style.display = "block";
-		var result = document.getElementById("result");
-		if ( 0 < score && score <= 15) {
-			var html = "";
-			var span = "得分："+score+";保守型——低风险级别产品";
-			var p = "您的风险承担能力水平比较低，您关注资产的安全性远超于资产的收益性，所以低风险 、高流动性的投资品种比较适合您，这类投资的收益相对偏低。"		
-			html +="<span class='user-risk-span'>" + span + "<\/span>";
-			html +="<p class='user-risk-p'>" + p + "<\/p>";
-			result.innerHTML = html;
-		} else if( 15 < score && score <= 30 ){
-			var html = "";
-			var span = "得分："+score+";稳健型——较低风险级别产品";
-			var p = "您有比较有限的风险承受能力，对投资收益比较敏感，期望通过短期、持续、渐进的投资获得高于定期存款的回报。所以较低等级风险的产品如保本保息的固定收益类，比较适合您，适当回避风险的同时保证收益，跑赢通胀。"		
-			html +="<span class='user-risk-span'>" + span + "<\/span>";
-			html +="<p class='user-risk-p'>" + p + "<\/p>";
-			result.innerHTML = html;
-		} else if(30 < score && score <= 45){
-			var html = "";
-			var span = "得分："+score+";平衡型——中等风险级别产品";
-			var p = "您有一定的风险承受能力，对投资收益比较敏感，期望通过长期且持续的投资获得高于平均水平的回报，通常更注重十年甚至更长期限内的平均收益。所以中等风险收益的投资品种比较适合您，回避风险的同时有一定的收益保证。"		
-			html +="<span class='user-risk-span'>" + span + "<\/span>";
-			html +="<p class='user-risk-p'>" + p + "<\/p>";
-			result.innerHTML = html;
-		} else if(45 < score && score <=60){
-			var html = "";
-			var span = "得分："+score+";积极型——较高风险级别产品";
-			var p = "您有中高的风险承受能力，愿意承担可预见的投资风险去获取更多的收益，一般倾向于进行中短期投资。所以中高等级的风险收益投资品种比较适合您，以一定的可预见风险换取超额收益。"		
-			html +="<span class='user-risk-span'>" + span + "<\/span>";
-			html +="<p class='user-risk-p'>" + p + "<\/p>";
-			result.innerHTML = html;
-		} else if(60<score && score <70){
-			var html = "";
-			var span = "得分："+score+";激进型——高风险级别产品";
-			var p = "您有较高的风险承受能力，是富有冒险精神的积极型选手。在投资收益波动的情况下，仍然保持积极进取的投资理念。短期内投资收益的下跌被您视为加注投资的利好机会。您适合从事灵活、风险与报酬都比较高的投资，不过要注意不要因一时的高报酬获利而将全部资金投入高风险操作，务必做好风险管理与资金调配工作。"		
-			html +="<span class='user-risk-span'>" + span + "<\/span>";
-			html +="<p class='user-risk-p'>" + p + "<\/p>";
-			result.innerHTML = html;
-		}
-	},false);
-	var close = document.getElementById("risk-close");
-	close.addEventListener("click",function(){
-		alert.style.display = "none";
-	},false);
-	
- 
-	</script>
+<script src="js/remmend.js" type="text/javascript"></script>
 </body>
 </html>
 

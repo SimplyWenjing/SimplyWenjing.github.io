@@ -18,6 +18,7 @@
 					<li><a href="recommend.html">投资推荐</a></li>
 					<li class="nav-active"><a href="industry-opinion.html" >行业舆情</a></li>
 					<li><a href="platform-opinion.html">品牌舆情</a></li>
+					<li ><a href="opinion-customization.html">舆情定制</a></li>
 					<li><a href="about.html">入门精华帖</a></li>
 				</ul>
 			</nav>
@@ -162,68 +163,7 @@
 	<script src="js/jquery-1.11.1.min.js"></script>	
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/swiper.min.js"></script>
-	<script type="text/javascript">
-		var swiper = new Swiper('.swiper-container', {
-	        pagination: '.swiper-pagination',
-	        nextButton: '.swiper-button-next',
-	        prevButton: '.swiper-button-prev',
-	        slidesPerView: 2,
-	        paginationClickable: true,
-	        spaceBetween: 30
-	    });
-	    var swiper2 = new Swiper('.swiper1 .swiper-container', {
-	        pagination: '.swiper-pagination',
-	        effect: 'cube',
-	        grabCursor: true,
-	        cube: {
-	            shadow: true,
-	            slideShadows: true,
-	            shadowOffset: 20,
-	            shadowScale: 0.94
-	        }
-	    });
-
-		var myTab = document.getElementById("myTab");
-		var hot = document.getElementById("hot");
-		var trend = document.getElementById("trend");
-		var eventTop = document.getElementById("event-top");
-		myTab.addEventListener("click",function(event){
-			var target = event.target
-			var id = target.id;
-			switch (id) {
-				case "tab-hot":
-					target.className = "li-hover";
-					target.previousElementSibling.className = "";
-					target.nextElementSibling.className = "";
-					hot.style.display = "block";					
-					trend.style.display = "none";
-					eventTop.style.display = "none";
-					break;
-				case "tab-trend":
-					target.className = "li-hover";
-					target.nextElementSibling.className = "";
-					target.nextElementSibling.nextElementSibling.className = "";
-					hot.style.display = "none";
-					trend.style.display = "block";
-					eventTop.style.display = "none";
-					break;
-				case "tab-event":
-					target.className = "li-hover";
-					target.previousElementSibling.className = "";
-					target.previousElementSibling.previousElementSibling.className = "";
-					hot.style.display = "none";
-					trend.style.display = "none";
-					eventTop.style.display = "block";
-					break;
-				default:
-					hot.style.display = "block";
-			}
-
-		},false);
-		 /*-------------滑动----------------*/
-	    
-
-	</script>
+	<script src="js/industry-opiniono.js"></script>
 </body>
 </html>
 
