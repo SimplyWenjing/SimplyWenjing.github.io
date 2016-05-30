@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title>舆情定制</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style type="text/css">
+        html,body{
+            margin: 0px;
+            height: 100%;
+        }
+        .body-container{
+            width: 100%;
+        }
+        .body-list{
+            width: 100%;
+            height: 100%;
+        }
+        .sousuo-btn{
+            margin-top: 13%;
+        }
+        .serch_btn{
+            display: inline-block;
+            height: 50px;
+            background-color:#E7504D;
+            width: 100px;
+            border: 0px;
+            font-size:17px;
+            cursor: pointer;
+            vertical-align: middle;
+            text-decoration: none;
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+            text-indent: 2px;
+        }
+        a:hover{
+            color: black;
+        }
+        .sousuo-btn{
+            margin-top: 5%;
+            display: flex;
+            justify-content: center;
+        }
+        #keyword_2{
+            width: 440px;
+            height: 48px;
+            border: 1px solid #E7504D;
+            border-radius: 5px;
+            font-size:17px;
+            vertical-align: middle;
+        }
+        .serch_btn{
+            margin-left: 5px;
+            display: inline-block;
+            height: 50px;
+            background-color:#E7504D;
+            width: 100px;
+            border: 0px;
+            font-size:17px;
+            cursor: pointer;
+            vertical-align: middle;
+            text-decoration: none;
+            text-align: center;
+            line-height: 50px;
+        }
+        a:hover{
+            color: black;
+        }
+        .body-content{
+            list-style: none;
+            margin: 30px auto;
+            text-align: center;
+        }
+        .nothing{
+            height: 410px;
+            width: 100%;
+
+        }
+        .body-content li{
+            width: 508px;
+            height: 427px;
+            border: 1px solid gainsboro;
+            margin-bottom: 10px;
+        }
+        .body-content li:nth-child(even){
+            margin-left: 6px;
+        }
+        .body-content li:nth-child(odd) img{
+            width: 490px;
+            height: 290px;
+        }
+        .body-content li:nth-child(even) img{
+            width: 450px;
+            height: 290px;
+            margin-top: 90px;
+        }
+        .body-content li p{
+            text-align: left;
+            margin-left: 10px;
+            font-size: 17px;
+            line-height: 180%;
+        }
+        h2{
+            text-align: left;
+            margin: 10px;
+        }
+        .serch-index{
+            border: 1px solid gainsboro;
+            width: 1028px;
+            margin: 10px auto;
+
+        }
+        .serch-index p{
+            margin: 20px 20px;
+            font-size: 17px;
+        }
+        .serch-index img{
+            margin-left: 20px;
+            width: 970px;
+        }
+        .content{
+        display: none;
+        }
+        .footer{
+            background-color: #2f3038;
+            height: 80px;
+            text-align: center;
+            line-height: 80px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="body-container">
+    <header>
+        <div id="logo"><span>P2P舆情分析</span></div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="recommend.html">投资推荐</a></li>
+                <li ><a href="industry-opinion.html" >行业舆情</a></li>
+                <li><a href="platform-opinion.html">品牌舆情</a></li>
+                <li class="nav-active"><a href="opinion-customization.html">舆情定制</a></li>
+                <li><a href="about.html">入门精华帖</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="body-list">
+                <div class="sousuo-btn">
+                    <input type="text" id="keyword_2"/>
+                    <button class="serch_btn">搜索</button>
+                </div>
+                <div class="content">
+                <ul class="body-content">
+                    <li class="brand-fire-degree">
+                        <h2>品牌热度</h2>
+                        <p>拍拍贷官方论坛帖子多达56万多条，每日以500+的速度增长，平台用户活跃度高，而微博讨论热度相对较低，整个平台热度平台论坛占较大比重。</p>
+                        <img src="images/select-images/redu.jpg">
+                    </li>
+                    <li class="brand-fire-word">
+                        <h2>关键词:品牌热度</h2>
+                        <img src="images/select-images/cloud.png">
+                    </li>
+                    <li class="goverment-perceive">
+                        <h2>政府认知</h2>
+                        <p>通知的发布使得在“去担保”的浪潮下，互联网平台与保险公司的合作朝着健康良性的方向发展。</p>
+                        <img src="images/select-images/zhengfu.jpg"/>
+                    </li>
+                    <li class="platform-deal-trend">
+                        <h2>平台成交走势</h2>
+                        <img src="images/select-images/chengjiao-zoushi.jpg"/>
+                    </li>
+                </ul>
+                <div class="serch-index">
+                    <p>搜索指数（近期百度指数30天的)</p>
+                    <img src="images/select-images/zhishu.jpg"/>
+                    <hr>
+                    <p>平台利率走势</p>
+                    <img src="images/select-images/rate-zoushi.png"/>
+                </div>
+        </div>
+        <div class="nothing"></div>
+        </section>
+    <div class="footer">
+        © 2015-2016 DUT-P2P舆情分析
+    </div>
+ </div>
+<script type="text/javascript">
+    var btn=document.getElementsByClassName("serch_btn")[0];
+    var content=document.getElementsByClassName("content")[0];
+    var blank=document.getElementsByClassName("nothing")[0];
+    btn.addEventListener("click",function () {
+        content.style.display="block";
+        blank.style.display="none";
+    })
+</script>
+</body>
+</html>

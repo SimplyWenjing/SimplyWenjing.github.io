@@ -181,7 +181,7 @@ h3{
 	border-radius: 5px 5px 0px 0px;
 	margin-top: 10%;
 	padding: 15px;
-	background-color: #ffF;
+	background-color: #0A727F;
 	color: white;
 }
 #recommend-result{
@@ -258,6 +258,6 @@ h3{
 	margin-right: 2px;
 }
 #recommend-result li span{
-	/*font-style: italic;*/
+	font-style: italic;
 	margin-right: 5%;
 }
