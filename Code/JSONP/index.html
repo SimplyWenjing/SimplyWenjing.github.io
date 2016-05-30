@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>JSONP跨域请求</title>
+</head>
+<body>
+	<div id="box"></div>
+	<script type="text/javascript">
+	function handle (response) {
+		var box = document.getElementById("box");
+		var html = "";
+		html += "响应数据为：" + response.words;
+		box.innerHTML = html;
+		console.log(html);
+	}
+	function jsonp (url,callback) {
+		var script = document.createElement("script");
+		script.src = url;
+		var header = document.getElementsByTagName("head")[0];
+		header.appendChild(script);
+	}
+	jsonp("data.json",handle);
+
+	</script>
+
+</body>
+</html>
