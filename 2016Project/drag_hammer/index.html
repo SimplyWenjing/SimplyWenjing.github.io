@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hammer类库实现拖拽</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="js/screen_adapt.js"></script>
+	<style type="text/css">
+		body{
+			width: 640px;			
+		}
+		#source{
+			width: 600px;
+			height: 300px;
+			margin: 0 auto;
+			border: 1px solid red;
+		}
+		#destinition{
+			width: 600px;
+			height: 300px;
+			margin: 0 auto;
+			border: 1px solid black;
+		}
+		#move-box{
+			background-color: black;
+			width: 80px;
+			height: 80px;
+			-webkit-transition: all .3s;
+            -moz-transition: all .3s;
+            transition: all .3s;
+		}
+	</style>
+</head>
+<body>
+	<div id="source">
+		<div id="move-box"></div>
+	</div>
+	<div id="destinition"></div>
+
+<script type="text/javascript" src="js/hammer.min.js"></script>
+<script type="text/javascript" src="js/jquery-2.2.0.js"></script>
+<script type="text/javascript">
+  var reqAnimationFrame = (function () {
+        return window[Hammer.prefixed(window, 'requestAnimationFrame')] || function (callback) {
+            window.setTimeout(callback, 1000 / 60);
+        };
+    })();
+	var moveBox = document.getElementById("move-box");
+	var mc = new Hammer.Manager(moveBox);
+	var START_X = Math.round((window.innerWidth - moveBox.offsetWidth) / 2);
+    var START_Y = Math.round((window.innerHeight - moveBox.offsetHeight) / 2);
+
+	mc.add(new Hammer.Pan({threshold: 0, pointers: 0}));
+	mc.add(new Hammer.Swipe()).recognizeWith(mc.get('pan'));
+
+	mc.on("panstart panmove", onPan);	
+
+   function onPan(ev) {
+    transform.translate = {
+        x: START_X + ev.deltaX,
+        y: START_Y + ev.deltaY
+    };
+    logEvent(ev.type);
+}
+</script>
+</body>
+</html>
