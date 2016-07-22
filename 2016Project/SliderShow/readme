@@ -1,0 +1,6 @@
+CSS3动画模拟幻灯片放映    
+使用了很多CSS3新特性，包括：    
+text-shadow    
+nth-of-type 选择器    
+否定伪类选择器 :not   
+伪元素 ::before  ::after
