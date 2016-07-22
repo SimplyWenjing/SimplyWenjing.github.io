@@ -1,34 +1,45 @@
 html,body{
 	height: 100%;
-	width: 850px;
-	margin: 0 auto;
-	border:1px solid black;
-	background: #000;
-	webkit-box-sizing: border;
+/*	width: 850px;
+	margin: 0 auto;*/
+	/*border:1px solid black;*/
+/*	background: #000;
+	webkit-box-sizing: border;*/
 }
 img.bg{
-	width: 850px;
-	height: 680px;
+	/*width: 850px;
+	height: 680px;*/
+	min-height: 100%;
+	min-width: 1024px;
+	width: 100%;
+	height: auto !important;
+	height: 100%;
 	position: fixed;
-	left: -850px;
+	left: 0;
 	z-index: 1;
+}
+@media screen and (max-width: 1024px) {
+	img.bg{
+		left: 50%;
+		margin-left: -512px;
+	}
 }
 .slide{
 	position: absolute;
-	width: 850px;
+	width: 100%;
 	text-align: center;
 	z-index: 9999;
 	bottom: 100px;
 }
 .slide li{
 	display: inline-block;
-	width: 100px;
-	height: 145px;
+	width: 170px;
+	height: 130px;
 	margin-left: 15px;
 }
 .slide a{
 	display: inline-block;
-	widows: 100px;
+	width: 170px;
 	padding-top: 70px;
 	padding-bottom: 20px;
 	position: relative;
@@ -44,3 +55,66 @@ img.bg{
 				-2px -2px 1px rgba(0,0,0,0.3),
 				-3px -3px 1px rgba(0,0,0,0.3);
 }
+.slide li:nth-of-type(1) a {
+	background-color: #02646e;
+}
+.slide li:nth-of-type(2) a {
+	background-color: #eb0837;
+}
+.slide li:nth-of-type(3) a {
+	background-color: #67b374;
+}
+.slide li:nth-of-type(4) a {
+	background-color: #e6674a;
+}
+.slide li:nth-of-type(5) a {
+	background-color: #e61061;
+}
+
+.slide a::after {
+	content: "";
+	display: block;
+	height: 100px;
+	width: 100px;
+	border: 5px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	left: 50%;
+	margin-left: -55px;
+	z-index: 9999;
+	top: -80px;
+}
+.slide li:nth-of-type(1) a::after{
+	background: url(../img/2013_small.jpg) no-repeat center;
+}
+.slide li:nth-of-type(2) a::after{
+	background: url(../img/2014_small.jpg) no-repeat center;
+}
+.slide li:nth-of-type(3) a::after{
+	background: url(../img/2015_small.jpg) no-repeat center;
+}
+.slide li:nth-of-type(4) a::after{
+	background: url(../img/2016_small.jpg) no-repeat center;
+}
+.slide li:nth-of-type(5) a::after{
+	background: url(../img/2016-2_small.jpg) no-repeat center;
+}
+.slide a::before{
+	content: "";
+	display: block;
+	height: 100px;
+	width: 100px;
+	border: 5px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	left: 50%;
+	margin-left: -55px;
+	z-index: 99999;
+	top: -80px;
+	background: rgba(0,0,0,0.3);
+}
+.slide a:hover::before{
+	opacity: 0;
+}
+
+/*定义动画*/
