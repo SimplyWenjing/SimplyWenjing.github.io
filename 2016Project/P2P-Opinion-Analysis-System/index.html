@@ -5,21 +5,23 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
 	<link rel="stylesheet" type="text/css" href="css/industry_opinion.css">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_directory'); ?>/Glyphicons.min.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_directory'); ?>/Glyphicons.min.css" />
 	<!--[if lt IE 9]>
 	<script src="js/html5shiv.js"></script>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 	<style type="text/css">
        .carousel-control{
-	   background-image:-webkit-linear-gradient(left,color-stop(rgba(0,0,0,.5) 0),color-stop(rgba(0,0,0,.0001) 0%));         background-image:linear-gradient(to right,rgba(0,0,0,1) 0,rgba(0,0,0,.0001) 0%);
-	   background-repeat:repeat-x;
-	   width:15%;
-	   }
+       	   background-image:-webkit-linear-gradient(color-stop(rgba(0,0,0,.0001));
+       	   background-image:-o-linear-gradient(color-stop(rgba(0,0,0,.0001));
+       	   background-image:linear-gradient(color-stop(rgba(0,0,0,.0001));
+       	   background-image:linear-gradient(to right,rgba(0,0,0,1) 0,rgba(0,0,0,.0001) 0%);
+       	   background-repeat:repeat-x;
+       	   width:15%;
+       	   }
 
  	</style>
 </head>
@@ -75,7 +77,7 @@
 						<li class="list-icon"><span>关于我们</span></li>			
 					</ul>
 					<ul>
-						<a href="industry_opinion.html" ><li>帮你最快速度了解<br>最新行业动态</li></a>
+						<a href="industry-opinion.html" ><li>帮你最快速度了解<br>最新行业动态</li></a>
 						<a href="data.html"><li>2015全年网贷数据<br>尽收眼底</li></a>
 						<a href="platform-opinion.html"><li>确定大众对于不同平台的情绪走向<br>帮你更准制定决策</li></a>
 						<a href="about.html"><li id="last">想要了解更多P2P舆情信息?<br>欢迎联系我们</li></a>
@@ -89,28 +91,7 @@
 		© 2015-2016 DUT-P2P舆情分析
 	</footer>
 </div>
-		<script src="js/jquery-1.11.1.min.js"></script>
-		<script>
-		// function outFun(){
-		// 	this.num = 10;
-		// 	function inFun(){
-		// 		var num = 100;
-		// 		alert(this.num);
-		// 		alert(num);
-		// 	}
-		// 	return inFun;
-		// }
-		// outFun()();
-		// var i =0 ,timer,j=0;
-		// while(i++<2){
-		// 	timer = window.setTimeout(function(){
-		// 		j++;
-		// 		alert(j);
-		// 	},500);
-
-		// }
-		// clearTimeout(timer);
-		</script>
-	
+		<script src="js/jquery-1.11.1.min.js"></script>	
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>	
 </body>
 </html>
