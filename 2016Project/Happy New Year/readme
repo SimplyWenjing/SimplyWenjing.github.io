@@ -1,0 +1,5 @@
+基于jQuery实现
+
+使用了 animate（）来控制猴子的移动和透明度改变；
+ 
+mouseover 时间来显示图片说明
