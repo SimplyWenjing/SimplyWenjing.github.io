@@ -1,5 +1,12 @@
 # 我的个人博客   
-内有平时做的项目代码。
+`主要放置平时做的项目代码`
+# 目录
+ * [拖拽的实现](http://simplywenjing.github.io/2016Project/Drag/index.html)
+ * [宝贝听听四周年活动页面](http://simplywenjing.github.io/2016Project/Fourth/index.html)
+ * [直击网贷P2P舆情分析系统-铜奖](http://simplywenjing.github.io/2016Project/P2P-Opinion-Analysis-System/index.html)
+ * [CSS3动画模拟幻灯片放映](http://simplywenjing.github.io/2016Project/SliderShow/slide-show.html)
+ * [转盘答题抽奖](http://simplywenjing.github.io/2016Project/turnplate/index2.html)
+ * [flexible.js实现表单弹框](http://simplywenjing.github.io/2016Project/new/index.html)
+# 声明
+`以上为学习过程中的作品，欢迎交流指正，如用作商业用途，请邮件联系我，并注明出处`
 
-其中2016Project中的是几个项目代码，包括肆周年活动页面等；    
-P2P-Opinion-Anaylysis-System 是参加拍拍贷数据产品比赛的网站“直击网贷P2P舆情分析系统”，获得铜奖，如需借鉴，请先联系我，并注明出处。
