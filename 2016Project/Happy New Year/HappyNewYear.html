@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Happy New Year</title>
+
+</head>
+<body>
+	<ul>
+		<li><a href="images/chun_bigger.jpg" class="tooltip" title="万事如意"><img src="images/chun.jpg" alt="春" /></a></li>
+		<li><a href="images/jie_bigger.jpg" class="tooltip" title="猴年大吉"><img src="images/jie.jpg" alt="节" /></a></li>
+		<li><a href="images/kl_bigger.jpg" class="tooltip" title="新年快乐"><img src="images/kl.jpg" alt="快乐" /></a></li>
+	</ul>
+	<div id="panel"><img src="images/monkey.jpg" alt="可爱的小猴子" /></div>
+	<div id="text">
+		<p><b>祝大家：</b></p>
+		</br>
+		<p><b>&nbsp;&nbsp;&nbsp;&nbsp;猴年大吉，心想事成！</b></p>
+	</div>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		var x=10;
+		var y=20;
+		$("a.tooltip").mouseover(function(e){
+			this.myTitle=this.title;
+			this.title="";
+			var imageTitle=this.myTitle?"<br/>"+this.myTitle:"";
+			var tooltip="<div id='tooltip'><img src='"+this.href+"' alt='产品预览图'/>"+imageTitle+"<\/div>"	;
+			$("body").append(tooltip);
+			$("#tooltip")
+			 	.css({
+					"top":(e.pageY+y)+"px",
+			 		"left":(e.pageX+x)+"px"
+			 	}).show("fast");
+		}).mouseout(function(){
+			this.title=this.myTitle;
+			$("#tooltip").remove();
+		}).mousemove(function(e){
+			$("#tooltip")
+				.css({
+					"top":(e.pageY+y)+"px",
+					"left":(e.pageX+x)+"px"
+				})
+		});
+	});
+
+</script>
+</body>
+</html>

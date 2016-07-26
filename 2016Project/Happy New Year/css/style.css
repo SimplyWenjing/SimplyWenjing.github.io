@@ -1,0 +1,46 @@
+*{
+	margin:0;padding:0;
+
+}	
+body{
+	padding: 60px;
+}
+#panel{
+	position: absolute; 
+	top: 200px;
+	left:30px;
+	width: 188px; 
+	height:157px;
+	/* border: 1px solid #0050D0; */
+	/* background: #96E555; */ 
+	cursor: pointer
+}
+#text{
+	position: absolute;
+	top: 160px;
+	left: 550px;
+	color: red;
+	font-size:30px;
+	font-family:"幼圆";
+}
+ul,li{
+			margin:0;
+			padding:0;
+		}
+		li{
+			list-style:none;
+			float:left;
+			display:inline;
+			margin-right:10px;
+			border:1px solid #AAAAAA;
+		}
+
+		/* tooltip */
+		#tooltip{
+			position:absolute;
+			border:1px solid #ccc;
+			background:#333;
+			padding:2px;
+			display:none;
+			color:#fff;
+		}
