@@ -6,21 +6,36 @@
 </head>
 <body>
 	<div id="box"></div>
+	<script type="text/javascript" src="../ajax.js"></script>
 	<script type="text/javascript">
-	function handle (response) {
-		var box = document.getElementById("box");
+	var box = document.getElementById("box");
+	function handle (response) {		
 		var html = "";
 		html += "响应数据为：" + response.words;
 		box.innerHTML = html;
 		console.log(html);
 	}
-	function jsonp (url,callback) {
+	function jsonp (url) {
 		var script = document.createElement("script");
 		script.src = url;
 		var header = document.getElementsByTagName("head")[0];
 		header.appendChild(script);
 	}
-	jsonp("data.json",handle);
+	jsonp("data.json");
+
+	// var xhr = createXHR();
+	// xhr.onreadystatechange = function () {
+	// 	if (xhr.readyState = 4) {
+	// 		if (xhr.status >= 200 && xhr.status < 300 || xhr.status == 304) {
+	// 			box.innerHTML = xhr.responseText;
+	// 		}
+	// 		else {
+	// 			alert("Request was failed:" + xhr.status);
+	// 		}
+	// 	}
+	// }
+	// xhr.open("get","data.json",false);
+	// xhr.send(null);
 
 	</script>
 

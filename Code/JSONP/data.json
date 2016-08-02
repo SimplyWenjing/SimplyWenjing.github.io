@@ -1,5 +1,4 @@
-handle(
-{
-	"words":"hello JSONP"
-}
-	)
+handle({
+	"words":"hello JSONP,You are great"
+})
+	

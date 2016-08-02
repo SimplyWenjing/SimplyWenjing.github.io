@@ -1,0 +1,153 @@
+*{  
+    margin: 0;  
+    padding: 0;  
+}  
+html,body{  
+    height: 100%;  
+    background: #fff;  
+}  
+body{  
+    width:100%;  
+    /*设置body为伸缩容器*/  
+    display: -webkit-box;/*旧版本，ios6-，Safari 3.1-6*/  
+    display: -moz-box;/*旧版本，Firefox 19-*/  
+    display: -ms-flexbox;/*混合版本，IE10*/  
+    display: -webkit-flex;/*新版本：Chrome*/  
+    display: flex;/*新版本：Opera 12.1,Firefox 20+*/  
+    /*伸缩项目换行*/  
+    /*旧版本：设置伸缩流*/  
+    -webkit-box-orient: vertical;  
+    -moz-box-orient: vertical;  
+    -webkit-box-direction: normal;  
+    -moz-box-orient: normal;  
+    /*旧版本：设置项目换行*/  
+    -webkit-box-lines: multiple;  
+    -moz-box-lines: multiple;  
+    /*混合版本：伸缩流方向与伸缩项目换行*/  
+    -ms-flex-flow: column wrap;  
+    /*新版本：伸缩流方向与伸缩项目换行*/  
+    -webkit-flex-flow: column wrap;  
+    flex-flow: column wrap;  
+}  
+section{  
+    width: 100%;  
+    margin-top: 1%;  
+    margin-bottom: 1%;  
+    /*设置section为伸缩容器*/  
+    display: -webkit-box;  
+    display: -moz-box;  
+    display: -ms-flexbox;  
+    display: -webkit-flex;  
+    display: flex;  
+    /*伸缩项目换行*/  
+    -webkit-box-orient: horizontal;  
+    -moz-box-orient: horizontal;  
+    -webkit-box-lines: multiple;  
+    -moz-box-lines: multiple;  
+    -ms-flex-flow: row wrap;  
+    -webkit-flex-flow: row wrap;  
+    flex-flow: row wrap;  
+    /*设置伸缩性*/  
+    -webkit-box-flex: 1;  
+    -moz-box-flex: 1;  
+    -ms-flex: 1;  
+    -webkit-flex: 1;  
+    flex: 1;  
+}  
+article{  
+    border:1px solid black;  
+    margin-left: 2%;  
+    margin-right: 2%;  
+    vertical-align: middle;  
+    -webkit-box-flex: 1;/*旧版本*/  
+    -moz-box-flex: 1;/*旧版本*/  
+    -ms-flex: 1;/*混合版本*/  
+    -webkit-flex: 1;/*新版本*/  
+    flex: 1;/*新版本*/  
+    -webkit-box-ordinal-group: 2;  
+    -moz-box-ordinal-group: 2;  
+    -ms-flex-order: 2;  
+    -webkit-order: 2;  
+    order: 2;  
+    /*文字水平垂直居中*/  
+    display: -webkit-box;  
+    display: -moz-box;  
+    display: -ms-flexbox;  
+    display: -webkit-flex;  
+    display: flex;  
+    /*水平居中*/  
+    -webkit-box-pack: center;/*旧版本*/  
+    -moz-box-pack: center;/*旧版本*/  
+    -ms-flex-pack:center;/*混合版本*/  
+    -webkit-justify-content:center;/*新版本*/  
+    justify-content: center;/*新版本*/  
+    /*垂直居中*/  
+    -webkit-box-align: center;/*旧版本*/  
+    -moz-box-align: center;/*旧版本*/  
+    -ms-flex-align: center;/*混合版本*/  
+    -webkit-align-items: center;/*新版本*/  
+    align-items: center;/*新版本*/  
+}  
+aside{  
+    width:25%;  
+    border:1px solid black;  
+    display: flex;  
+    display: -webkit-flex;  
+    -ms-flex-align: center;  
+    -ms-flex-pack: center;  
+    -webkit-box-align:center;  
+    -moz-box-align:center;  
+    box-align:center;  
+    -webkit-box-pack: center;  
+    -moz-box-pack:center;  
+    box-pack:center;  
+    -webkit-justify-content: center;  
+    justify-content: center;  
+    align-items: center;  
+    -webkit-align-items:center;  
+    -webkit-box-ordinal-group: 3;/*旧版本*/  
+    -moz-box-ordinal-group: 3;/*旧版本*/  
+    -ms-flex-order: 3;/*混合版本*/  
+    -webkit-order: 3;/*新版本*/  
+    order: 3;/*新版本*/  
+}  
+nav{  
+    border:1px solid black;  
+    width:20%;  
+    /*文字水平垂直居中*/  
+    display: -webkit-box;  
+    display: -moz-box;  
+    display: -ms-flex-box;  
+    display: -webkit-flex;  
+    display: flex;  
+    /*水平居中*/  
+    -webkit-box-pack: center;  
+    -moz-box-pack: center;  
+    -ms-flex-pack: center;  
+    -webkit-justify-content: center;  
+    justify-content: center;  
+    /*垂直居中*/  
+    -webkit-box-align: center;  
+    -moz-box-align: center;  
+    -ms-flex-align: center;  
+    -webkit-align-items: center;  
+    align-items: center;  
+}  
+header,footer,article,aside,nav{  
+    padding:1%;   
+}  
+header{  
+    min-width: 100%;  
+    min-height: 100px;  
+    border:1px solid black;  
+    line-height: 100px;  
+    text-align: center;  
+}  
+footer{  
+    min-width: 100%;  
+    min-height: 60px;  
+    border:1px solid black;  
+    background: #eee;  
+    line-height: 100px;  
+    text-align: center;  
+}  
