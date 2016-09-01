@@ -1,0 +1,109 @@
+.huojian {
+    width: 540px;
+    height: 810px;
+    background: url(http://3gimg.qq.com/BabytingWeb/operation/2015diary/style/images/huojian2.png) center center no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 50%;
+    margin-left:-270px; 
+    bottom: 0px;
+    z-index: 98;
+  }
+.page7 {
+  background: #4ec7fe url(http://3gimg.qq.com/BabytingWeb/operation/2015diary/style/images/page7_bg.png) center top no-repeat;
+  background-size: 500px;
+}
+
+.road {
+  width: 226px;
+  height: 380px;
+  background: url(http://3gimg.qq.com/BabytingWeb/operation/2015diary/style/images/road.png) center center no-repeat;
+  background-size: cover;
+  margin: 200px auto 0px auto;
+  position: relative;
+}
+
+.car {
+  width: 263px;
+  height: 300px;
+  background: url(http://3gimg.qq.com/BabytingWeb/operation/2015diary/style/images/car.png) center center no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 89px;
+  left: -30px;
+  opacity: 0;
+}
+
+.share-btn {
+  width: 149px;
+  height: 50px;
+  display: block;
+  margin: 30px auto 0px auto;
+  background: url(http://3gimg.qq.com/BabytingWeb/operation/2015diary/style/images/share_btn2.png) center center no-repeat;
+  background-size: cover;
+  opacity: 0;
+}
+
+
+.page4-text1 {
+  margin-top: 10px;
+}
+
+.page4-text3 {
+  margin-top: 13px;
+}
+
+
+.page1 .dropdown-btn {
+    width: 74px;
+    height: 54px;
+    background: url(http://3gimg.qq.com/BabytingWeb/operation/2015diary/style/images/dropdown1_btn.png) center center no-repeat;
+    background-size: cover;
+    margin-left: -37px;
+}
+.page2 .dropdown-btn {
+    width: 74px;
+    height: 54px;
+    background: url(http://3gimg.qq.com/BabytingWeb/operation/2015diary/style/images/dropdown2_btn.png) center center no-repeat;
+    z-index: 1025;
+     background-size: cover;
+     margin-left: -37px;
+}
+.page3 .dropdown-btn {
+    width: 74px;
+    height: 54px;
+    background: url(http://3gimg.qq.com/BabytingWeb/operation/2015diary/style/images/dropdown3_btn.png) center center no-repeat;
+    z-index: 1025;
+    background-size: cover;
+    margin-left: -37px;
+}
+.page4 .dropdown-btn {
+    width: 66px;
+    height: 54px;
+    background: url(http://3gimg.qq.com/BabytingWeb/operation/2015diary/style/images/dropdown4_btn.png) center center no-repeat;
+    background-size: cover;
+    margin-left: -33px;
+}
+.page5 .dropdown-btn {
+    width: 54px;
+    height: 54px;
+    background: url(http://3gimg.qq.com/BabytingWeb/operation/2015diary/style/images/dropdown5_btn.png) center center no-repeat;
+    background-size: cover;
+    margin-left: -27px;
+}
+.page6 .dropdown-btn {
+    width: 54px;
+    height: 54px;
+    background: url(http://3gimg.qq.com/BabytingWeb/operation/2015diary/style/images/dropdown6_btn.png) center center no-repeat;
+    background-size: cover;
+    margin-left: -27px;
+}
+
+.page7 .dropdown-btn {
+    width: 54px;
+    height: 54px;
+    background: url(http://3gimg.qq.com/BabytingWeb/operation/2015diary/style/images/dropup_btn.png) center center no-repeat;
+    bottom: 90px;
+    background-size: cover;
+    margin-left: -27px;
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>宝贝听听2015成长日记</title>
+    <meta name="format-detection" content="telephone=no">
+    <script type="text/javascript">
+     function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+          results = regex.exec(location.search);
+      return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+            var viewWidth = 640;
+            var viewHeight = 960;
+            var phoneWidth = parseInt(window.screen.width);
+            var phoneHeight = parseInt(window.screen.height);
+            var phoneScale = phoneWidth / viewWidth;
+            var phoneHeightScale = phoneHeight / viewHeight;
+            var isAndroid = false;
+            var androidVer = 4.0;
+            var ua = navigator.userAgent;
+            var meta = null;
+            if (/Android (\d+\.\d+)/.test(ua)){
+                isAndroid = true;
+                var version = parseFloat(RegExp.$1);
+                androidVer = version;
+                if (phoneWidth <= phoneHeight) {
+                        meta = '<meta name="viewport" content="width='+viewWidth+', initial-scale='+phoneScale+', minimum-scale='+phoneScale+', maximum-scale='+phoneScale+', target-densitydpi=device-dpi" />';
+                } else {
+                    phoneScale = phoneHeight / viewWidth;
+                    var deviceWidth = viewWidth * phoneWidth / phoneHeight;
+                    if(version > 2.3){
+                        meta =  '<meta name="viewport" content="width='+deviceWidth+', initial-scale='+phoneScale+', minimum-scale='+phoneScale+', maximum-scale='+phoneScale+', target-densitydpi=device-dpi" />';
+
+                    }else{
+                        meta =  '<meta name="viewport" content="width='+deviceWidth+', target-densitydpi=device-dpi" />'
+                    }
+                }
+            }
+            else if (/iPhone|iPad/.test(ua)) {
+               meta = '<meta name="viewport" content="width='+viewWidth+', initial-scale='+phoneScale+', minimum-scale='+phoneScale+', maximum-scale='+phoneScale+', target-densitydpi=device-dpi" />';
+            }  
+
+            else {
+               var deviceWidth = viewWidth * phoneWidth / phoneHeight;
+               meta =  '<meta name="viewport" content="width='+ deviceWidth + ',initial-scale=' + 1 + ',target-desitydpi=device-dpi" />'
+            }
+
+        document.write(meta);
+       
+       
+        
+       
+     </script>
+    <link rel="stylesheet" href="http://3gimg.qq.com/BabytingWeb/operation/2015diary/style/idangerous.swiper.css">
+    <link rel="stylesheet" href="style/main.css?v=36">
+    <script type="text/javascript">
+
+    if (phoneWidth <= 320 && phoneHeight <= 480) {
+      document.write('<link rel="stylesheet" href="style/fixed.css?v=36">');
+    }
+    if (phoneWidth == 480 && phoneHeight == 800) {
+      document.write('<link rel="stylesheet" href="style/fixed.css?v=36">');
+    }
+    </script>
+  </head>
+  <body class="body-page1">
+  <div id="loading">
+   <div id="loading_icon"></div>
+   <div id="loading_text">资源加载中...</div>
+  </div>
+
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide page page1 animate-page">
+        <div class="yun1"></div>
+        <div class="yun2"></div>
+        <div class="yun3"></div>
+        <div class="huojian"></div>
+        <div class="miaomiao-leaf"></div>
+        <div class="miaomiao">
+
+          <div class="miaomiao-eye miaomiao-eye1">
+            <div class="miamiao-eyeball miaomiao-eyeball1"></div>
+          </div>
+          <div class="miaomiao-eye miaomiao-eye2">
+            <div class="miamiao-eyeball miaomiao-eyeball2"></div>
+          </div>
+        </div>
+        <!--
+          <div class="sun1"></div>
+          <div class="sun2"></div>
+        -->
+        <div class="dropdown-btn"></div>
+      </div>
+      <div class="swiper-slide page page2 ">
+          <div class="color-arrow page2-color-arrow1"></div>
+          <div class="page2-text1 page2-text-font">这一年，你的宝宝和小朋友们一起</div>
+          <div class="page2-text2 page2-text-font" >听了<span class="page2-num">5.4亿</span>分钟的故事。</div>
+          <div class="clear"></div>
+          <div class="color-arrow page2-color-arrow2"></div>
+          <div class="page2-text3 page2-text-font" >这相当于你从</div>
+          <div class="page2-text4 page2-text-font"><span class="page2-num">北宋公元955年</span>开始，</div>
+          <div class="page2-text5 page2-text-font">一刻不停地跟孩子嘚吧嘚，</div>
+          <div class="page2-text6 page2-text-font">才能把这些故事讲完。</div>
+          <div class="dropdown-btn"></div>
+      </div>
+      <div class="swiper-slide page page3" >
+        <div class="color-arrow page3-color-arrow1"></div>
+        <div class="page3-text1 page3-text-font">这一年，听故事的家庭超过</div>
+        <div class="page3-text2 page3-text-font"><span class="page3-num">2000万</span>个。</div>
+
+        <div class="clear"></div>
+        <div class="color-arrow page3-color-arrow2"></div>
+        <div class="page3-text3 page3-text-font">这相当于你与无数个隔壁老王及熊孩子</div>
+        <div class="page3-text4 page3-text-font">手拉手霸占地球<span class="page3-num" >2圈</span>。</div>
+        <div class="person2">
+          
+           <div class="eye-warpper eye1">
+              <div class="eye"></div>
+            </div>
+            <div class="eye-warpper eye2">
+              <div class="eye"></div>
+            </div>
+        </div>
+        <div class="person1">
+           
+        </div>
+        <div class="dropdown-btn"></div>
+      </div>
+      <div class="swiper-slide page page4" id="page4">
+        <div class="stars"></div>
+        <div class="moon"></div>
+        <div class="page4-b1" id="page4_b1">
+          <div class="font1 page4-text1">宝宝今年共使用宝贝听听</div>
+          <!--
+          <div class="circle">
+            <div class="pie-left"><div id="left" class="left"></div></div>
+            <div class="pie-right"><div id="right" class="right"></div></div>
+            <div class="mask"><span id="day_value">0</span>天</div>
+          </div>
+          -->
+          <div id="day_circle">
+
+          </div>
+
+        </div>  
+        <div class="page4-b2" id="page4_b2">
+          <div class="font1 page4-text2">多数在</div>
+          <div class="time-show" id="time_show"></div>
+          <div class="font1 page4-text3">宝宝听着听着就睡着了...</div>
+        </div>
+        <div class="dropdown-btn"></div>
+      </div>
+      <div class="swiper-slide page page5" id="page5">
+          <div class="page5-b1">
+          <div class="page5-header">
+
+            <div class="page5-star1"></div>
+            <div class="page5-star2"></div>
+            <div class="page5-star3"></div>
+            <div class="page5-star4"></div>
+            <div class="page5-star5"></div>
+            <div class="page5-star6"></div>
+            <div class="page5-star7"></div>
+            <div class="page5-star8"></div>
+            <div class="page5-header-bg"></div>
+          </div>
+          <div class="page5-text-panel">
+            <div class="page5-text1"><span class="font1">过去一年宝宝共收听故事</span></div>
+            <div class="page5-text4 font1"><span class="num2" id="play_story_count"></span><span style="vertical-align: middle;">次</span></div>
+            <div style="width:80%;height:0px;border-top:3px dotted   #1ab99b;margin: 15px auto;"></div>
+            <div class="page5-text2 font2">一不小心，就超过了全国</div>
+            <div class="page5-text3 font2"><span class="num2" id="play_order"></span><span style="vertical-align: middle;">的小朋友</span></div>
+          </div>
+          </div>
+          <div class="dropdown-btn"></div>
+      </div>
+      <div class="swiper-slide page page6" id="page6">
+          <div class="score-name"></div>
+          <div class="score-warpper">
+          <div class="scroe-header">
+            宝宝喜爱类型
+          </div>
+          <div class="score">
+            <div id="score1"><label id="score1_label">故事: </label><div class="score-stars score-stars1"><span class="star star1"></span><span class="star star2"></span><span class="star star3"></span><span class="star star4" ></span><span class="star star5"></span></div></div>
+            <div id="score2"><label id="score2_label">动画: </label><div class="score-stars score-stars2"><span class="star star1"></span><span class="star star2"></span><span class="star star3"></span><span class="star star4" ></span><span class="star star5"></span></div></div>
+            <div id="score3"><label id="score3_label">外语: </label><div class="score-stars score-stars3"><span class="star star1"></span><span class="star star2"></span><span class="star star3"></span><span class="star star4" ></span><span class="star star5"></span></div></div>
+            <div id="score4"><label id="score4_label">儿歌: </label><div class="score-stars score-stars4"><span class="star star1"></span><span class="star  star2"></span><span class="star star3"></span><span class="star star4" ></span><span class="star star5"></span></div></div>
+            <div id="score5"><label id="score5_label">国学: </label><div class="score-stars score-stars5"><span class="star star1"></span><span class="star star2"></span><span class="star star3"></span><span class="star star4" ></span><span class="star star5"></span></div></div>
+          </div>
+          </div>
+          <div class="dropdown-btn"></div>
+      </div>
+    <div class="swiper-slide page page7">
+         <div class="leaf1"></div>
+          <div class="leaf2"></div>
+         
+        
+         <div class="leaf3"></div>
+         <div class="leaf4"></div>
+         <div class="leaf5"></div>
+         
+         <div class="road"><div class="car"></div></div>
+
+         <a class="share-btn" id="share_btn"></a>
+         <div class="dropdown-btn"></div>
+         <div id="download_bar" class="download-bar">
+           <div class="download-babyting-icon">
+             <div style="color: #fcf138;font-size: 28px;">下载宝贝听听</div>
+             <div style="color: #fff;font-size: 24px;">查看我的成长日记</div>
+           </div>
+           <div id="download_btn">立即下载<span class="download-icon"></span></div>
+         </div>
+      </div>
+    
+    </div>
+   
+  </div>
+  <audio id="bg_audio"  loop="loop" preload="auto">
+    <source src="resource/music.mp3" />
+  </audio>
+  <div id="share_mask"></div>
+  <div id="music_warpper">
+    <div id="music"></div>
+  </div>
+  </body>
+  <script type="text/javascript" src="http://3gimg.qq.com/BabytingWeb/lib/qwest.min.js"></script>
+  <script type="text/javascript" src="http://3gimg.qq.com/BabytingWeb/operation/2015diary/js/idangerous.swiper.min.js"></script>
+  <script type="text/javascript" src="http://3gimg.qq.com/BabytingWeb/operation/2015diary/js/progressbar.min.js"></script>
+  <script type="text/javascript" src="js/main.js?v=36"></script>
+   <script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?784d3abf59a7d732a4a66b45acf087ae";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+</html>
