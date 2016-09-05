@@ -1,0 +1,174 @@
+@charset "utf-8";
+@major-color:#e7504d;
+@fontSize:14px;
+.reset{
+	margin: 0;
+	padding: 0;
+	border: 0px;
+}
+body,div,ul,li,p{
+	.reset;
+}
+
+ul li{
+	display: inline-block;
+	list-style: none;
+	text-align: center;
+	vertical-align: middle;
+}
+
+a{
+	text-decoration: none;
+}
+
+body,html{
+	width: 1280px; 
+	margin: 0 auto;	
+	font-family: "Microsoft YaHei";
+	font-size: @fontSize;
+}
+//头部导航栏
+header{  
+    min-height: 60px;  
+}  
+nav{
+	float: right;
+}
+.nav-active{
+	border-bottom: 5px solid #e7504d;
+}
+#logo{
+	height: 31px;
+	width: 310px;
+	float: left;
+	background: url(../images/world-icon.png) no-repeat;
+	margin: 13px 0px;
+	span{	
+		margin-left: 44px;
+		font-size: 20px;
+		color: #e74f4d;
+	}
+}
+.nav-list li{
+	padding: 0px 25px 0px 25px;
+	margin-top:20px;
+	cursor: pointer;
+	a{
+		color:black;
+		width: 78px;
+		height: 38px;
+		display: inline-block;
+
+		&:hover{
+			color: #e7504d;
+			text-decoration: none;
+		}
+	}
+	&:hover{
+		border-bottom: 5px solid #e7504d;
+	}
+}
+
+//轮播图
+#image-container{
+	margin-top:10px;
+	height: 600px;
+	overflow: hidden;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+#image-list{
+	width: 7680px;
+	position: absolute;
+	top: 0;	
+	left: -1280px;
+}
+#image-control{
+	.icon(520px);
+	width: 1280px;
+	font-size: 60px;
+	text-align: center;
+	:nth-child(1){
+		color:@major-color;
+	}
+
+}
+.icon(@top){
+	font-size: 100px;
+	color: #eee;
+	position: absolute;
+	top: @top;
+	text-shadow: -1px -1px 1px rgba(0,0,0,0.9);
+}
+#left{
+	.icon(250px);
+	display: block;
+	left: 0px;
+}
+#right{
+	.icon(250px);
+	display: block;
+	right: 0px;
+}
+
+//功能列表
+#list{
+	width: 1280px;
+	height: 250px;
+	text-align: center;
+}
+.list-icon{
+	width: 42px;
+	height: 42px;
+	margin-top: 44px;
+	margin-bottom: 44px;
+	span{
+		display: inline-block;
+		margin-top: 50px;
+		width: 100px;
+		text-align: center;
+		margin-left: -30px;
+		font-size: 16px;
+		font-weight: bold;
+		color:#e7504d;
+	}
+}
+li.list-icon:nth-child(1){
+	background: url(../images/list-icon1.png) no-repeat;
+	margin-left: 14px;
+}
+li.list-icon:nth-child(2){
+	background: url(../images/list-icon2.png) no-repeat;
+	margin-left: 270px;
+}
+li.list-icon:nth-child(3){
+	background: url(../images/list-icon3.png) no-repeat;
+	margin-left: 274px;
+}
+li.list-icon:nth-child(4){
+	background: url(../images/list-icon4.png) no-repeat;
+	margin-left: 280px;
+}
+#list ul:nth-child(2) li{
+	width: 310px;	
+	text-align: center;
+}
+#list ul:nth-child(2) li:nth-child(1),#list ul:nth-child(2) li:nth-child(2),#list ul:nth-child(2) li:nth-child(3){
+	border-right: 2px solid #bbbbbb;
+}
+#list ul:nth-child(2) {
+	margin-bottom: 70px;
+}
+
+
+footer{   
+    min-height: 60px;  
+    background:#2f3038;
+	text-align: center;
+	line-height: 60px;
+	color: #fff;  
+}
+
+
+
