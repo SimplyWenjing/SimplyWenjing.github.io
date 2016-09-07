@@ -1,11 +1,8 @@
 {
   "name": "p2p",
   "version": "1.0.0",
-  "description": "* 拍拍贷魔镜杯数据产品开发比赛铜奖作品。     \r * 主要是为了为推荐者推荐何时的理财产品，并且在投资者/借贷者/P2P平台中担任意见领袖的身份",
+  "description": "* 拍拍贷魔镜杯数据产品开发比赛铜奖作品，\r * 主要是为了为推荐者推荐何时的理财产品，并且在投资者/借贷者/P2P平台中担任意见领袖的身份",
   "main": "gulpfile.js",
-  "dependencies": {
-    "gulp": "^3.9.1"
-  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.12",

@@ -6,8 +6,6 @@ var gulp     = require('gulp'),
 	imagemin = require('gulp-imagemin'),
 	jsmin    = require('gulp-uglify'),
 	jsconcat = require('gulp-concat');
-	
-
 //定义一个testLess任务(自定义任务名称)
 /*gulp.task('testLess',function(){
 	gulp.src('src/css/*.less')//该任务针对的文件
@@ -16,7 +14,7 @@ var gulp     = require('gulp'),
 });*/
 //压缩css
 gulp.task('cssMin',function(){
-	gulp.src('src/css/*.css')
+	gulp.src('css/*.css')
 		.pipe(cssmin({
 			advanced:false,//类型：Boolean 默认：true [是否开启高级优化（合并选择器等）]
 			compatibility:'ie7',//保留ie7及以下兼容写法 类型：String 默认：''or'*' [启用兼容模式； 'ie7'：IE7兼容模式，'ie8'：IE8兼容模式，'*'：IE9+兼容模式]
