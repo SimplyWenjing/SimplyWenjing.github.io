@@ -1,0 +1,21 @@
+{
+  "name": "p2p",
+  "version": "1.0.0",
+  "description": "* 拍拍贷魔镜杯数据产品开发比赛铜奖作品。     \r * 主要是为了为推荐者推荐何时的理财产品，并且在投资者/借贷者/P2P平台中担任意见领袖的身份",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-concat": "^2.6.0",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-less": "^3.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-uglify": "^2.0.0"
+  },
+  "author": "wenjing",
+  "license": "ISC"
+}
