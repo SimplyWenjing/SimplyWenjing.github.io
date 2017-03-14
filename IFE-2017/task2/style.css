@@ -1,0 +1,71 @@
+p,section,aside,ul,li,h1,h2{
+	margin: 0px;
+	padding: 0px;
+	font-family: "微软雅黑";
+}
+body{
+	background-color:#DEDEDE; 
+}
+
+
+header{
+	background-color: #333  ;
+	height: 60px;
+	padding: 1px 0px 0px 0px;
+}
+#logo{
+	height: 38px;
+	width:150px;
+	float: left;
+	background: url(baidu.jpg) no-repeat;
+	margin: 10px 0px 11px 40px;
+}
+header ul li{
+	display: inline-block;
+	vertical-align: middle;
+	color: #fff;
+	padding: 0px 20px 0px 0px;
+	cursor: pointer;
+	text-align: center;
+	height: 60px;
+	line-height: 60px;	
+	font-size: 12px;
+}
+#nav li:nth-child(4){
+	color: #A19CB0;
+}
+#nav{
+	float: right;
+	margin: 0px 10px 5px 0px;
+}
+
+.article{
+	border: 1px solid #cbcbcb;
+	border-bottom: 2px solid #848484;
+	background-color: #fff;
+	margin: 22px 20px 0px 20px;
+	padding: 39px 21px;
+}
+.first{
+	margin-bottom: 23px;
+}
+.second{
+	margin-bottom: 20px;
+	font-size: 16px;
+}
+.author{
+	font-size: 14px;
+	margin-bottom: 20px;
+	text-indent: 0em !important;
+}
+.article p{
+	text-indent: 2em;
+	line-height: 1.5em;
+	letter-spacing: 0.05em;
+}
+
+#list li{
+	list-style: none;
+	margin: 5px 0px 5px 20px;
+
+}
