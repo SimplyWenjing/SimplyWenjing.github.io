@@ -1,4 +1,4 @@
-#CSS笔记
+# CSS笔记
 - margin,padding
 - ul li 样式
 - 图片随父元素改变大小
