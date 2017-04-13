@@ -1,0 +1,51 @@
+div,ul,li{
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+ul li{
+	list-style: none;
+}
+#container{
+	background-color: #eee;
+	border: 1px solid #999;
+	width: 90%;
+	margin: 20px auto;
+/*	position: relative;*/
+	padding: 20px;
+	overflow: hidden;
+}
+#team_logo{
+/*	position: absolute;
+	top: 20px;
+	left: 20px;*/
+	float: left;
+	height: 300px;
+	width: 200px;
+	border: 1px solid #999;
+}
+#pers_logo{
+/*	position: absolute;
+	top: 20px;
+	right: 20px;*/
+	float: right;
+	height: 400px;
+	width: 120px;
+	border: 1px solid #999;
+}
+#main{
+	margin: 0px 140px 0px 220px;
+	height: 200px;
+	border: 1px solid #999;
+}
+/*.clear{
+	clear: both;
+	height: 0;
+	line-height: 0;
+}
+*/
+/*#container::after{
+	content: '';
+    display: block;
+    clear: both;
+}*/
