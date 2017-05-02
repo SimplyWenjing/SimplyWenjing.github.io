@@ -11,41 +11,83 @@ ul li{
 	border: 1px solid #999;
 	width: 90%;
 	margin: 20px auto;
-/*	position: relative;*/
 	padding: 20px;
-	overflow: hidden;
+	/*overflow: hidden;/*清除浮动*/
+}
+/*使用::after清除浮动*/
+#container::after{
+	content: "";
+	display: block;
+	clear: both;
 }
 #team_logo{
-/*	position: absolute;
-	top: 20px;
-	left: 20px;*/
 	float: left;
+	width: 200px;
+	border: 1px solid #999;
+}
+#team_logo img{
+	float: left;
+	margin: 20px;
+}
+#team_name{
+	float: right;
+	margin-right: 10px;
+	margin-top: 20px;
+	font-family: "微软雅黑";
+}
+#pers_logo{
+	float: right;
+	width: 120px;
+	border: 1px solid #999;
+}
+#pers_logo li{
+	background: url(girl.jpg) no-repeat ;
+	width: 80px;
+	height: 80px;
+	margin: 20px;
+}
+#main{
+	margin: 0px 140px 0px 220px;
+	border: 1px solid #999;
+}
+#main p{
+	margin: 15px;
+	font-family: "微软雅黑";
+}
+
+
+/*------------ 测试-------------*/
+#container1{
+	background-color: #eee;
+	border: 1px solid #999;
+	width: 90%;
+	margin: 20px auto;
+	position: relative;
+	padding: 20px;
+}
+#team_logo1{
+	position: absolute;
+	top: 20px;
+	left: 20px;
 	height: 300px;
 	width: 200px;
 	border: 1px solid #999;
 }
-#pers_logo{
-/*	position: absolute;
+#pers_logo1{
+	position: absolute;
 	top: 20px;
-	right: 20px;*/
-	float: right;
+	right: 20px;
 	height: 400px;
 	width: 120px;
 	border: 1px solid #999;
 }
-#main{
+#main1{
 	margin: 0px 140px 0px 220px;
 	height: 200px;
 	border: 1px solid #999;
 }
-/*.clear{
-	clear: both;
-	height: 0;
-	line-height: 0;
-}
-*/
-/*#container::after{
-	content: '';
+#container1::after{
+	content: "";
     display: block;
     clear: both;
-}*/
+}
