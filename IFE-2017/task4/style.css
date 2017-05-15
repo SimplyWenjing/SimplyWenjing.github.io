@@ -1,0 +1,25 @@
+#container{
+	width: 400px;
+	height: 200px;
+	background: #ccc;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+}
+.sector{
+	background-color: #fc0;
+	width: 50px;
+	height: 50px;
+}
+.rb{
+	 border-radius:0 0 50px 0;
+}
+.lt{
+	border-radius: 50px 0 0 0 ;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
