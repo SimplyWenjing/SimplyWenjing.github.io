@@ -1,0 +1,187 @@
+p,section,aside,ul,li,h1,h2,fieldset{
+	margin: 0px;
+	padding: 0px;
+	border: 0;
+	font-family: "微软雅黑";
+	letter-spacing: 0.05em;
+}
+body{
+	background-color:#DEDEDE; 
+}
+
+header,footer{
+	width: 100%;
+}
+header{
+	background-color: #333  ;
+	height: 60px;
+	padding: 1px 0px 0px 0px;
+}
+#logo{
+	height: 38px;
+	width:150px;
+	float: left;
+	background: url(baidu.jpg) no-repeat;
+	margin: 10px 0px 11px 40px;
+}
+header ul li{
+	display: inline-block;
+	vertical-align: middle;
+	color: #fff;
+	padding: 0px 20px 0px 0px;
+	cursor: pointer;
+	text-align: center;
+	height: 60px;
+	line-height: 60px;	
+	font-size: 12px;
+}
+#nav li:nth-child(4){
+	color: #A19CB0;
+}
+#nav{
+	float: right;
+	margin: 0px 10px 5px 0px;
+}
+
+.article{
+	border: 1px solid #cbcbcb;
+	border-bottom: 2px solid #848484;
+	background-color: #fff;
+	margin: 22px 20px 11px 20px;
+	padding: 39px 21px;
+}
+.article:nth-child(6){
+	margin-top: 40px;
+
+}
+.first{
+	margin-bottom: 23px;
+}
+.second{
+	margin-bottom: 20px;
+	font-size: 16px;
+}
+.author{
+	font-size: 14px;
+	margin-bottom: 20px;
+	text-indent: 0em !important;
+}
+.article p{
+	text-indent: 2em;
+	line-height: 1.5em;
+	letter-spacing: 0.05em;
+}
+
+#list li{
+	list-style: none;
+	margin: 5px 0px 5px 20px;
+}
+#picture li{
+	list-style: none;
+	width: 122px;
+	height: 126px; 
+	border: 1px solid #CBCBCB;
+	margin-left: 30px;
+	margin-bottom: 10px;
+	float: left;
+}
+#picture:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+#picture img{
+	width: auto;
+	height: auto;
+	max-width: 80%;
+	max-height: 100%;
+	margin: 8px 10%;
+}
+#picture p{
+	font-size: 12px;
+	text-indent: 0em;
+	text-align: center;
+	padding-top: 10px;
+}
+#table{
+	width: 100%;
+	border: 1px solid #dedede;
+	border-collapse:collapse;
+}
+#table td{
+	border: 1px solid #dedede;
+	height: 26px;
+	text-indent: 0.5em;
+	font-size: 14px;
+}
+#table tr:nth-child(1){
+	background-color: black;
+	color: #fff;
+	font-size: 16px;
+}
+#table tr:nth-child(6){
+	background-color: #ccc;
+}
+#aside-title{
+	border-left: 4px solid #dedede;
+	height: 38px;
+	line-height: 38px;
+	text-indent: 12px;
+}
+fieldset{
+	margin:5px 0px;
+}
+
+#form{
+	font-size: 12px;
+}
+.right{
+	width: 30%;
+	display: inline-block;
+	margin-right: 10px;
+	text-align: right;
+}
+.note{
+	margin: 5px 0px 20px 0px;
+	color: #B5B9B8;
+}
+#des{
+	height: 100px;
+	width: 200px;
+	vertical-align:top; 
+}
+#btn{
+	width: 320px;
+	background-color: #3355D0;
+	border: 1px solid #3355D0;
+	height: 40px;
+	border-radius: 5px;
+	color: #fff;
+	margin-top: 10px;
+	
+}
+
+#content{
+	border: 1px solid #dedede;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+#right-box{
+	box-sizing:border-box;
+	width: 365px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+#main-box{
+	margin-right: 385px;
+}
+
+footer{
+	height: 100px;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	line-height: 100px;
+}
