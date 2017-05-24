@@ -1,4 +1,4 @@
-div,p,ul,li,section,aside,article{
+div,p,ul,li,section,aside,article,h1,h2{
 	border: 0;
 	margin: 0;
 	padding: 0;
@@ -8,7 +8,6 @@ div,p,ul,li,section,aside,article{
 body{
 	width: 980px;
 	height: 1386px;
-	border: 1px solid red;
 	margin: 0 auto;
 
 }
@@ -47,6 +46,11 @@ header{
 	/*border: 1px solid red;*/
 	margin: 36px auto 0 auto;
 	overflow: hidden;
+}
+#container::after{
+	content: "";
+	clear: both;
+	display: block;
 }
 #main-intro ul li{
 	float: left;
@@ -147,10 +151,204 @@ header{
 	margin-left: -30px;
 }
 #top-right-words p:nth-child(5) span:nth-child(1){
-	font-size: 55px;
+	font-size: 50px;
 	color: #cc8091;
+	float: left;
 }
-#top-right-words p:nth-child(5) span:nth-child(2){
+#encourage span{
+	display: block;
 	font-size: 21px;
 	color: #cc8091;
+}
+#encourage{
+	float: right;
+}
+/*-------下部分样式------*/
+/*清除上部分父元素的坍塌*/
+#top::after,#r-bottom-b::after{
+	content: "";
+	clear: both;
+	display: block;
+}
+#bottom::after{
+	content: "";
+	clear: both;
+	display: block;
+}
+#left-intro{
+	width: 405px;
+	float: left;
+	margin-top: 25px;
+}
+#left-intro img{
+	float: right;
+	margin: 15px 0px 15px 15px;
+}
+#left-intro p{
+	font-size: 12px;
+	font-family: "宋体";
+	color: #767777;
+	line-height: 1.5em;
+	letter-spacing: 0.05em;
+}
+.indenttwo{
+	text-indent: 2em;
+}
+#left-intro h1 span:nth-child(1){
+	font-size: 72px;
+	font-weight: bold;
+	font-style: italic;
+	color: #E5D324;
+}
+#left-intro h1 span:nth-child(2){
+	font-size: 42px;
+	color: #11456b;
+}
+#left-intro h2{
+	font-size: 33px;
+	font-weight: bold;
+	color: #11456b;
+	margin-top: 16px;
+	border-bottom: 2px solid #11456b;
+	padding-bottom: 17px;
+	margin-bottom: 25px;
+}
+#king{
+	font-size: 70px;
+	font-family: "微软雅黑";
+	color: #f5e327;
+	float: left;
+	margin: -20px 10px 0px 0px;
+}
+/*下右边样式*/
+#right-info{
+	float: right;
+	margin-top: 25px;
+}
+#r-top{
+	width: 458px;
+	height: 275px;
+	background: url(images/middle-image.png) no-repeat;
+	border:1px solid #fff;/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!要再看看这里*/
+}
+#r-top-words{
+	background: rgba(0,0,0,0.4);
+	width: 458px;
+	height: 61px;
+	margin-top: 196px;
+	line-height: 61px;
+}
+#r-top-words span:nth-child(1){
+	display: inline-block;
+	height: 44px;
+	border-left: 3px solid #72b16a;
+	margin-left: 25px;
+	margin-top: 8.5px;
+	color: #fff;
+	font-size: 26px;
+	font-family: "微软雅黑";
+	line-height: 44px;
+	padding-left: 10px;
+}
+#r-top-words span:nth-child(2){
+	font-size: 14px;
+	color: #72b16a;
+	display: inline-block;
+	padding-left: 5px;
+}
+#r-bottom{
+	width: 459px;
+	height: 318px;
+	background-color: #EEEED6;
+	margin-top: 15px;
+	border: 1px solid #fff;
+}
+#hero-list{
+	margin-top: 33px;
+}
+#hero-list span{
+	font-size: 12px;
+	font-family: "微软雅黑";
+}
+#hero-list li{
+	list-style: square;
+	margin-left: 32px;
+	font-size: 16px;
+	font-family: "宋体";
+	color: #5a5b5b;
+	margin-bottom: 20px;
+	line-height: 16px;
+}
+#r-bottom-b{
+	width: 459px;
+	height: 160px;
+	
+	margin-top: 34px;
+}
+#r-bottom-b-left{
+	float: left;
+	width: 260px;
+	background: #D55D5C;
+}
+#r-bottom-b-left span{
+	font-size: 110px;
+	font-family: "微软雅黑";
+	color: #fff;
+	display: inline-block;
+	margin-left: 8px;
+	float: left;
+	line-height: 160px;
+	margin-right: -5px;
+}
+#r-bottom-b-left-words{
+	float: right;
+	height: 86px;
+	width: 170px;
+	border-left: 2px solid #fff;
+	margin-top: 37px;
+	margin-right: 10px;
+}
+#r-bottom-b-left-words p:nth-child(1){
+	font-size: 21px;
+	font-family: "黑体";
+	font-style: italic;
+	color: #fff;
+	padding-left: 5px;
+}
+#r-bottom-b-left-words p:nth-child(2){
+	font-size: 12px;
+	color: #fff;
+	padding-left: 5px;
+}
+#r-bottom-b-right{
+	float: right;
+	width: 160px;
+	margin-right: 20px;
+}
+#r-bottom-b-right span:nth-child(1){
+	background: url(images/left-marks.png);
+	display: inline-block;
+	width: 26px;
+	height: 22px;
+	float: left;
+}
+#right-mark{
+	background: url(images/right-marks.png);
+	display: inline-block;
+	width: 25px;
+	height: 22px;
+	float: right;
+	margin-right: -18px;
+	margin-top: -10px;
+}
+#r-bottom-b-right p{
+	text-indent: 1em;
+}
+footer{
+	text-align: right;
+	border-top: 1px solid black;
+	margin-top: 10px;
+	padding-top: 5px;
+	font-size: 12px;
+	padding-right: 5px;
 }
